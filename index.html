@@ -482,7 +482,7 @@
 <p>研究了下，是因为 <code>babun</code> 自带 ssh，读取的是 <code>/home/username/.ssh</code></p>
 <p>而我们的 <code>public key</code> 是放在系统的 <code>c/Users/username/.ssh</code> 下的</p>
 <p>在 <code>babun</code> 做一个软链接<br><figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln <span class="_">-s</span> /cygdrive/c/Users/username/.ssh /home/username/.ssh</div></pre></td></tr></table></figure></p>
-<p>然后再进行 ‘hexo d’， 这下就成功了</p>
+<p>然后再进行 <code>hexo d</code>， 这下就成功了</p>
 
           
         
