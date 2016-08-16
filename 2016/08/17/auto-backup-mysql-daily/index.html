@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="babun," />
+  <meta name="keywords" content="mysql," />
 
 
 
@@ -84,21 +84,22 @@
 
 
 
-<meta name="description" content="babun 插件安装zsh-syntax-highlighting123cd ~/.oh-my-zsh/custom/pluginsgit clone git://github.com/zsh-users/zsh-syntax-highlighting.gitvi ~/.zshrc
-# add below to ~/.zshrc1plugins=(zsh-syntax-highlighting)">
+<meta name="description" content="每日自动备份 mysql 数据库，超过7天的自动删除CentOS 6.5 x64
+1.在/目录下建立三个文件夹123mkdir -p /bak/&amp;#123;bakmysql,bakmysqlold&amp;#125;touch /bak/bakmysql/bakcup.shchmod 755 /bak/bakmysql/backup.sh
+1234/bak/├── bakmysql│   └── back">
 <meta property="og:type" content="article">
-<meta property="og:title" content="config of babun">
-<meta property="og:url" content="http://elonwoo.com/2016/08/13/config-of-babun/index.html">
+<meta property="og:title" content="auto backup mysql daily">
+<meta property="og:url" content="http://elonwoo.com/2016/08/17/auto-backup-mysql-daily/index.html">
 <meta property="og:site_name" content="Elon Talk">
-<meta property="og:description" content="babun 插件安装zsh-syntax-highlighting123cd ~/.oh-my-zsh/custom/pluginsgit clone git://github.com/zsh-users/zsh-syntax-highlighting.gitvi ~/.zshrc
-# add below to ~/.zshrc1plugins=(zsh-syntax-highlighting)">
-<meta property="og:image" content="https://raw.githubusercontent.com/zsh-users/zsh-syntax-highlighting/master/images/preview.png">
-<meta property="og:updated_time" content="2016-08-13T10:20:01.205Z">
+<meta property="og:description" content="每日自动备份 mysql 数据库，超过7天的自动删除CentOS 6.5 x64
+1.在/目录下建立三个文件夹123mkdir -p /bak/&amp;#123;bakmysql,bakmysqlold&amp;#125;touch /bak/bakmysql/bakcup.shchmod 755 /bak/bakmysql/backup.sh
+1234/bak/├── bakmysql│   └── back">
+<meta property="og:updated_time" content="2016-08-16T15:56:12.434Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="config of babun">
-<meta name="twitter:description" content="babun 插件安装zsh-syntax-highlighting123cd ~/.oh-my-zsh/custom/pluginsgit clone git://github.com/zsh-users/zsh-syntax-highlighting.gitvi ~/.zshrc
-# add below to ~/.zshrc1plugins=(zsh-syntax-highlighting)">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/zsh-users/zsh-syntax-highlighting/master/images/preview.png">
+<meta name="twitter:title" content="auto backup mysql daily">
+<meta name="twitter:description" content="每日自动备份 mysql 数据库，超过7天的自动删除CentOS 6.5 x64
+1.在/目录下建立三个文件夹123mkdir -p /bak/&amp;#123;bakmysql,bakmysqlold&amp;#125;touch /bak/bakmysql/bakcup.shchmod 755 /bak/bakmysql/backup.sh
+1234/bak/├── bakmysql│   └── back">
 
 
 
@@ -119,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://elonwoo.com/2016/08/13/config-of-babun/"/>
+  <link rel="canonical" href="http://elonwoo.com/2016/08/17/auto-backup-mysql-daily/"/>
 
-  <title> config of babun | Elon Talk </title>
+  <title> auto backup mysql daily | Elon Talk </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -241,7 +242,7 @@
             
             
               
-                config of babun
+                auto backup mysql daily
               
             
           </h1>
@@ -253,8 +254,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-13T19:47:54+09:00" content="2016-08-13">
-              2016-08-13
+            <time itemprop="dateCreated" datetime="2016-08-17T01:30:51+09:00" content="2016-08-17">
+              2016-08-17
             </time>
           </span>
 
@@ -281,13 +282,16 @@
       
 
       
-        <h1 id="babun-插件安装"><a href="#babun-插件安装" class="headerlink" title="babun 插件安装"></a>babun 插件安装</h1><h2 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a><a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank" rel="external">zsh-syntax-highlighting</a></h2><figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~/.oh-my-zsh/custom/plugins</div><div class="line">git <span class="built_in">clone</span> git://github.com/zsh-users/zsh-syntax-highlighting.git</div><div class="line">vi ~/.zshrc</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span># add below to ~/.zshrc</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">plugins=(zsh-syntax-highlighting)</div></pre></td></tr></table></figure>
-<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> ~/.zshrc or src</div></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/zsh-users/zsh-syntax-highlighting/master/images/preview.png" alt="zsh-syntax-highlighting"></p>
-<h2 id="autojump"><a href="#autojump" class="headerlink" title="autojump"></a><a href="https://github.com/wting/autojump" target="_blank" rel="external">autojump</a></h2><figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~/.oh-my-zsh/custom/plugins</div><div class="line">git <span class="built_in">clone</span> git://github.com/joelthelion/autojump.git</div><div class="line"><span class="built_in">cd</span> autojump</div><div class="line">./install.py</div><div class="line">vi ~/.zshrc</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span># add below to ~/.zshrc</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh</div><div class="line">autoload -U compinit &amp;&amp; compinit -u</div></pre></td></tr></table></figure>
-<p>然后定位到plugins=(git)的位置，将其修改成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">plugins=(git autojump)</div></pre></td></tr></table></figure></p>
+        <h1 id="每日自动备份-mysql-数据库，超过7天的自动删除"><a href="#每日自动备份-mysql-数据库，超过7天的自动删除" class="headerlink" title="每日自动备份 mysql 数据库，超过7天的自动删除"></a>每日自动备份 <code>mysql</code> 数据库，超过7天的自动删除</h1><p>CentOS 6.5 x64</p>
+<h1 id="1-在-目录下建立三个文件夹"><a href="#1-在-目录下建立三个文件夹" class="headerlink" title="1.在/目录下建立三个文件夹"></a>1.在/目录下建立三个文件夹</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir -p /bak/&#123;bakmysql,bakmysqlold&#125;</div><div class="line">touch /bak/bakmysql/bakcup.sh</div><div class="line">chmod 755 /bak/bakmysql/backup.sh</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/bak/</div><div class="line">├── bakmysql</div><div class="line">│   └── backup.sh</div><div class="line">└── bakmysqlold</div></pre></td></tr></table></figure>
+<h1 id="2-编辑-shell-脚本"><a href="#2-编辑-shell-脚本" class="headerlink" title="2.编辑 shell 脚本"></a>2.编辑 <code>shell</code> 脚本</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /bak/bakmysql/backup.sh</div></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">#!/bin/<span class="keyword">sh</span> </div><div class="line"><span class="keyword">cd</span> /bak/bakmysql</div><div class="line"><span class="keyword">echo</span> <span class="string">"You are in bakmysql directory"</span></div><div class="line">mv bakmysql* /bak/bakmysqlold</div><div class="line"><span class="keyword">echo</span> <span class="string">"Old databases are moved to bakmysqlold folder"</span></div><div class="line">Now=$(date +<span class="string">"%d-%m-%Y"</span>) </div><div class="line">File=bakmysql-$Now.sql </div><div class="line">mysqldump -uroot -<span class="keyword">p</span><span class="string">'_password_'</span> _database_ &gt; $File </div><div class="line"><span class="keyword">echo</span> <span class="string">"Your database backup successfully completed"</span></div><div class="line">SevenDays=$(date -d -<span class="number">7</span>day  +<span class="string">"%d-%m-%Y"</span>) </div><div class="line"><span class="keyword">if</span> [ -<span class="keyword">f</span> /bak/bakmysqlold/bakmysql-$SevenDays.sql ] </div><div class="line">then</div><div class="line">rm -rf /bak/bakmysqlold/bakmysql-$SevenDays.sql </div><div class="line"><span class="keyword">echo</span> <span class="string">"You have delete 7days ago bak file "</span></div><div class="line"><span class="keyword">else</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"7days ago bak file not exist "</span></div><div class="line">fi</div></pre></td></tr></table></figure>
+<h1 id="3-shell-脚本内容修改"><a href="#3-shell-脚本内容修改" class="headerlink" title="3.shell 脚本内容修改"></a>3.<code>shell</code> 脚本内容修改</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysqldump -uroot -p&apos;_password_&apos; _database_&gt; $File</div></pre></td></tr></table></figure>
+<p>将上句分别换为你自己的 <code>mysql</code> 数据库用户、密码和 <code>database</code> 名<br>脚本会先将 <code>/bak/bakmysql</code> 文件夹下 <code>bakmysql</code> 为文件名开头的备份文件移至 <code>/bak/bakmysqlold</code>，再生成最新的备份文件，最后再判断 <code>/bak/bakmysqlold</code> 文件夹中七天前的文件是否存在，存在则删除，最后结束。这样就能自动备份最近七天的数据库脚本。</p>
+<h1 id="4-设置每天自动执行-shell-脚本"><a href="#4-设置每天自动执行-shell-脚本" class="headerlink" title="4.设置每天自动执行 shell 脚本"></a>4.设置每天自动执行 <code>shell</code> 脚本</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/crontab</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0 0 * * * root /bak/bakmysql/backup.sh  #在最后加入这样一行（具体含义请自行参考/etc/crontab中的注释）</div></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/sbin/service crond restart <span class="comment">#重启crontab</span></div><div class="line">chkconfig –level 35 crond on <span class="comment">#如果没有设置crontab为开机自启动可以如下设置其开机自启动</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -310,7 +314,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/babun/" rel="tag">#babun</a>
+            <a href="/tags/mysql/" rel="tag">#mysql</a>
           
         </div>
       
@@ -319,17 +323,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/13/use-banbu-to-update-hexo/" rel="next" title="use babun to update hexo">
-                <i class="fa fa-chevron-left"></i> use babun to update hexo
+              <a href="/2016/08/16/changing-cursor-shape-per-mode-tmux-vim/" rel="next" title="changing cursor shape per mode[tmux-vim]">
+                <i class="fa fa-chevron-left"></i> changing cursor shape per mode[tmux-vim]
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/13/config-of-vimium/" rel="prev" title="config of vimium">
-                config of vimium <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -479,7 +479,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#babun-插件安装"><span class="nav-number">1.</span> <span class="nav-text">babun 插件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#zsh-syntax-highlighting"><span class="nav-number">1.1.</span> <span class="nav-text">zsh-syntax-highlighting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#autojump"><span class="nav-number">1.2.</span> <span class="nav-text">autojump</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#每日自动备份-mysql-数据库，超过7天的自动删除"><span class="nav-number">1.</span> <span class="nav-text">每日自动备份 mysql 数据库，超过7天的自动删除</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-在-目录下建立三个文件夹"><span class="nav-number">2.</span> <span class="nav-text">1.在/目录下建立三个文件夹</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-编辑-shell-脚本"><span class="nav-number">3.</span> <span class="nav-text">2.编辑 shell 脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-shell-脚本内容修改"><span class="nav-number">4.</span> <span class="nav-text">3.shell 脚本内容修改</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-设置每天自动执行-shell-脚本"><span class="nav-number">5.</span> <span class="nav-text">4.设置每天自动执行 shell 脚本</span></a></li></ol></div>
             
           </div>
         </section>
