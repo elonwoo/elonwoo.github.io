@@ -238,6 +238,121 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/17/babun-ruby-gem-tmuxinator/" itemprop="url">
+                  babun ruby gem tmuxinator
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-17T20:38:31+08:00" content="2016-08-17">
+              2016-08-17
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>装了 <code>tmux</code> 后，想装 <code>tmuxinator</code><br>而装 <code>tmuxinator</code> 的命令是:</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem install tmuxinator</div></pre></td></tr></table></figure>
+<p>要用 <code>gem</code> 就得先装 <code>ruby</code></p>
+<p>尝试过在 <code>babun</code> 里直接命令：</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pact install ruby</div></pre></td></tr></table></figure>
+<p>但这样安装的ruby会有问题 运行 <code>ruby</code> 命令无反应</p>
+<p>参考了下<a href="http://wiki.k-zone.cn/post/wiki/babun-pei-zhi" target="_blank" rel="external">Babun 配置</a><br>安装步骤整理如下:</p>
+<h2 id="安装-Rvm"><a href="#安装-Rvm" class="headerlink" title="安装 Rvm"></a>安装 <code>Rvm</code></h2><ol>
+<li>安装依赖 <code>gnupg</code></li>
+</ol>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pact install gnupg</div></pre></td></tr></table></figure>
+<p>下载 <a href="http://prdownloads.sourceforge.net/gettext/libiconv-1.9.1.bin.woe32.zip?download" target="_blank" rel="external">libiconv-1.9.1.bin.woe32.zip</a><br>解压缩 <code>libiconv-1.9.1.bin.woe32.zip</code> 将里面的 <code>iconv.dll</code> 拷贝至 <code>%USERPROFILE%\AppData\Roaming\gnupg</code></p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pact install patch libyaml-devel libtool bison mingw64-i686-gcc-g++ mingw64-x86_64-gcc-g++ patch sqlite3</div></pre></td></tr></table></figure>
+<ol>
+<li>安装</li>
+</ol>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</div><div class="line">curl <span class="_">-s</span>SL https://get.rvm.io | bash <span class="_">-s</span> stable</div><div class="line"><span class="built_in">source</span> /home/username/.rvm/scripts/rvm</div><div class="line">rvm install 1.9.3 <span class="comment">#自带rubygems</span></div></pre></td></tr></table></figure>
+<ul>
+<li>注意： <code>rvm install 2.x.x</code> 会出现类似 <code>/psych.so (LoadError)</code> 这样的错误。暂时不清楚如何解决，所有只能安装 <code>1.x.x</code></li>
+</ul>
+<h2 id="安装-tmuxinator"><a href="#安装-tmuxinator" class="headerlink" title="安装 tmuxinator"></a>安装 <code>tmuxinator</code></h2><figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem install tmuxinator</div></pre></td></tr></table></figure>
+<p>这样 <code>tmuxinator</code> 就安装完了</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/17/auto-backup-mysql-daily/" itemprop="url">
                   auto backup mysql daily
                 </a>
@@ -1170,7 +1285,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1180,7 +1295,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

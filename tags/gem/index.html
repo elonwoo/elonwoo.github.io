@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="tmux,vim," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,19 +84,15 @@
 
 
 
-<meta name="description" content="edit vimrc
-123456789101112131415&amp;quot; Changing cursor shape per mode&amp;quot; 1 or 0 -&amp;gt; blinking block&amp;quot; 2 -&amp;gt; solid block&amp;quot; 3 -&amp;gt; blinking underscore&amp;quot; 4 -&amp;gt; solid underscoreif exi">
-<meta property="og:type" content="article">
-<meta property="og:title" content="changing cursor shape per mode[tmux-vim]">
-<meta property="og:url" content="http://elonwoo.com/2016/08/16/changing-cursor-shape-per-mode-tmux-vim/index.html">
+<meta name="description" content="知其道 用其妙">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Elon Talk">
+<meta property="og:url" content="http://elonwoo.com/tags/gem/index.html">
 <meta property="og:site_name" content="Elon Talk">
-<meta property="og:description" content="edit vimrc
-123456789101112131415&amp;quot; Changing cursor shape per mode&amp;quot; 1 or 0 -&amp;gt; blinking block&amp;quot; 2 -&amp;gt; solid block&amp;quot; 3 -&amp;gt; blinking underscore&amp;quot; 4 -&amp;gt; solid underscoreif exi">
-<meta property="og:updated_time" content="2016-08-16T07:08:20.741Z">
+<meta property="og:description" content="知其道 用其妙">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="changing cursor shape per mode[tmux-vim]">
-<meta name="twitter:description" content="edit vimrc
-123456789101112131415&amp;quot; Changing cursor shape per mode&amp;quot; 1 or 0 -&amp;gt; blinking block&amp;quot; 2 -&amp;gt; solid block&amp;quot; 3 -&amp;gt; blinking underscore&amp;quot; 4 -&amp;gt; solid underscoreif exi">
+<meta name="twitter:title" content="Elon Talk">
+<meta name="twitter:description" content="知其道 用其妙">
 
 
 
@@ -117,9 +113,9 @@
 
 
 
-  <link rel="canonical" href="http://elonwoo.com/2016/08/16/changing-cursor-shape-per-mode-tmux-vim/"/>
+  <link rel="canonical" href="http://elonwoo.com/tags/gem/"/>
 
-  <title> changing cursor shape per mode[tmux-vim] | Elon Talk </title>
+  <title> Tag: gem | Elon Talk </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -140,7 +136,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -218,130 +214,46 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        gem
+        <small>Tag</small>
+      </h2>
+    </div>
 
     
-      <header class="post-header">
+      
 
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
+            <a class="post-title-link" href="/2016/08/17/babun-ruby-gem-tmuxinator/" itemprop="url">
               
-                changing cursor shape per mode[tmux-vim]
+                <span itemprop="name">babun ruby gem tmuxinator</span>
               
-            
-          </h1>
+            </a>
         
+      </h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-16T17:04:13+09:00" content="2016-08-16">
-              2016-08-16
-            </time>
-          </span>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-08-17T20:38:31+08:00"
+              content="2016-08-17" >
+          08-17
+        </time>
+      </div>
 
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>edit vimrc</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&quot; Changing cursor shape per mode</div><div class="line">&quot; 1 or 0 -&gt; blinking block</div><div class="line">&quot; 2 -&gt; solid block</div><div class="line">&quot; 3 -&gt; blinking underscore</div><div class="line">&quot; 4 -&gt; solid underscore</div><div class="line">if exists(&apos;$TMUX&apos;)</div><div class="line">    &quot; tmux will only forward escape sequences to the terminal if surrounded by a DCS sequence</div><div class="line">    let &amp;t_SI .= &quot;\&lt;Esc&gt;Ptmux;\&lt;Esc&gt;\&lt;Esc&gt;[4 q\&lt;Esc&gt;\\&quot;</div><div class="line">    let &amp;t_EI .= &quot;\&lt;Esc&gt;Ptmux;\&lt;Esc&gt;\&lt;Esc&gt;[2 q\&lt;Esc&gt;\\&quot;</div><div class="line">    autocmd VimLeave * silent !echo -ne &quot;\033Ptmux;\033\033[0 q\033\\&quot;</div><div class="line">else</div><div class="line">    let &amp;t_SI .= &quot;\&lt;Esc&gt;[4 q&quot;</div><div class="line">    let &amp;t_EI .= &quot;\&lt;Esc&gt;[2 q&quot;</div><div class="line">    autocmd VimLeave * silent !echo -ne &quot;\033[0 q&quot;</div><div class="line">endif</div></pre></td></tr></table></figure>
-<p><a href="https://gist.github.com/andyfowler/1195581" target="_blank" rel="external">from github</a></p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/tmux/" rel="tag">#tmux</a>
-          
-            <a href="/tags/vim/" rel="tag">#vim</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/08/16/usage-of-tmux/" rel="next" title="usage of tmux">
-                <i class="fa fa-chevron-left"></i> usage of tmux
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/17/auto-backup-mysql-daily/" rel="prev" title="auto backup mysql daily">
-                auto backup mysql daily <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
+    
   </div>
+
+  
 
 
           </div>
@@ -349,10 +261,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -372,17 +280,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -468,17 +367,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -575,10 +463,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
