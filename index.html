@@ -238,6 +238,120 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/27/import-SQL-Server-to-MySQL/" itemprop="url">
+                  import SQL Server to MySQL
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-27T01:17:06+08:00" content="2016-09-27">
+              2016-09-27
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>SQL Server 里的数据导出时会遇到点问题，个别字段里描述很长，里面有回车键</p>
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>找到不是 20 或 21 开始，6 位数字开头的行，将这些行与上一行进行合并</p>
+<h2 id="处理方案"><a href="#处理方案" class="headerlink" title="处理方案"></a>处理方案</h2><ol>
+<li>将所需数据导出为 txt 文档，或者直接复制成txt文档</li>
+<li>用 vim 编辑文档</li>
+<li>搜索文档里不存在的字符，比如 &amp;lt</li>
+<li><p>为每个 20 或 21 开始，6 位数字开头的行加上 &amp;lt</p>
+ <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">:/&lt;    #确认没有 &lt; 的存在</div><div class="line">:%s/^\d\&#123;<span class="number">6</span>\&#125;/&lt;&amp;/g   #为每行行首是<span class="number">6</span>位数字的行，在行首添加 &lt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>建制宏脚本，进行如下操作</p>
+ <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">qa</span></div><div class="line">gg  #将光标至于首行行首</div><div class="line">/^[^&lt;]      #搜索不是 &lt; 开头的行，此时光标会至于不是 &lt; 开头的行</div><div class="line"><span class="keyword">k</span>   #将光标上移一行</div><div class="line">J   #将两行合并</div><div class="line">gg  #光标回到首行行首</div><div class="line">q   #结束脚本录制</div></pre></td></tr></table></figure>
+</li>
+<li><p>运行刚刚制作的宏脚本</p>
+ <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="number">100</span>@a    #当提示 E486: 找不到模式： ^[^&lt;]时，就是脚本跑完的时候</div></pre></td></tr></table></figure>
+</li>
+<li><p>去除每行行首的 &amp;lt</p>
+ <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:%s/&lt;//g</div></pre></td></tr></table></figure>
+</li>
+<li><p>导入 SQL Server 投诉表里的字段名，然后将 txt 文档导入到 MySQL 表里</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/20/zsh-theme/" itemprop="url">
                   zsh theme
                 </a>
@@ -1149,105 +1263,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/13/use-banbu-to-update-hexo/" itemprop="url">
-                  use babun to update hexo
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-13T15:54:41+08:00" content="2016-08-13">
-              2016-08-13
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>安装完 babun 后，尝试用 babun 进行 <code>hexo d</code> 的部署，会报以下错误:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Permission denied (publickey).</div><div class="line">fatal: Could not read from remote repository.</div><div class="line"></div><div class="line">Please make sure you have the correct access rights</div><div class="line">and the repository exists.</div><div class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</div><div class="line">Error: Permission denied (publickey).</div><div class="line">fatal: Could not read from remote repository.</div></pre></td></tr></table></figure>
-<p>研究了下，是因为 <code>babun</code> 自带 ssh，读取的是 <code>/home/username/.ssh</code></p>
-<p>而我们的 <code>public key</code> 是放在系统的 <code>c/Users/username/.ssh</code> 下的</p>
-<p>在 <code>babun</code> 做一个软链接<br><figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln <span class="_">-s</span> /cygdrive/c/Users/username/.ssh /home/username/.ssh</div></pre></td></tr></table></figure></p>
-<p>然后再进行 <code>hexo d</code>， 这下就成功了</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1293,7 +1308,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1303,7 +1318,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
