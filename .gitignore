@@ -3,3 +3,4 @@ _site
 .sass-cache
 yulib.config
 yulib.resource
+.history
