@@ -1,12 +1,9 @@
-markdown: rdiscount
-highlighter: pygments
+name: '与己说'
 permalink: /:year/:month/:day/:title.html
-name: "与己说"
-markdown: rdiscount
 
-author: "Elon Woo"
-atom-baseurl: "http://www.elonwoo.com"
-disqus: "gopherwood"
+author: 'Elon Woo'
+atom-baseurl: 'http://www.elonwoo.com'
+disqus: 'gopherwood'
 
 navigations:
   - title: Archive
@@ -18,7 +15,9 @@ navigations:
   - title: About
     class: fa fa-user
     href: /about.html
+  - title: Gallery
+    class: fa fa-film
+    href: https://www.instagram.com/elonwoo/
   - title: Subscribe
     class: fa fa-rss
     href: /atom.xml
-

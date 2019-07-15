@@ -4,13 +4,14 @@
  *
  * @author linghua.zhang@me.com
  * @link http://lhzhang.com/
- * @update 2014-03-17
+ * @update 2015-07-24
  *
  * |/ | (~ (~
  * |\.|._)._)
  * --------------------------------- */
 @import url(/media/fonts/telex-regular.css);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
+@import url(//code.cdn.mozilla.net/fonts/fira.css);
 * {
   margin: 0;
   padding: 0; }
@@ -19,7 +20,8 @@ body {
   font-size: 14px;
   font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif;
   color: #555;
-  background-color: #f9f9f9; }
+  background-color: #f9f9f9;
+  -webkit-font-smoothing: antialiased; }
 
 ol, ul {
   list-style-position: inside; }
@@ -60,7 +62,7 @@ code {
   background-color: #f8f8f8;
   padding: 2px 5px;
   border: 1px dashed #e0e0e0;
-  font-family: Ubuntu, monospace; }
+  font-family: Fira Mono, monospace; }
 
 h1, h2 {
   font-size: 1.4em; }
@@ -69,10 +71,21 @@ time {
   font-family: Ubuntu, monospace; }
 
 header {
-  width: 800px;
   margin: 0 auto;
   text-align: justify;
   margin: 3em auto; }
+  @media screen and (min-width: 320px) {
+    header {
+      width: 300px; } }
+  @media screen and (min-width: 375px) {
+    header {
+      width: 350px; } }
+  @media screen and (min-width: 414px) {
+    header {
+      width: 400px; } }
+  @media screen and (min-width: 800px) {
+    header {
+      width: 750px; } }
   header:after {
     content: '';
     width: 100%;
@@ -97,9 +110,20 @@ header {
       color: #ccc; }
 
 #content {
-  width: 800px;
   margin: 0 auto;
   line-height: 2em; }
+  @media screen and (min-width: 320px) {
+    #content {
+      width: 300px; } }
+  @media screen and (min-width: 375px) {
+    #content {
+      width: 350px; } }
+  @media screen and (min-width: 414px) {
+    #content {
+      width: 400px; } }
+  @media screen and (min-width: 800px) {
+    #content {
+      width: 750px; } }
   #content .main-listing {
     margin-bottom: 2em; }
 
@@ -137,7 +161,7 @@ article {
       color: #999999;
       padding: .25em; }
   article .post img {
-    max-width: 800px;
+    max-width: 100%;
     display: block;
     margin: .5em auto; }
   article .comment {
@@ -176,7 +200,6 @@ article {
     margin-left: 1%; }
 
 footer {
-  width: 800px;
   margin: 0 auto;
   display: block;
   color: #909090;
@@ -184,6 +207,18 @@ footer {
   font-size: .9em;
   text-align: center;
   margin: 1em auto; }
+  @media screen and (min-width: 320px) {
+    footer {
+      width: 300px; } }
+  @media screen and (min-width: 375px) {
+    footer {
+      width: 350px; } }
+  @media screen and (min-width: 414px) {
+    footer {
+      width: 400px; } }
+  @media screen and (min-width: 800px) {
+    footer {
+      width: 750px; } }
   footer a, footer header #header h1 a, header #header h1 footer a, footer article .title a, article .title footer a, footer article .meta .tags a, article .meta .tags footer a, footer article .divider a, article .divider footer a {
     color: #cccccc; }
     footer a:hover, footer header #header h1 a:hover, header #header h1 footer a:hover, footer article .meta .tags a:hover, article .meta .tags footer a:hover {
