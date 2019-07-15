@@ -9,16 +9,16 @@ tags:
 ### 1. 更新命令
 
 `brew update && brew upgrade && brew cask upgrade && mas upgrade`
-- 察看本地快照 `sudo tmutil listlocalsnapshots /`
-- 删除本地快照(最后加上你查出来的快照的时间戳) `tmutil deletelocalsnapshots 时间戳`
+察看本地快照 `sudo tmutil listlocalsnapshots /`
+删除本地快照(最后加上你查出来的快照的时间戳) `tmutil deletelocalsnapshots 时间戳`
 
 ### 2. 其他快捷键
 
 让双手尽量多的键盘和快捷键，少使用鼠标和触摸板，可以大大提高效率。
 
-* 苹果官方文档。当你在写代码，怎么通过快捷键让光标转移到行首、行尾、向上翻页或者将光标移左移一个词？都在这篇文档里。[Mac keyboard shortcts](https://support.apple.com/kb/HT201236)
+苹果官方文档。当你在写代码，怎么通过快捷键让光标转移到行首、行尾、向上翻页或者将光标移左移一个词？都在这篇文档里。[Mac keyboard shortcts](https://support.apple.com/kb/HT201236)
 
-* 苹果官方文档。回车触发蓝底按钮，空格触发蓝边按钮，都出自这里。[Mac keyboard shortcuts for accessibility features](https://support.apple.com/kb/HT204434)
+苹果官方文档。回车触发蓝底按钮，空格触发蓝边按钮，都出自这里。[Mac keyboard shortcuts for accessibility features](https://support.apple.com/kb/HT204434)
 
 ### 3. Remove all Dock icons[OCD]
 
@@ -36,15 +36,15 @@ tags:
 
 ### 4. shift 切换输入法
 
-1. 先在系统设置/快捷键/输入法 里面设定一个“切换到下一个输入法”的快捷键（最好是比较冷门的组合，我选的是 command+shift+i）；
+先在系统设置/快捷键/输入法 里面设定一个“切换到下一个输入法”的快捷键（最好是比较冷门的组合，我选的是 command+shift+i）；
 
-2. 然后在 Better Touch Tool 的手势/键盘/按键顺序 中设置“按下 shift 等效于 command+shift+i”；
+然后在 Better Touch Tool 的手势/键盘/按键顺序 中设置“按下 shift 等效于 command+shift+i”；
 
-3. 打完收工。
+打完收工。
 
 ### 5. Mojave 相关处理
 
-1. 字体处理：
+字体处理：
 
    [Font rendering seems strange in macOS Mojave · Issue #51132 · Microsoft/vscode](https://github.com/Microsoft/vscode/issues/51132#issuecomment-424132330)
 
@@ -52,15 +52,15 @@ tags:
 
 ### 6. 升级更新 macOS Mojave 10.14 后系统卡顿以及部分软件 (如 VS Code) 字体变虚的解决方法
 
-1. 输入文字卡顿
+输入文字卡顿
 
    如果你的 Mac 已经更新至 macOS Mojave，在输入文字时经常卡顿，频繁出现小风车，那很有可能是搜狗输入法造成的，只需将它升级至最新的 4.8.0 版本，即可完美解决。
 
-2. 字体发虚
+字体发虚
 
    升级 macOS Mojave 新系统后，苹果默认关闭了子像素抗锯齿，导致字体变细锯齿增多。
    解决字体渲染过细，打开终端，输入：
    `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
 
-3. 重启应用比如 VS Code 后即可看到效果
+重启应用比如 VS Code 后即可看到效果
 
