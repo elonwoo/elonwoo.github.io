@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "dev": "npm run eleventy -- --serve ",
+    "eleventy": "eleventy --input=./src",
+    "css": "postcss -c postcss.config.js -o src/assets/index.css src/assets/**/*.pcss",
+    "dev:css": "npm run css -- -w",
+    "build:css": "NODE_ENV=production npm run css",
+    "build": "rm -rf _site && npm run build:css && npm run eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.0.9",
+    "@egoist/md-colors": "^1.2.2",
+    "autoprefixer": "^9.8.6",
+    "dayjs": "^1.8.34",
+    "eleventy-plugin-seo": "^0.5.1",
+    "markdown-it-anchor": "^5.3.0",
+    "markdown-it-table-of-contents": "^0.4.4",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.7.3"
+  }
+}

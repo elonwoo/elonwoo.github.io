@@ -1,7 +1,17 @@
-Feel free to fork.
-Please keep the link in the bottom.
+# my blog
 
-The like button is currently for personal use and would not work on any other domain.
-Please delete all the lines between `<!-- BEGIN this would not work on any other domain -->` and `<!-- END this would not work on any other domain -->`
+Built with Eleventy, TailwindCSS.
 
-_Or you can [host](https://github.com/waynezhang/blog-like-btn) your like button server on firease_
+https://lutaonan.com
+
+## Build
+
+```bash
+yarn
+
+yarn dev
+
+yarn build:css # build css files
+
+yarn build # build the whole project
+```
