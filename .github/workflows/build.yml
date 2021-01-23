@@ -1,4 +1,4 @@
-name: Build Eleventy
+name: Build Eleventy
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies & build
         run: |
-          npm ci
+          npm i
           npm run build
 
       - name: Deploy
