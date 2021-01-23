@@ -4,11 +4,26 @@
   <subtitle>Randy is blogging about life, tech and music.</subtitle>
   <link href="https://lutaonan.com/rss.xml" rel="self"/>
   <link href="https://lutaonan.com/"/>
-  <updated>2019-07-24T00:00:00Z</updated>
+  <updated>2020-01-23T00:00:00Z</updated>
   <id>https://lutaonan.com/</id>
   <author>
     <name>Randy</name>
   </author>
+  
+  <entry>
+    <title>极简blog主题</title>
+    <link href="https://lutaonan.com/blog/minimalist-theme-blog/"/>
+    <updated>2020-01-23T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/minimalist-theme-blog/</id>
+    <content type="html">&lt;p&gt;以下收集了一些个人比较喜欢的 &lt;strong&gt;极简blog主题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lutaonan.com/&quot;&gt;Randy&#39;s Blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.ilaipi.top/&quot;&gt;赖皮 – 生活 技术&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Siricee/hexo-theme-Chic&quot;&gt;Siricee/hexo-theme-Chic&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://fullstackbb.com/&quot;&gt;Meowu&#39;s Web Blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.blurredcode.com/&quot;&gt;Home | Blurred code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.tmaize.net/&quot;&gt;首页-TMaize Blog&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>解决MacOS休眠后Wifi卡死断网的方法</title>
