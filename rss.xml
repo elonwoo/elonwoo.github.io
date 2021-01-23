@@ -11,12 +11,109 @@
   </author>
   
   <entry>
+    <title>Eleventy Blog On GitHub Page</title>
+    <link href="https://lutaonan.com/blog/blog-on-github-page/"/>
+    <updated>2020-01-23T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/blog-on-github-page/</id>
+    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;table-of-contents&quot;&gt;&lt;div class=&quot;toc-container-header&quot;&gt;索引&lt;/div&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/blog-on-github-page/#%E4%B8%BB%E9%A2%98%E5%8F%82%E8%80%83&quot;&gt;主题参考&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/blog-on-github-page/#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&quot;&gt;注意事项&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/blog-on-github-page/#%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D&quot;&gt;添加自定义域名&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/blog-on-github-page/#%E6%B7%BB%E5%8A%A0github-action&quot;&gt;添加Github Action&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/blog-on-github-page/#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5&quot;&gt;参考链接&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E4%B8%BB%E9%A2%98%E5%8F%82%E8%80%83&quot;&gt;主题参考&lt;/h2&gt;
+&lt;p&gt;参照 Randy&#39;s blog 的主题&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lutaonan.com/&quot;&gt;Randy&#39;s Blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/djyde/blog-2020&quot;&gt;djyde/blog-2020&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&quot;&gt;注意事项&lt;/h2&gt;
+&lt;p&gt;把整个github的项目下载下来，执行以下命令后就可以启动了&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;yarn
+
+yarn dev
+
+yarn build:css # build css files
+
+yarn build # build the whole project
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改自己的个人信息，去除不必要的功能页，上传到自己的Github Page&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;发文新建的markdown文件，文章信息部分需要严格遵守格式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&quot;language-plaintext&quot;&gt;---
+title: XXXXXXX
+layout: blog.njk
+date: XXXX-XX-XX
+tags: blog (这里必须是blog)
+categories:
+  - XXX（这里可以修改）
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D&quot;&gt;添加自定义域名&lt;/h2&gt;
+&lt;p&gt;在项目根目录下新建&lt;code&gt;CNAME&lt;/code&gt;文件，文件填写&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-plaintext&quot;&gt;your-domain.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;编辑 &lt;code&gt;.eleventy.js&lt;/code&gt; 文件，添加如下&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// 表示在编译时，把`CNAME`文件加进去，
+module.exports = function(eleventyConfig) {
+  ...
+  eleventyConfig.addPassthroughCopy(&amp;quot;CNAME&amp;quot;);
+  ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;%E6%B7%BB%E5%8A%A0github-action&quot;&gt;添加Github Action&lt;/h2&gt;
+&lt;p&gt;项目根目录下添加&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-plaintext&quot;&gt;.github/workflows/build.yml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;build.yml&lt;/code&gt; 文件内容如下&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;name: Build Eleventy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js $
+        uses: actions/setup-node@v1
+        with:
+          node-version: $
+
+      - name: Install dependencies &amp;amp; build
+        run: |
+          npm i
+          npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./_site
+          github_token: $
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样项目每次push到Github后，Github会识别到&lt;code&gt;build.yml&lt;/code&gt;，会自动构建发布网站，发布成功后，会在Github的项目下新建分支&lt;code&gt;gh-pages&lt;/code&gt;，也就是会把&lt;code&gt;_site&lt;/code&gt;里的内容，发布到&lt;code&gt;gh-pages&lt;/code&gt;分支里&lt;/p&gt;
+&lt;p&gt;最后我们需要在
+GitHub blog项目-Settings-GitHub Pages-Source-Branch设置为gh-pages&lt;/p&gt;
+&lt;h2 id=&quot;%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5&quot;&gt;参考链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.rockyourcode.com/how-to-deploy-eleventy-to-github-pages-with-github-actions/&quot;&gt;How to Deploy Eleventy to GitHub Pages With GitHub Actions :: rockyourcode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.justus.ws/tech/deploying-eleventy-to-github-pages/#adding-a-cname-file&quot;&gt;How To Deploy an Eleventy Site to Github Pages with a Custom Domain | justus.ws&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html&quot;&gt;GitHub Actions 入门教程 - 阮一峰的网络日志&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
     <title>极简blog主题</title>
     <link href="https://lutaonan.com/blog/minimalist-theme-blog/"/>
-    <updated>2020-01-23T00:00:00Z</updated>
+    <updated>2020-01-22T00:00:00Z</updated>
     <id>https://lutaonan.com/blog/minimalist-theme-blog/</id>
     <content type="html">&lt;p&gt;以下收集了一些个人比较喜欢的 &lt;strong&gt;极简blog主题&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://lutaonan.com/&quot;&gt;Randy&#39;s Blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lutaonan.com/&quot;&gt;Randy&#39;s Blog&lt;/a&gt;
+&lt;a href=&quot;https://github.com/djyde/blog-2020&quot;&gt;djyde/blog-2020&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.ilaipi.top/&quot;&gt;赖皮 – 生活 技术&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/Siricee/hexo-theme-Chic&quot;&gt;Siricee/hexo-theme-Chic&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://fullstackbb.com/&quot;&gt;Meowu&#39;s Web Blog&lt;/a&gt;&lt;/p&gt;

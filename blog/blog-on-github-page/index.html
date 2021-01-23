@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <title>
+        Eleventy Blog On GitHub Page - Elon's Blog</title>
+    
+
+    
+  <title>Eleventy Blog On GitHub Page - Elon&apos;s Blog</title>
+
+<meta name="description" content="blogging about life, tech.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Elon Woo">
+
+<link rel="canonical" href="https://elonwoo.com/blog/blog-on-github-page/">
+
+<meta property="og:title" content="Eleventy Blog On GitHub Page - Elon&apos;s Blog">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://elonwoo.com/blog/blog-on-github-page/">
+<meta property="og:description" content="blogging about life, tech.">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@elonwoo">
+<meta name="twitter:url" content="https://elonwoo.com/blog/blog-on-github-page/">
+<meta name="twitter:title" content="Eleventy Blog On GitHub Page - Elon&apos;s Blog">
+<meta name="twitter:description" content="blogging about life, tech.">
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.21.0,npm/prismjs@1.21.0/components/prism-javascript.min.js,npm/prismjs@1.21.0/components/prism-typescript.min.js,npm/prismjs@1.21.0/components/prism-bash.min.js,npm/prismjs@1.21.0/components/prism-sql.min.js,npm/prismjs@1.21.0/components/prism-diff.min.js,npm/prismjs@1.21.0/components/prism-tsx.min.js,npm/prismjs@1.21.0/components/prism-jsx.min.js,npm/prismjs@1.21.0/components/prism-json.min.js"></script>
+
+  <link href="//cdn.jsdelivr.net/combine/npm/prismjs@1.21.0/themes/prism.min.css,npm/prismjs@1.21.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet">
+    <link href="/assets/index.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+  <div class="main-container mx-auto pt-12">
+    <div class="flex justify-between mb-4">
+  <div>
+    <h1 class="logo text-xl text-red-900">
+      <a href="/">Elon's Blog</a>
+    </h1>
+
+  </div>
+  <div class="flex self-center -mx-2 text-sm text-red-900 font-bold">
+    <a class="mx-2" href="/">文章</a>
+    
+
+  </div>
+</div>
+    <div class="mb-4 mt-12 font-sans">
+      <h2 class="text-4xl tracking-wide text-gray-900 font-bold">Eleventy Blog On GitHub Page</h2>
+      <h3 class="text-gray-500 text-xs font-light">2020-01-23</h3>
+    </div>
+    <div class="blog-post">
+      <p><div class="table-of-contents"><div class="toc-container-header">索引</div><ul><li><a href="#%E4%B8%BB%E9%A2%98%E5%8F%82%E8%80%83">主题参考</a></li><li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</a></li><li><a href="#%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D">添加自定义域名</a></li><li><a href="#%E6%B7%BB%E5%8A%A0github-action">添加Github Action</a></li><li><a href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5">参考链接</a></li></ul></div></p>
+<h2 id="%E4%B8%BB%E9%A2%98%E5%8F%82%E8%80%83">主题参考</h2>
+<p>参照 Randy's blog 的主题</p>
+<p><a href="https://lutaonan.com/">Randy's Blog</a></p>
+<p><a href="https://github.com/djyde/blog-2020">djyde/blog-2020</a></p>
+<h2 id="%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</h2>
+<p>把整个github的项目下载下来，执行以下命令后就可以启动了</p>
+<pre><code class="language-javascript">yarn
+
+yarn dev
+
+yarn build:css # build css files
+
+yarn build # build the whole project
+</code></pre>
+<p>修改自己的个人信息，去除不必要的功能页，上传到自己的Github Page</p>
+<blockquote>
+<p>发文新建的markdown文件，文章信息部分需要严格遵守格式</p>
+</blockquote>
+<pre><code class="language-plaintext">---
+title: XXXXXXX
+layout: blog.njk
+date: XXXX-XX-XX
+tags: blog (这里必须是blog)
+categories:
+  - XXX（这里可以修改）
+---
+</code></pre>
+<h2 id="%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D">添加自定义域名</h2>
+<p>在项目根目录下新建<code>CNAME</code>文件，文件填写</p>
+<pre><code class="language-plaintext">your-domain.com
+</code></pre>
+<p>编辑 <code>.eleventy.js</code> 文件，添加如下</p>
+<pre><code class="language-javascript">// 表示在编译时，把`CNAME`文件加进去，
+module.exports = function(eleventyConfig) {
+  ...
+  eleventyConfig.addPassthroughCopy(&quot;CNAME&quot;);
+  ...
+}
+</code></pre>
+<h2 id="%E6%B7%BB%E5%8A%A0github-action">添加Github Action</h2>
+<p>项目根目录下添加</p>
+<pre><code class="language-plaintext">.github/workflows/build.yml
+</code></pre>
+<p><code>build.yml</code> 文件内容如下</p>
+<pre><code class="language-yml">name: Build Eleventy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js $
+        uses: actions/setup-node@v1
+        with:
+          node-version: $
+
+      - name: Install dependencies &amp; build
+        run: |
+          npm i
+          npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./_site
+          github_token: $
+</code></pre>
+<p>这样项目每次push到Github后，Github会识别到<code>build.yml</code>，会自动构建发布网站，发布成功后，会在Github的项目下新建分支<code>gh-pages</code>，也就是会把<code>_site</code>里的内容，发布到<code>gh-pages</code>分支里</p>
+<p>最后我们需要在
+GitHub blog项目-Settings-GitHub Pages-Source-Branch设置为gh-pages</p>
+<h2 id="%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5">参考链接</h2>
+<ul>
+<li><a href="https://www.rockyourcode.com/how-to-deploy-eleventy-to-github-pages-with-github-actions/">How to Deploy Eleventy to GitHub Pages With GitHub Actions :: rockyourcode</a></li>
+<li><a href="https://www.justus.ws/tech/deploying-eleventy-to-github-pages/#adding-a-cname-file">How To Deploy an Eleventy Site to Github Pages with a Custom Domain | justus.ws</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html">GitHub Actions 入门教程 - 阮一峰的网络日志</a></li>
+</ul>
+
+    </div>
+
+  </div>
+
+
+
+    
+  </body>
+
+</html>
