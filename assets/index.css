@@ -725,11 +725,6 @@ video {
   margin-bottom: 2rem;
 }
 
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
 .my-24 {
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -753,10 +748,6 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -771,10 +762,6 @@ video {
 
 .mt-12 {
   margin-top: 3rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
 }
 
 .p-4 {
@@ -845,10 +832,6 @@ video {
 
 .w-32 {
   width: 8rem;
-}
-
-.w-64 {
-  width: 16rem;
 }
 
 .w-full {
