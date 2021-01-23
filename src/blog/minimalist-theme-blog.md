@@ -12,6 +12,9 @@ categories:
 [Randy's Blog](https://lutaonan.com/)
 [djyde/blog-2020](https://github.com/djyde/blog-2020)
 
+[nullprogram](https://nullprogram.com/index/)
+[skeeto/skeeto.github.com: Personal website/blog](https://github.com/skeeto/skeeto.github.com)
+
 [赖皮 – 生活 技术](https://www.ilaipi.top/)
 
 [Siricee/hexo-theme-Chic](https://github.com/Siricee/hexo-theme-Chic)
