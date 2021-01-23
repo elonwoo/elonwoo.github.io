@@ -4,446 +4,108 @@
   <subtitle>Randy is blogging about life, tech and music.</subtitle>
   <link href="https://lutaonan.com/rss.xml" rel="self"/>
   <link href="https://lutaonan.com/"/>
-  <updated>2021-01-10T00:00:00Z</updated>
+  <updated>2019-07-24T00:00:00Z</updated>
   <id>https://lutaonan.com/</id>
   <author>
     <name>Randy</name>
   </author>
   
   <entry>
-    <title>2020 年终总结</title>
-    <link href="https://lutaonan.com/blog/2020-summary/"/>
-    <updated>2021-01-10T00:00:00Z</updated>
-    <id>https://lutaonan.com/blog/2020-summary/</id>
-    <content type="html">&lt;p&gt;COVID-19 疫情最严重的时候我在广州，记得我 12 月底从杭州飞回广州的时候，根本没有想到事情会发展得和 SARS 一样严重。印象中那个时候的关键词是：安静，冷空气，未知。不知道这样的情况会持续多久，每天关注着 Telegram 的 Broadcast 看新增的感染有多少。同时还远程办公着，做着「花呗来电」的需求。没错，就是那个让你付钱还要每月打电话提醒你还花呗的服务。&lt;/p&gt;
-&lt;p&gt;没想到多年前我们都在探索的远程办公，会因为一场传染病让更多人体验到了。但显然，我体验到的只是畸形的远程办公，他披上了远程办公的外衣，让我们每个人变成了 On call 24 小时 —— 比如我甚至在炒菜的时候还要接入电话会议。&lt;/p&gt;
-&lt;p&gt;我思考了很多，在 4 月份决定&lt;a href=&quot;https://lutaonan.com/blog/leaving-alibaba&quot;&gt;离开阿里巴巴&lt;/a&gt;。后来我面试了一些公司，那些你能说得出名字的公司我应该面了有一半。我很奇怪现在的「大厂」招聘到底是什么标准，问的问题到底有什么意义，让我一度严重怀疑我的能力。当然，有些面试者可能也觉得奇怪，为什么这样一个在博客上侃侃而谈的人，连浏览器如何验证 HTTPS 证书的都不知道。&lt;/p&gt;
-&lt;p&gt;后来落实了现在的工作，不过我现阶段不打算过多的提及我的新工作。但在这个新的环境，遇到的新的人们，对我一些固有的想法有了不少的冲击，让我有了一些新的想法和反思：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;优秀的程序员和普通的程序员之间很多时候只隔了一层好奇心，对「有没有更好，更有效率，更聪明的做法」的好奇心。&lt;strong&gt;在这个时代，「代码」是一种生产资料的，而大量的程序员们却自己忽略了这一点，或者自愿放弃了这点&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;把技术作为兴趣的人是少数，只是互联网让我们有机会聚集到了一起，这让我很长一段时间误以为这就是程序员的常态。现在每当我因一个程序员缺乏专业素养而内心愤怒的时候， &lt;strong&gt;我都会提醒自己，不是每个人都像我一样愿意(或者有条件)把技术带到日常生活中去。&lt;/strong&gt; 我每天吸收的资讯、读的书大部分都和技术有关，这只是因为我的兴趣和职业都恰好是技术，但别人不是。&lt;/li&gt;
-&lt;li&gt;我在很多人的眼里是幸运的 —— 我有条件在很小的时候接触计算机，我「幸运地」在退学以后还能进「大厂」，等等等等。我承认我是幸运的，但我一直在思考，我所享受到的幸运，可以如何为那些不那么「幸运」的人带去一些有用的东西呢？博客是我一直在做的，也能稍微达到目的，但这远远不够。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;%E6%8A%80%E6%9C%AF&quot;&gt;技术&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;在一个内部平台用了 &lt;a href=&quot;https://hapi.dev/&quot;&gt;hapi&lt;/a&gt;, 我非常喜欢 &lt;code&gt;hapi/boom&lt;/code&gt; 的设计。hapi 是我目前用 Node 写 API Server 的首选。&lt;/li&gt;
-&lt;li&gt;学了一段时间 Go, 写了 &lt;a href=&quot;https://github.com/djyde/snp&quot;&gt;snp&lt;/a&gt;. 目前还没有场景用到 Go 的更高阶的特性。以后我会尽量把和前端无关的工具用 Go 写。&lt;/li&gt;
-&lt;li&gt;我仍然一直在关注 &lt;a href=&quot;https://rescript-lang.org/&quot;&gt;ReScript&lt;/a&gt; (也就是 ReasonML), 我认为 ReScript 是所有编译到 JavaScript 的方言里最优雅的语言。她的特性弥补了用 ECMAScript 写 React 的缺点。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;%E6%88%91%E4%BB%8A%E5%B9%B4%E6%9C%80%E5%96%9C%E6%AC%A2%E7%9A%84%E6%8A%80%E6%9C%AF&quot;&gt;我今年最喜欢的技术&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://hasura.io/&quot;&gt;Hasura&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://prisma.io/&quot;&gt;Prisma&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://chakra-ui.com/&quot;&gt;chakra-ui&lt;/a&gt; 它比 Ant.Design 更容易定制化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;best-buy&quot;&gt;Best buy&lt;/h2&gt;
-&lt;p&gt;(&lt;small&gt;*排名分先后&lt;/small&gt;)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/tesla-model-3-review/&quot;&gt;Tesla Model 3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/go/shop/xiaomi-chongya&quot;&gt;小米冲牙器&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;以前用牙线，麻烦，效率低，不环保，不全面。用了冲牙器，快、有效、方便。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/go/shop/sony-a6100&quot;&gt;SONY a6100&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;替换了我的黑卡 3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;我也对我买过的数码产品进行了反思，觉得有些对我来说是性能过剩的：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;iPad Pro&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如果现在让我选，我肯定会选更便宜且支持二代 Apple Pencil 的 iPad Air. 我目前对 iPad 的需求只有：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;支持二代 Apple Pencil&lt;/li&gt;
-&lt;li&gt;支持蜂窝&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;MacBook Pro 32GB 内存&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;我在买这台 MacBook 的时候特意把内存加到了 32GB, 但这些年用下来，我发现我对 laptop 的需求瓶颈不在内存，而是 CPU, 运算速度，续航和发热量，而这些东西在这台 MacBook Pro 都没有做得好。&lt;/p&gt;
-&lt;p&gt;我可能会在一年后换成 M2 的 MacBook Air 取代这台 MacBook Pro.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Apple Watch&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Apple Watch 对于有氧训练来说确实非常好用，但对于我大多数情况下都是力量训练的人来说并没有太大的用处，唯一的用处只有一些健身记录的 App 可以通过 Apple Watch 在训练的时候进行记录，或者组间计时。而我更愿意用小本子来记(因为记录一些训练感受的备注更方便)，我的卡西欧手表计时也足够方便。&lt;/p&gt;
-&lt;p&gt;我也用 AutoSleep 记录过一段时间的睡眠时间和质量，但我本身睡眠就没有什么问题，所以这些数据对我没有什么帮助。&lt;/p&gt;
-&lt;h2 id=&quot;%E5%B7%A5%E5%85%B7&quot;&gt;工具&lt;/h2&gt;
-&lt;p&gt;今年用到了两个新的工具，值得分享给大家。&lt;/p&gt;
-&lt;h3 id=&quot;roam-research&quot;&gt;Roam Research&lt;/h3&gt;
-&lt;p&gt;我在试用了 30 天 Roam Research 以后就发现我离不开它，所以咬着牙订阅了它。我记的想法或者笔记通常是零散的，没有组织的，但在 Roam Research 里可以通过 tag 和 backlink 把这些零散的记录关联到一起，可以很好地辅助我的写作。&lt;/p&gt;
-&lt;p&gt;比如在我的 Roam Research 里有提到关于 Roam Research 的记录都能直观地看到：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/uPic/cpfllD.png?x-oss-process=style/80&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;有时候我在写作的时候会惊喜地发现有些有关联的笔记我自己都已经忘了，如果不是 backlink 我可能永远都不会想起它。所以它就像是我&lt;strong&gt;第二大脑&lt;/strong&gt; ：我们虽然暂时还无法复制我们自己的大脑，但是我们可以通过文字笔记的方式创造一个我们大脑的子集。它记忆了自己曾经学习过的、思考过的东西，永远不会忘记。在需要的时候，随时可以翻查这个第二大脑的记忆，而且他是网状的，拥有一定程度上的「联想」。&lt;/p&gt;
-&lt;p&gt;我之后会详细地分享我是如何用 Roam Research 的。&lt;/p&gt;
-&lt;h3 id=&quot;cubox&quot;&gt;Cubox&lt;/h3&gt;
-&lt;p&gt;https://cubox.pro&lt;/p&gt;
-&lt;p&gt;我以前不用书签管理工具，有些曾经读过的文章和工具，在之后想找也找不到了。在用了 Roam Research 之后，感受到了 tag 的强大力量，所以我开始用书签管理工具, 给每一个书签加上标签，日后我可以通过 tag 的组合找到忘掉的东西。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Cubox 也替代了我其它的 Read it later 工具，我现在看到无法短时间消化的文章，都可以收藏到 Read it later 的文件夹里，到晚上统一处理。&lt;/li&gt;
-&lt;li&gt;在移动端用 share sheet 也可以很方便把移动端上看到的页面收藏到 Cubox&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;%E9%98%85%E8%AF%BB&quot;&gt;阅读&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;《精通正则表达式》&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;我是在一次面试的时候被问到过一个用正则表达式提取一个固定语法的句子里的信息的问题，之后我就读到了这本《精通正则表达式》，前三章已经让我收获非常大。这个收获不是那些正则表达式的基本语法，而是这本书想要传达给读者的思想 —— 把正则表达式作为一种工具去运用它。&lt;/p&gt;
-&lt;p&gt;我在读了这本书之后再也没有了以前对正则表达式的那种恐惧，而且还因为正则表达式学习了很多关于 Parser 的知识，也在日常开发中惊喜地发现有很多问题可以用正则的方式解决。&lt;/p&gt;
-&lt;p&gt;《精通正则表达式》是我今年读的最有价值的一本书。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;How to make smart notes&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;因为用 Roam Research 所以读的一本书，讲的是做笔记的方法论。&lt;/p&gt;
+    <title>解决MacOS休眠后Wifi卡死断网的方法</title>
+    <link href="https://lutaonan.com/blog/mac-wifi-dropdown/"/>
+    <updated>2019-07-24T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/mac-wifi-dropdown/</id>
+    <content type="html">&lt;h2 id=&quot;%E7%97%87%E7%8A%B6&quot;&gt;症状&lt;/h2&gt;
+&lt;p&gt;合盖睡眠再次唤醒后没有WiFi连接。点WiFi图表转菊花。&lt;/p&gt;
+&lt;p&gt;需要重新启动才能解决。问题不定时出现，而且并不限于某一个WiFi。&lt;/p&gt;
+&lt;h2 id=&quot;%E4%B8%B4%E6%97%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88&quot;&gt;临时解决方案&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Even the best tool will not improve your productivity considerably if you don’t change your daily routines the tool is embedded in, just as the fastest car won’t help you much if you don’t have proper roads to drive it on. Like every change in behaviour, a change in working habits means going through a phase where you are drawn back to your old ways.&lt;/p&gt;
+&lt;p&gt;sudo killall airportd&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://lutaonan.com/go/shop/clean-arch&quot;&gt;《整洁架构之道》&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;我最早的职业规划是成为一个架构师，在工作以来也用自己的方法「设计」过很多系统和工具，这本书是讲真正的软件架构，里面解答了很多我想要知道的答案，软件架构的目标是什么，如何做软件架构，如何做技术选型。还有一些真实的架构案例可以参考。&lt;/p&gt;
-&lt;p&gt;这本书我要再读一两遍才能详细地和大家分享。&lt;/p&gt;
-&lt;h2 id=&quot;%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%E6%83%B3%E5%81%9A%E7%9A%84&quot;&gt;新的一年想做的&lt;/h2&gt;
-&lt;p&gt;如果有机会，我希望可以在今年做一个小而美且有人愿意购买的产品，她会是好用的、体验好的、克制的、能带给用户更深层次的价值的。&lt;a href=&quot;https://sspai.com/post/61000&quot;&gt;就像印刷机，他表面上看上去只是一个工具，但他对于人类知识文化的传播是功不可没的&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&quot;%E5%BD%BB%E5%BA%95%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88&quot;&gt;彻底解决方案&lt;/h2&gt;
+&lt;p&gt;打开系统偏好设置，选择网络，选择位置里的『编辑位置』，新建一个位置，比如「work」，并选择「work」。反正不要选「自动」&lt;/p&gt;
+&lt;p&gt;打开系统设置里隐私-位置，关掉「Wi-Fi Networking」的位置获取权限&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gt-toolbox.oss-cn-beijing.aliyuncs.com/8bS5dK.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;重启&lt;/p&gt;
 </content>
   </entry>
   
   <entry>
-    <title>2019 年终总结：慢慢变成别人眼中「食古不化」的「怪人」</title>
-    <link href="https://lutaonan.com/blog/2019-summary/"/>
-    <updated>2020-01-01T00:00:00Z</updated>
-    <id>https://lutaonan.com/blog/2019-summary/</id>
-    <content type="html">&lt;h2 id=&quot;%E6%80%BB%E7%BB%93&quot;&gt;总结&lt;/h2&gt;
-&lt;p&gt;2019 年 3 月我来到杭州，在蚂蚁金服开始了新的工作。这是我第一次在广东省外的地方生活。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/blog/hang.jpg?x-oss-process=style/80&quot; alt=&quot;杭州的公路&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;新的环境，新的工作，对我来说是一个很大的挑战。挑战不在于如何适应一个新的环境，而在于在一个技术基建完备的环境里，如果业务难关不是技术可以解决的，那我的价值在哪里？在这个方面，我让很多对我抱有期望的人失望了。&lt;/p&gt;
-&lt;p&gt;「我的价值是什么」是我不断寻找答案的命题，我不满足只作为一个消费者活在世上。只有作为生产者创造自己独特的价值，才让我觉得自己是这个世界的一员。&lt;/p&gt;
-&lt;p&gt;我创造了很多，但好像只有写博客算是对别人来说稍微有价值的东西。现代的人又不怎么喜欢认真地看文字了，写好一篇文章的阅读量也不比同样内容的一个视频高。就连我一个关注了很久的独立博客博主，也转了型做视频。&lt;/p&gt;
-&lt;p&gt;「写博客」似乎已经是一件看上去「食古不化」的事，而我竟然越来越「食古不化」了。有时候到一家餐厅，被告知没有餐牌，只能扫码点餐，我会反问，「如果我没有手机呢？」。&lt;/p&gt;
-&lt;p&gt;我想，如果旁边正好有一位比我年轻十岁的客人听到我这样问，他心中也许会暗想，「x, 这个食古不化的傻x」。&lt;/p&gt;
-&lt;p&gt;今年下半年我又因为不能忍受国内社交网络的反智内容和评论，微信和微博都变成了只写的状态，除非收到消息，微信几乎不怎么打开。此举极大地改善了我的心理健康。但在别人眼里，就是一个不合群的怪人。&lt;/p&gt;
-&lt;p&gt;告别 2019，我就 25 岁了。这是一个不算年轻，也不算不年轻的岁数。如果开始「食古不化」是变老的征兆，那么我已经开始变老了。但如果不懒惰、不犬儒、不圆滑、不反智就是年轻，那么我将会永远年轻下去。&lt;/p&gt;
-&lt;h2 id=&quot;%E6%95%B0%E6%8D%AE&quot;&gt;数据&lt;/h2&gt;
-&lt;h3 id=&quot;%E5%8D%9A%E5%AE%A2&quot;&gt;博客&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/tg_image_2920303564.jpeg?x-oss-process=style/80&quot; alt=&quot;博客数据&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;今年博客的 UV 比上一年多了 10, 000. PV 比上一年多了 40, 000. &lt;a href=&quot;https://lutaonan.com/blog/one-year-of-bulking&quot;&gt;《健身一年》&lt;/a&gt; 问率最高。&lt;/p&gt;
-&lt;p&gt;博客没有广告，所有收入来源于读者自发赞赏，今年收到的赞赏总共有约 200 元人民币。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/tg_image_1589983487.jpeg?x-oss-process=style/80&quot; alt=&quot;读者来信&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;共收到 11 封咨询信和很有心的感谢信。&lt;/p&gt;
-&lt;h3 id=&quot;%E9%9F%B3%E4%B9%90&quot;&gt;音乐&lt;/h3&gt;
-&lt;p&gt;今年做了 6 首翻唱，上传在 &lt;a href=&quot;https://www.youtube.com/channel/UCFQUVJ0_ZGzvuX6GHl_cqsQ&quot;&gt;YouTube&lt;/a&gt; 和 &lt;a href=&quot;https://space.bilibili.com/20931693&quot;&gt;Bilibili&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/tg_image_79326384.jpeg?x-oss-process=style/80&quot; alt=&quot;YouTube 首页&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;播放量最高的是《奉献》和《黄昏》。&lt;/p&gt;
-&lt;h3 id=&quot;%E9%98%85%E8%AF%BB&quot;&gt;阅读&lt;/h3&gt;
-&lt;p&gt;今年读的书里有以下几本想推荐给大家：&lt;/p&gt;
-&lt;p&gt;《学会提问：批判式思维指南》（&lt;a href=&quot;https://book.douban.com/subject/20428922/&quot;&gt;豆瓣&lt;/a&gt; | &lt;a href=&quot;https://lutaonan.com/go/shop/critical-thinking&quot;&gt;购买&lt;/a&gt;）&lt;/p&gt;
-&lt;p class=&quot;text-sm&quot;&gt;这本书提到了几个常见的逻辑谬误，以及如何去看待别人的观点，如何得出自己思考过的结论。这本书没有教你应该相信谁，而是不应该相信谁。&lt;/p&gt;
-&lt;p&gt;《非暴力沟通》（&lt;a href=&quot;https://book.douban.com/subject/3533221/&quot;&gt;豆瓣&lt;/a&gt; | &lt;a href=&quot;https://lutaonan.com/go/shop/nonviolent-communication&quot;&gt;购买&lt;/a&gt;）&lt;/p&gt;
-&lt;p class=&quot;text-sm&quot;&gt;
-&lt;a href=&quot;https://lutaonan.com/blog/nonviolent-communication&quot;&gt;我的书评&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;《颓废与沉默》（&lt;a href=&quot;https://book.douban.com/subject/26575643/&quot;&gt;豆瓣&lt;/a&gt; | &lt;a href=&quot;https://lutaonan.com/go/shop/tui-fei-yu-chen-mo&quot;&gt;购买&lt;/a&gt;）&lt;/p&gt;
-&lt;p class=&quot;text-sm&quot;&gt;这本书结合中国发生的实例解释了中国存在的「犬儒主义」，和它产生的原因和影响。&lt;/p&gt;
-&lt;h3 id=&quot;%E6%B6%88%E8%B4%B9&quot;&gt;消费&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Kindle Oasis&lt;/strong&gt; ( &lt;a href=&quot;https://lutaonan.com/go/shop/kidle-oasis&quot;&gt;购买&lt;/a&gt; ) 替换了我的 Kindle Paperwhite. 手感很好，放裤袋很轻松。是我今年买得最值的产品。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;黑卡 3&lt;/strong&gt; ( &lt;a href=&quot;https://lutaonan.com/go/shop/rx100m3&quot;&gt;购买&lt;/a&gt; ) 替换了我的黑卡 1, 有可以旋转的屏幕，自己拍视频的时候轻松多了。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;iPad Pro&lt;/strong&gt; ( &lt;a href=&quot;https://lutaonan.com/blog/ipad-pro-11-review&quot;&gt;我的评测&lt;/a&gt; ) 替换了我的 iPad mini 2. 主要用来看微信读书，睡前浏览各个咨询网站。最后悔是没有买蜂窝版。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;%E6%AF%8F%E5%A4%A9%E9%83%BD%E7%9C%8B%E7%9A%84%E5%86%85%E5%AE%B9&quot;&gt;每天都看的内容&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.v2ex.com/&quot;&gt;V2EX&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://news.ycombinator.com/&quot;&gt;Hacker News&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://theinitium.com/&quot;&gt;端传媒&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Podcast (睡前听)&lt;/li&gt;
-&lt;li&gt;Feedly (只订阅一些独立博客)&lt;/li&gt;
-&lt;li&gt;YouTube&lt;/li&gt;
-&lt;li&gt;Twitter&lt;/li&gt;
-&lt;li&gt;Instagram&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;%E6%94%BE%E7%A9%BA%E7%9A%84%E6%97%B6%E5%80%99%E7%9C%8B%E7%9A%84%E5%86%85%E5%AE%B9&quot;&gt;放空的时候看的内容&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://sspai.com/&quot;&gt;少数派&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://dgtle.com/&quot;&gt;数字尾巴&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;%E5%85%B3%E4%BA%8E-2020&quot;&gt;关于 2020&lt;/h2&gt;
-&lt;p&gt;创造更多价值吧。&lt;/p&gt;
+    <title>css tips</title>
+    <link href="https://lutaonan.com/blog/css-tips/"/>
+    <updated>2019-07-16T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/css-tips/</id>
+    <content type="html">&lt;h2 id=&quot;%E5%8D%95%E8%A1%8C%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7%EF%BC%9A&quot;&gt;单行文本溢出显示省略号：&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.daqianduan.com/wp-content/uploads/2015/10/dome1.png&quot; alt=&quot;单行文本溢出显示省略号&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E5%A4%9A%E8%A1%8C%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA%E6%98%BE%E7%A4%BA%E7%9C%81%E7%95%A5%E5%8F%B7&quot;&gt;多行文本溢出显示省略号&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;display: -webkit-box;
+overflow: hidden;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.daqianduan.com/wp-content/uploads/2015/10/dome2.png&quot; alt=&quot;多行文本溢出显示省略号&quot; /&gt;&lt;/p&gt;
 </content>
   </entry>
   
   <entry>
-    <title>2018 年终总结</title>
-    <link href="https://lutaonan.com/blog/2018-summary/"/>
-    <updated>2019-01-07T00:00:00Z</updated>
-    <id>https://lutaonan.com/blog/2018-summary/</id>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;大人热爱数字。如果你跟他们说你认识了新朋友，他们从来不会问你重要的事情。他们从来不会说：“他的声音听起来怎么样？他最喜欢什么游戏？他收集蝴蝶吗？”&lt;/p&gt;
-&lt;p&gt;他们会问：“他多少岁？有多少个兄弟？他有多重？他父亲赚多少钱？”只有这样他们才会觉得他们了解了他。&lt;/p&gt;
-&lt;p&gt;如果你对大人说：“我看到一座漂亮红砖房，窗台上摆着几盆天竺葵，屋顶有许多鸽子……”那他们想象不出这座房子是什么样子的。你必须说：“我看到一座价值十万法郎的房子。”他们就会惊叫：“哇，多漂亮的房子啊！”&lt;/p&gt;
-&lt;p&gt;—— 《小王子》&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;2018 对我自己来说，是灰心的一年。这一年除了和往年一样的焦虑以外，也没有做成什么我认为了不起的事。很大的原因是我对技术失去了信心。&lt;/p&gt;
-&lt;p&gt;小时候，我最大的理想是「用技术改变世界」，但我早在我的 &lt;a href=&quot;https://lutaonan.com/blog/2017-summary/&quot;&gt;2017 年终总结&lt;/a&gt; 里提到：「技术并不是那么重要，它只不过是一种手段而已」。今年我更加确信这一点，我们做技术的人，永远只能间接地改变世界。一个可以改变人们生活方式的产品，技术虽是不可缺少的部份，但也不是起决定性作用的部分。&lt;/p&gt;
-&lt;p&gt;于我而言这是灾难性的信仰崩塌。&lt;/p&gt;
-&lt;p&gt;有时夜里我也会反思，是不是对自己的要求太高了，又或者是，我太想向别人证明自己，害怕自己变得平庸。而在今年，我意识到自己真的变得平庸了，所以我把他称为灰心的一年。&lt;/p&gt;
-&lt;p&gt;而今年最主要的心态变化，则是随着年龄的增长和财富的积累，我不免也会想到未来的现实生活。婚姻、家庭、置业，等等。我觉得这些东西不能带给我快乐，它们不是我想要的。但是为什么每一个人都要「善意」地提醒我，你应该这样，应该那样呢。我不买房，便错么？成年人的眼里，为什么都只有所谓的「保值」、「升值」呢。&lt;/p&gt;
-&lt;p&gt;我们总说大人们不关心孩子们快不快乐，只关心孩子们的成绩。原来大人们也不关心大人们快不快乐啊。&lt;/p&gt;
-&lt;h2 id=&quot;%E5%B7%A5%E4%BD%9C&quot;&gt;工作&lt;/h2&gt;
-&lt;p&gt;今年除了支撑了几个业务的后台管理系统以外，主要在思考的东西是如何利用 GraphQL 帮助开发者更轻松地应对中后台管理系统的开发。&lt;/p&gt;
-&lt;p&gt;在内部做了很多基建以后我有一个感悟，我们做基建的初衷是提高开发者的效率，但是实际上，影响开发者效率的因素，很大程度是开发者本身。基建能做的很有限。举例来说，Redux 这么一个「简单」的库，却有很多人用不好。在项目里，很多可以简单实现的地方，由于编程水平、经验、对库/框架的了解程度等等条件的不足，开发者就把简单的问题复杂地解决了。&lt;/p&gt;
-&lt;p&gt;即使给人一台最好的单反，也不一定拍得出最好的照片——因为重点还是镜头背后的那颗脑袋。&lt;/p&gt;
-&lt;p&gt;所以在新的一年，我的目标是多输出一些理论层面的东西。&lt;/p&gt;
-&lt;h2 id=&quot;%E6%B6%88%E8%B4%B9&quot;&gt;消费&lt;/h2&gt;
-&lt;p&gt;2018 年依然是没有节制地消费，不过买的东西已经不多了（该买的都买过了）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;把 Yamaha 的电子琴换成了 Korg Kross1&lt;/li&gt;
-&lt;li&gt;搬到了一个 43 平米的一房一厅&lt;/li&gt;
-&lt;li&gt;买了 TASCAM 录音笔&lt;/li&gt;
-&lt;li&gt;买了 Scarlett 2i2 音频介面 （用来录些 cover）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;（不得不提欧德堡全脂牛奶是大概一周一箱...）&lt;/p&gt;
-&lt;h2 id=&quot;%E8%BE%93%E5%87%BA&quot;&gt;输出&lt;/h2&gt;
-&lt;p&gt;今年尝试性地做了一集技术的短视频内容：&lt;a href=&quot;http://www.bilibili.com/video/av36543409&quot;&gt;《解读 The State of JavaScript 2018》&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;%E7%94%9F%E6%B4%BB&quot;&gt;生活&lt;/h2&gt;
-&lt;p&gt;2018 年我做了决定，我的生活不再是 80% 的 coding time 了，我把更多的时间，花在了别的地方——音乐、健身、读书。这是一个巨大的变化，因为在以前，代码几乎是我生活的全部。&lt;strong&gt;我意识到，如果我稍微放下一点点的代码时间，生活里还可以拥有更多有趣的东西。&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&quot;%E5%81%A5%E8%BA%AB&quot;&gt;健身&lt;/h3&gt;
-&lt;img class=&quot;small&quot; src=&quot;https://gbstatic.djyde.com/assets/006tNc79ly1fyy4u0ie1bj30pa0pan1o.jpg&quot; /&gt;
-&lt;p&gt;健身可以说是 2018 年唯一一件做成了的事情。我从 2018 年 1 月份开始健身，每周训练 3-4 天，控制饮食。直到现在刚好整整一年，达到了从 46kg 到 54 kg 的变化。&lt;/p&gt;
-&lt;p&gt;如果问我是怎么坚持下来的，我认为无论是坚持什么，都是：因为相信，所以咬着牙坚持试试，坚持了一段时间后，它就成了你的一种生活方式。&lt;strong&gt;当它成为了你的一种生活方式的时候，就无所谓坚持和不坚持了&lt;/strong&gt;。就像你不会去问别人是怎么「坚持」看美剧的一样。&lt;/p&gt;
-&lt;p&gt;关于更多我健身的经验，我会在之后单独写一篇文章分享。&lt;/p&gt;
-&lt;h3 id=&quot;%E5%BE%B7%E5%B7%9E%E6%89%91%E5%85%8B&quot;&gt;德州扑克&lt;/h3&gt;
-&lt;p&gt;今年学会了德州扑克，和朋友打了很多场。我非常喜欢这个扑克游戏，他让我更了解我的牌友，更重要的是，在牌局里，我意识到了自己的缺点：冒进、喜欢承受高风险高回报、贪婪、充满侥幸心理。每次打完，通过回顾自己的打法，我更加了解我自己，我会反思：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;是不是贪婪让我失去了我的筹码？&lt;/li&gt;
-&lt;li&gt;下一次我再遇到相同的情况时，我如何控制自己的欲望？&lt;/li&gt;
-&lt;li&gt;我应该付出多少的筹码，才是一次价值下注，才能击败我的对手？&lt;/li&gt;
-&lt;li&gt;面对失败时，我是否能做到及时止损，调整心态？&lt;/li&gt;
-&lt;li&gt;当我读到对方的牌有 80% 的概率是比我强的时候，我是否可以克服自己的侥幸心理而不去跟注？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;德州扑克结合了运气、心理、概率、演技，它不仅是人与人之间的博弈，也能让你有不妥协于运气的机会——你拿一手烂牌，仍然能打好（当然，运气有时候也会打败你，本来在转牌时胜利在望，河牌却是别人的翻身之牌）。&lt;/p&gt;
-&lt;p&gt;我还转载排版了世界扑克巡回赛（WPT）总决赛冠军老邱的小传记 &lt;a href=&quot;https://randyloop.gitbooks.io/the-legend-of-david-chiu/content/&quot;&gt;《赌士列传: 老邱传奇》&lt;/a&gt;。相信你可以通过这篇传记感受到德州扑克的魅力。&lt;/p&gt;
-&lt;h2 id=&quot;%E5%8D%9A%E5%AE%A2%E6%88%90%E7%BB%A9&quot;&gt;博客成绩&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tNc79ly1fyy7f777sfj31im0cead2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;在这一年收到了挺多的读者来信，向我询问建议，我都尽量抽时间一一回复。还有一些文章收到的打赏留言里提到的因为我的文章而有所收获，让我知道我写的博客的确有他的价值所在。&lt;/p&gt;
-&lt;h2 id=&quot;%E5%85%B3%E4%BA%8E-2019&quot;&gt;关于 2019&lt;/h2&gt;
-&lt;p&gt;希望把生活过得更有趣一些。&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>2018 香港流行音乐推介</title>
-    <link href="https://lutaonan.com/blog/2018-cantonpop-list/"/>
-    <updated>2018-12-19T00:00:00Z</updated>
-    <id>https://lutaonan.com/blog/2018-cantonpop-list/</id>
-    <content type="html">&lt;p&gt;「香港乐坛已死」已经不是什么新鲜的论调，这句话也经常被用于伪装自己对当代流行音乐颇有研究。作为一个港乐爱好者，我对此一直持相反的意见。港乐没死，但它的确从大众变成小众了。&lt;/p&gt;
-&lt;p&gt;「&lt;a href=&quot;https://blog.yitianshijie.net/2018/12/03/pop-and-nostalgia/&quot;&gt;流行文化产品是时代气息的显影&lt;/a&gt;」，显然，当代粤语片区大多数人们变得不再需要粤语流行歌曲，他们比以前有更多选择，例如综艺、韩国流行文化等等。当然也和当代人接触信息的媒介有很大的关系，毕竟如果消费者可以满足于连「俗气芭乐」都不如的《学猫叫》，那么又何必费钱费心思去做更具音乐性的音乐作品呢。&lt;/p&gt;
-&lt;p&gt;当粤语片区的年轻一代人「抛弃」了电视机，加上国内串流音乐服务的版权问题，粤语流行文化在国内就很难传播进来了。如果不是主动接触它，关注它，粤语流行歌曲几乎没有机会进入你的耳朵。唯一的机会是香港艺人参加国内的音乐类综艺节目，但为了照顾观众，唱起了国语，发行的也是国语唱片。&lt;/p&gt;
-&lt;p&gt;不发国语唱片的新生代香港音乐人自然更难被发现，但港乐从旋律、编曲、填词都不输中国大陆（以及台湾地区）的流行音乐。下面是一个歌单，这些歌是我心目中 2018 年发行的粤语歌曲中最好的。听完这些歌，你就可以大概清楚目前港乐的发展状况。它是真的不如其它的流行音乐吗？&lt;/p&gt;
-&lt;p&gt;（如果你用 PC 访问这篇文章，在这里会有一个 Spotify 播放器，播放这一整个歌单）&lt;/p&gt;
-&lt;iframe class=&quot;spotify&quot; src=&quot;https://open.spotify.com/embed/user/randyloop/playlist/2A5YT9MzHZw0AilWIu80iW&quot; width=&quot;300&quot; height=&quot;80&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; allow=&quot;encrypted-media&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;strong&gt;《心之科学》 容祖儿&lt;/strong&gt; 作曲：&lt;strong&gt;Howie@DearJane &amp;amp; 林家謙&lt;/strong&gt; / 填词：&lt;strong&gt;黃偉文&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《小问题》 AGA&lt;/strong&gt; 作曲：&lt;strong&gt;AGA&lt;/strong&gt; / 填词：&lt;strong&gt;陳詠謙&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《未来见》 RubberBand&lt;/strong&gt; 作曲：&lt;strong&gt;RubberBand&lt;/strong&gt; / 填词：&lt;strong&gt;Tim Lui&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《恐怖情人》 许廷铿&lt;/strong&gt; 作曲：&lt;strong&gt;雷頌德&lt;/strong&gt; / 填词：&lt;strong&gt;林夕&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《无期》 AGA&lt;/strong&gt;  作曲：&lt;strong&gt;AGA&lt;/strong&gt; / 填词：&lt;strong&gt;林夕&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《哪儿》 小尘埃&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《仙乐处处飘》 小尘埃&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《挥挥手》 JW&lt;/strong&gt; 作曲：&lt;strong&gt;Eye Fung&lt;/strong&gt; / 填词：&lt;strong&gt;陳詠謙&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《荣辱战争》 林奕匡&lt;/strong&gt; 作曲：&lt;strong&gt;林奕匡&lt;/strong&gt; / 填词：&lt;strong&gt;陳詠謙&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《人妻的伪术》 谢安琪&lt;/strong&gt; 作曲：&lt;strong&gt;雷頌德&lt;/strong&gt; / 填词：&lt;strong&gt;林夕&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《睡前服》 小肥&lt;/strong&gt; 作曲：&lt;strong&gt;小肥&lt;/strong&gt; / 填词：&lt;strong&gt;Tim Lui&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《天才儿童 1985》 张敬轩&lt;/strong&gt; 作曲：&lt;strong&gt;伍樂城&lt;/strong&gt; / 填词：&lt;strong&gt;黃偉文&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《重阳》 邓小巧&lt;/strong&gt; 作曲：&lt;strong&gt;林家謙、謝國維&lt;/strong&gt; / 填词：&lt;strong&gt;黃偉文&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《百年树木》 张敬轩&lt;/strong&gt; 作曲：&lt;strong&gt;伍卓賢&lt;/strong&gt; / 填词：&lt;strong&gt;林若寧&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《风尘三侠》 小肥/侧田/6号@RubberBand&lt;/strong&gt; 作曲：&lt;strong&gt;李偉@RubberBand&lt;/strong&gt; / 填词：&lt;strong&gt;林寶&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;《如何从夏天活过来》 黄妍&lt;/strong&gt; 作曲：&lt;strong&gt;黄妍&lt;/strong&gt; / 填词：&lt;strong&gt;黄妍&lt;/strong&gt;&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>2017 年终总结</title>
-    <link href="https://lutaonan.com/blog/2017-summary/"/>
-    <updated>2018-01-03T00:00:00Z</updated>
-    <id>https://lutaonan.com/blog/2017-summary/</id>
-    <content type="html">&lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
-&lt;p&gt;我的 2017 过得很平淡，可能是因为出来工作已经是第二年了。&lt;/p&gt;
-&lt;p&gt;今年比较特别的是身边的朋友都大四了，参加了一些毕业拍照。大家都陆陆续续地开始找工作，面试。偶尔在朋友圈看到朋友拿到 offer, 也会替他们感到开心。&lt;/p&gt;
-&lt;p&gt;有很多朋友开始请教我一些出来工作的经验，面试的技巧、offer 怎么选择、租房的经验等等。被问到这些问题的时候我也会很开心。因为以前上学的时候，学业成绩不好，我在班上除了搞搞笑，对身边的同学来说并没有多大的「用处」。&lt;/p&gt;
-&lt;p&gt;4 月份的时候上台拿了 16 年的优秀新人奖，但是 17 年整一年没有做出很出色的成绩。慢慢失落地发现在很多事情上，技术并不是那么重要，它只不过是一种手段而已。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn3migpdnvj30tx0txaf6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;在年底，和 @EGOIST 一起创办了 &lt;a href=&quot;https://stickeroverflow.org/&quot;&gt;StickerOverflow&lt;/a&gt;. 成功地让国内的开发者能买到高质量的技术贴纸。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn3n2vutcoj30u00u0nah.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;今年想得比较多的是应该如何用自己的能力去帮助更多的人。想过去做培训，想过回大学给以前班的人开个交流会，想过写书。最后都搁置了，因为我后来发现，「助人」有时是一件很一厢情愿的事。&lt;/p&gt;
-&lt;p&gt;除了技术外，这一年有很多新的尝试，上台唱歌纪念张国荣，参加了唱歌的比赛，做了一期&lt;a href=&quot;http://music.163.com/#/djradio?id=350672104&quot;&gt;音乐电台节目&lt;/a&gt;。在新的一年，还想尝试去经营一个音乐博客，让更多人发现被忽略的优秀粤语流行音乐和歌手。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn3mgojgc1j30qo0xcafi.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;%E5%8D%9A%E5%AE%A2%E6%88%90%E7%BB%A9&quot;&gt;博客成绩&lt;/h2&gt;
-&lt;p&gt;今年博客的 PV 和 UV 都小幅度降低了，原因是今年下半年文章写得很少。因为花了不少时间在比写文章更有趣的事情上。&lt;/p&gt;
-&lt;p&gt;博客没有广告，但还是会有人因为读文章而受到启发给我赞赏，今年一共收到 ￥136 的赞赏。更开心的是收到了一些真诚的交流邮件。&lt;/p&gt;
-&lt;h3 id=&quot;pv%2Fuv&quot;&gt;PV/UV&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn2ebqiqbhj31kw0jvn2k.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;PV: &lt;strong&gt;33,247&lt;/strong&gt; (去年 &lt;strong&gt;49,406&lt;/strong&gt;), UV: 12,172 (去年 &lt;strong&gt;15,800&lt;/strong&gt;)&lt;/p&gt;
-&lt;h3 id=&quot;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&quot;&gt;操作系统&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn2ec5tdhoj31f00hedhz.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;%E6%9D%A5%E6%BA%90&quot;&gt;来源&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn2ehoxfhzj316y0ks771.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;%E7%94%A8%E6%88%B7%E8%AE%BF%E9%97%AE%E7%9A%84%E6%97%B6%E6%AE%B5&quot;&gt;用户访问的时段&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn2ek8wd91j30j60v43zv.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;%E8%AE%BE%E5%A4%87&quot;&gt;设备&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn2ekpdlnwj30iu0v4q4x.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;%E6%B6%88%E8%B4%B9&quot;&gt;消费&lt;/h2&gt;
-&lt;h3 id=&quot;%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81&quot;&gt;电子产品&lt;/h3&gt;
-&lt;h4 id=&quot;iphone-8&quot;&gt;iPhone 8&lt;/h4&gt;
-&lt;p&gt;把很喜欢的 iPhone SE 退役了，因为跑 iOS11 耗电快，性能不够。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn3mzigtncj31ja17uaqe.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;sony-%E9%BB%91%E5%8D%A1-1&quot;&gt;SONY 黑卡 1&lt;/h4&gt;
-&lt;p&gt;为了方便写数码产品评测，入手了黑卡 1 代。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn3n6gqyzaj30u00u0gqv.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;ds216j%2Fds218%2B&quot;&gt;DS216j/DS218+&lt;/h4&gt;
-&lt;p&gt;上半年用 DS216j，因为性能满足不了，年底换成了 DS218+. 关于 NAS 的使用，可以参考&lt;a href=&quot;https://lutaonan.com/blog/synology-ds216j-exp/&quot;&gt;这篇文章&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn3n2gyl48j31kw16o19e.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;yamaha-p115-%2F-yamaha-np12&quot;&gt;Yamaha P115 / Yamaha NP12&lt;/h4&gt;
-&lt;p&gt;因为要学习 Keyboard，入手了 Yamaha P115 电钢来入门。P115 是全配重的，手感很好，但是重量大，不便携。为了可以携带出去户外表演，于是又入了轻一半重量的 61 键的 NP12。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn3mz45nepj31kw16oqew.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn3mym8w5vj30u00u2481.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;nintendo-switch&quot;&gt;Nintendo Switch&lt;/h4&gt;
-&lt;p&gt;买了 Switch, 圆了掌机梦，玩了《塞尔达传说》和《奥德赛》。因为便携，吃灰率要比 PS4 低。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn3n20mksej31kw16mu07.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;dji-spark&quot;&gt;DJI Spark&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/assets/006tKfTcgy1fn3n6wgqt5j31d81d8ndh.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;%E6%96%B0%E5%B9%B4%E8%AE%A1%E5%88%92&quot;&gt;新年计划&lt;/h2&gt;
-&lt;p&gt;2018 年的计划是多写写代码，多玩玩音乐，读更多书，换一间大些的房子，买一辆车。&lt;/p&gt;
-&lt;p&gt;有次和朋友聊天，她说，你知道自己想要做什么，又能把它做到，还能靠它养活自己。你千万不能变得世俗啊，如果你也变得世俗，我会觉得这个世界，真的就是那样了。&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>2016 年终总结</title>
-    <link href="https://lutaonan.com/blog/2016-summary/"/>
-    <updated>2016-12-28T00:00:00Z</updated>
-    <id>https://lutaonan.com/blog/2016-summary/</id>
-    <content type="html">&lt;h2 id=&quot;%E5%8D%9A%E5%AE%A2%E7%AF%87&quot;&gt;博客篇&lt;/h2&gt;
-&lt;p&gt;开篇讲讲这个博客这一年的「成绩」：&lt;/p&gt;
-&lt;h4 id=&quot;%E8%AE%BF%E9%97%AE%E9%87%8F&quot;&gt;访问量&lt;/h4&gt;
-&lt;p&gt;因为今年年中进行过博客迁移，从 github pages 迁到了阿里云，还换了整个 blog platform. 所以新旧博客的统计要结合起来看。&lt;/p&gt;
-&lt;p&gt;旧博客统计：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/blog/old_blog.png&quot; alt=&quot;旧博客统计&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;新博客统计：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/blog/new_blog.png&quot; alt=&quot;新博客统计&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;总计： PV &lt;strong&gt;49,406&lt;/strong&gt;，UV &lt;strong&gt;15,800&lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&quot;%E8%AE%BF%E9%97%AE%E8%AE%BE%E5%A4%87&quot;&gt;访问设备&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/blog/newblog_devices.png&quot; alt=&quot;访问设备&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;iPhone 用户仍然排第一，第二是小米。&lt;/p&gt;
-&lt;h4 id=&quot;%E6%9D%A5%E6%BA%90%E6%B5%8F%E8%A7%88%E5%99%A8&quot;&gt;来源浏览器&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/blog/newblog_browser.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4 id=&quot;%E6%96%87%E7%AB%A0%E6%8E%92%E8%A1%8C&quot;&gt;文章排行&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/blog/oldblog_post_trend.png&quot; alt=&quot;旧博客排行&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;上半年一个 Vue 和 Webpack 系列访问量比较大。下半年给自己的博客定位不是单纯的技术博客，访问量比较大的是关于退学的两篇文章。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/blog/newblog_post_trend.png&quot; alt=&quot;新博客排行&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;坚持做独立博客很难，坚持写博客更难。我没有开公众号，因为开公众号会让我感到有压力，更会让我「为了推送而写文章」。也是因为赞同&lt;a href=&quot;http://coolshell.cn/articles/17391.html&quot;&gt;陈皓的观点&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id=&quot;%E6%8A%80%E6%9C%AF%E7%AF%87&quot;&gt;技术篇&lt;/h2&gt;
-&lt;p&gt;今年因为工作原因，把大部分的精力花在了 React 上，Vue 反倒没什么机会写了。写 React 的过程中对 Thinking in React 有了不同的看法。我从前不喜欢 JSX, 不喜欢 &lt;code&gt;setState&lt;/code&gt;, 但是慢慢地开始思考 Functional Programming, Reactive Programming. 后来发现，React 是不是 React 已经不重要了，因为 React 只是实现它思想的手段，更重要的是在其背后的，UI Development 的观念 —— &lt;code&gt;(state) =&amp;gt; View&lt;/code&gt;。无论如何争论 Functional Programming，它的的确确改变了我对程序开发的想法，我开始追求 Pure Function，开始讲究函数的 side-effect. 我想下一年我还会对 FRP 做更深入的研究。关于这方面的感悟，我会单独写成文章。&lt;/p&gt;
-&lt;p&gt;比较快乐的是在一些项目里使用了 TypeScript. 自己也写了&lt;a href=&quot;http://lutaonan.com/is-static-type-in-javascript-a-burden/&quot;&gt;文章&lt;/a&gt;，录了&lt;a href=&quot;http://www.bilibili.com/video/av6511223/&quot;&gt;视频&lt;/a&gt;, 来表达我对这个语言的看法。&lt;/p&gt;
-&lt;p&gt;这一年参加了两个 Talk, 一个是珠三角技术沙龙，讲的是 Vue 和 Native. 另一个是 Node 地下铁，讲了 TypeScript. 关于技术分享，我在知乎有&lt;a href=&quot;https://www.zhihu.com/question/52777303/answer/136427221&quot;&gt;一篇回答&lt;/a&gt; 讲了我对国内技术分享会议的看法。希望我自己在接下来的一年能有更大的长进，然后用自己的行动去告诉大家技术分享应该怎么做。&lt;/p&gt;
-&lt;p&gt;比较遗憾的是工作之后减少了写开源项目的时间，今年对开源社区最大的贡献就只有给一本&lt;a href=&quot;https://github.com/basarat/typescript-book&quot;&gt;TypeScript 书&lt;/a&gt; 贡献了些内容。&lt;/p&gt;
-&lt;h2 id=&quot;%E5%B7%A5%E4%BD%9C%E7%AF%87&quot;&gt;工作篇&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://gbstatic.djyde.com/blog/gitlab.png&quot; alt=&quot;Gitlab Summary&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;从 3 月份入职，完成了一个项目的重构，帮助了一些还有些迷茫的朋友，用自己的热情感染了团队的技术氛围，是在这一年工作上让我自己感到满足的事情。&lt;/p&gt;
-&lt;h2 id=&quot;%E8%AF%BB%E4%B9%A6%E7%AF%87&quot;&gt;读书篇&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/25930025/&quot;&gt;&lt;strong&gt;Just for Fun: The Story of an Accidental Revolutionary&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Linux 创始人 Linus 的自传，记录了 Linus 的少年时期和 Linux 的诞生，之中还夹杂一些对开放源代码的观念。读完以后很受鼓舞，能像 Linus 一样是我做软件开发的终极目标。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/26835090/&quot;&gt;&lt;strong&gt;Soft Skills: The software developer&#39;s life manual&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;中文名叫《软技能：代码之外的生存指南》。我很不喜欢这类教别人做人的书，但是受人推荐，还是读完了。&lt;/p&gt;
-&lt;p&gt;书里有几个章节我印象比较深刻。比如谈到大公司、中等规模公司、创业公司之前的区别：&lt;/p&gt;
+    <title>mac tips</title>
+    <link href="https://lutaonan.com/blog/mac-tips/"/>
+    <updated>2019-07-15T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/mac-tips/</id>
+    <content type="html">&lt;h3 id=&quot;1.-%E6%9B%B4%E6%96%B0%E5%91%BD%E4%BB%A4&quot;&gt;1. 更新命令&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在大公司工作令人沮丧，因为他们感到他们个人的贡献无足轻重&lt;/p&gt;
+&lt;p&gt;brew update &amp;amp;&amp;amp; brew upgrade &amp;amp;&amp;amp; brew cask upgrade &amp;amp;&amp;amp; mas upgrade&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;察看本地快照&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;为大公司工作的一个显而易见的事情就是成长机会&lt;/p&gt;
+&lt;p&gt;sudo tmutil listlocalsnapshots /&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;结合自身条件和自己喜欢的工作环境进行职业选择，是需要深思熟虑的事情。&lt;/p&gt;
-&lt;p&gt;书中还谈了个人品牌的打造，学历问题等等。都值得一读。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/1467587/&quot;&gt;&lt;strong&gt;The Art of UNIX Programming&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;中文名是《UNIX 编程艺术》。万幸我用 macOS 也算是 UNIX 环境的重度用户，所以在读这本书的时候不会感到吃力。这本书实际上和 UNIX 源代码没有什么关系，讲的是 UNIX 下的程序（比如 grep），这些程序的设计哲学让我对软件有了新的思考。&lt;/p&gt;
-&lt;p&gt;编写复杂软件又不至于把自己搞混乱的方法是降低软件整体的复杂度。软件本身的复杂度不会因为实现方式和代码组织的优秀而降低，但是这能使整体复杂度降低。降低整体复杂度的方法是&lt;strong&gt;用清晰的接口把复杂的软件分解成若干个简单的模块&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;每把剃刀都自有其哲学，更何况是软件开发呢。即使是开发一个小函数，它的输入和输出也是需要讲究的。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/26849305/&quot;&gt;&lt;strong&gt;Becomming Steve Jobs&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;我没有读《乔布斯传》，而是选了这本《成为乔布斯》，是听说这本传记记录的乔布斯要更真实。事实上通过很多途径都已经宏观上对乔布斯有了很大程度上的了解，所以读传记的时候已经没有对某些事件产生触动。反而触动我的是一些小细节上，比如书中提到乔布斯父亲的话：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;删除本地快照&lt;/strong&gt;(最后加上你查出来的快照的时间戳)&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;对于一个橱柜来说，别人看不到的底面与表面的抛光一样重要；对于一辆雪佛兰汽车来说，别人看不到的刹车片和汽车的油漆一样重要。&lt;/p&gt;
+&lt;p&gt;tmutil deletelocalsnapshots 时间戳&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/6558202/&quot;&gt;&lt;strong&gt;容忍与自由&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;我求学时期读了很多民国作家的书，唯独胡适先生的书读得不多。今年读了这本文集，意犹未尽，还想读他的《中国的哲学》，但看来要等下一年了。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/26759508/&quot;&gt;&lt;strong&gt;Elon Musk&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;硅谷「钢铁侠」Elon Musk 的传记。十分羡慕财富自由又有想法的人。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/25985021/&quot;&gt;&lt;strong&gt;A brief history of humankind&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;推荐这本有趣的《人类简史》，看人类是如何从原始人进化过来的。&lt;/p&gt;
-&lt;h2 id=&quot;%E6%B8%B8%E6%88%8F%E7%AF%87&quot;&gt;游戏篇&lt;/h2&gt;
-&lt;p&gt;今年买了 PS4, 人生第一台游戏机。玩了几款大作，《最后的生还者》、《神秘海域》、《GTA5》、《看门狗》。印象较深的是《最后的生还者》，没有 PS4 的也建议视频通关。&lt;/p&gt;
-&lt;p&gt;下半年换了 Macbook Pro 也入了 Steam 的坑，Steam 的游戏和 PS4 比简直就是白菜价。沉迷了一段时间 Don&#39;t Starve. 通关了 Firewatch.&lt;/p&gt;
-&lt;h2 id=&quot;%E8%87%AA%E6%88%91%E6%80%BB%E7%BB%93&quot;&gt;自我总结&lt;/h2&gt;
-&lt;p&gt;这一年的成长比较横向，不仅仅在技术，还学习了音乐，健身等等。遗憾是改不掉一直以来喜欢「急」的缺点，急于完成事情，不多加考虑。甚至容易使自己在快要完成一件事情的时候，容易由于太急，最后烂尾，比如&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>中山纪念中学游记</title>
-    <link href="https://lutaonan.com/blog/533-travel-middle-school/"/>
-    <updated>2016-06-09T00:00:00Z</updated>
-    <id>https://lutaonan.com/blog/533-travel-middle-school/</id>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;考虑到移动设备用户，文中图片都经过七牛 50% 质量压缩。非广角照片拍摄设备均为 iPhone SE.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;2.-%E5%85%B6%E4%BB%96%E5%BF%AB%E6%8D%B7%E9%94%AE&quot;&gt;2. 其他快捷键&lt;/h3&gt;
+&lt;p&gt;让双手尽量多的键盘和快捷键，少使用鼠标和触摸板，可以大大提高效率。&lt;/p&gt;
+&lt;p&gt;苹果官方文档。当你在写代码，怎么通过快捷键让光标转移到行首、行尾、向上翻页或者将光标移左移一个词？都在这篇文档里。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://support.apple.com/kb/HT201236&quot;&gt;Mac keyboard shortcts&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;苹果官方文档。回车触发蓝底按钮，空格触发蓝边按钮，都出自这里。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://support.apple.com/kb/HT204434&quot;&gt;Mac keyboard shortcuts for accessibility features&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;3.-remove-all-dock-icons%5Bocd%5D&quot;&gt;3. Remove all Dock icons[OCD]&lt;/h3&gt;
+&lt;p&gt;本条目对于强迫症适用。&lt;/p&gt;
+&lt;p&gt;默认情况下 Dock 被一堆系统自带的应用占据着，而其中大部分我都很少使用，当我打开几个常用应用后，Dock 上会有很多图标，每个图标都会被挤得很小。所以我会把所有 Dock 上固定的图标都删掉，这样一来 Dock 上只有我打开的应用。&lt;code&gt;PS：Finder 图标是删不掉的。&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;除了一个一个删除图标，也可以通过这个命令来&lt;strong&gt;隐藏所有的固定图标&lt;/strong&gt;：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;另外，很多图中我都在看手机，是因为运动相机成像要在手机上看。&lt;/p&gt;
+&lt;p&gt;defaults write com.apple.dock static-only -boolean true; killall Dock&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;最近入手了小蚁相机（一代），需要找个地方测试一下相机的体验和成像效果，恰逢即将高考，于是决定回高中一趟，找找以前的老师，看看学校的变化。&lt;/p&gt;
-&lt;p&gt;我买了从广州南到南朗早上 10 点 38 分的动车票，但是由于时间估计错误，我没有赶上这趟车，只好改签成 12 点多。这很遗憾，因为我原本的计划是拍学生冲饭堂，然后自己去吃粗菜馆的。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1371.jpg?imageView2/2/q/50&quot; alt=&quot;改签的地方&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;坐上动车以后天色就开始变，我开始感觉这次的行程很亏。在我的想象中，我应该在一个风和日丽的白天架着三脚架拍拍阳光下的凤凰花。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1372.jpg&quot; alt=&quot;刚上车&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1377.jpg?imageView2/2/q/50&quot; alt=&quot;轻轨上的乌云&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;到达南朗轻轨站后就开始下雨，本来想刚好试试中山刚开通的 Uber, 奈何附近没有 Uber 车。眼见雨越下越大，只好上了一辆私家黑车，大概是 Uber XL 的级别（这在南朗是司空见惯的）。&lt;/p&gt;
-&lt;p&gt;路上开始慢慢从大雨变成了暴雨。我问司机，南朗打 Uber 的人多不多？司机说南朗还没有 Uber，中山暂时只开通了石岐、小榄和古镇。我问那打滴滴的多不多？他说偶尔，但是在这个地方一般都是短途，平台分成又多，做了反而赚得不多，所以也很少做。&lt;/p&gt;
-&lt;p&gt;到了校门口依然暴雨，只好躲到『翠影』。『翠影』一家人没有变，老板娘在包云吞。我问她现在还有东西吃吗？她说现在没有啊。我看了看表，下午 1 点多，时间的确是很尴尬。于是我买了一瓶果粒橙，又去了隔壁的『成伯伯拉布粉』。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1411.jpg?imageView2/2/q/50&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;雨小了就进学校，撑着伞把每周一演的舞台拍了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1382.jpg?imageView2/2/q/50&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1383.jpg?imageView2/2/q/50&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;没过多久雨就停了，但天还是灰的。我决定到兰溪湖拍水鸭，但是当我走到亭里的时候，水鸭都逃走了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1443.jpg?imageView2/2/q/50&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://o86cdh9ph.qnssl.com/IMG_1443.jpg&quot;&gt;原图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;我觉得鸭子这样很不礼貌，所以很快就离开了兰溪湖，走到了纪中里我最喜欢拍照的地方——图书馆最顶楼。&lt;/p&gt;
-&lt;p&gt;之所以喜欢这里是因为这里几乎是整个学校的最高处（除了后山），这个角度看兰溪湖和天空非常漂亮。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1425.jpg?imageView2/2/q/50&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://o86cdh9ph.qnssl.com/IMG_1425.jpg&quot;&gt;原图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;我特意在这里用小蚁拍了一段延时摄影：&lt;/p&gt;
-&lt;p&gt;&lt;video src=&quot;https://o86cdh9ph.qnssl.com/IMG_1434.MP4&quot; controls=&quot;&quot; style=&quot;max-width: 100%;&quot;&gt;&lt;/video&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;接下来去教学楼找语文老师。这个时间点刚好是午休完开始上课，不出意料，有很多学生迟到被抓了。抓人的还是我以前的年级主任。她看到我，说，卢涛南，怎么选这么好的日子过来啊。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1558.jpg?imageView2/2/q/50&quot; alt=&quot;高二楼门口&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1442.jpg?imageView2/2/q/50&quot; alt=&quot;黄桂芳抓迟到&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;见到语文老师后闲聊了几句，中途又见到了物理老师，但是显然她已经把我忘了（很正常，只教了我们一年）。我说到我没有上大学了，现在在阿里巴巴。物理老师问，是自己开网店吗？&lt;/p&gt;
-&lt;p&gt;闲聊了十多分钟，散了以后，逛了高三楼，面基了 Lucy。高三到这个时候，基本就是放羊状态了，很快他们都要『解放』了。&lt;strong&gt;我想，这种所谓的解放，虽然只是假象，但起码能给你一个瞬间的快感。有人告诉你，熬到什么地方，你就可以疯狂了。然而出来工作以后，没有人告诉你，到哪个点，你就解放了，你就自由了。没有，并没有尽头，连转折点都看不到。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1448.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1554.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;傍晚天气很好，还有晚霞：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1454.jpg?imageView2/2/q/50&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1457.jpg?imageView2/2/q/50&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1473.jpg?imageView2/2/q/50&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;南朗的变化很大，我高一那年刚进来的时候，南朗的第一家 KFC 还在装修。现在有 KTV、有正规的电影院、有网咖。&lt;/p&gt;
-&lt;p&gt;到轻轨站的时候是日落最后的阶段，这时晚霞更加鲜艳。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1547.jpg?imageView2/2/q/50&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1549.jpg?imageView2/2/q/50&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1467.jpg?imageView2/2/q/50&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;旅行就这样结束。我一个朋友问我，你觉得你有多爱你的高中？&lt;strong&gt;我觉得我并没有『爱』这个高中，我相信任何人留恋一个地方，都是因为在那里发生过的事、遇到过的人而已。而我的这部分记忆又恰好是在中山纪念中学留下的罢了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://o86cdh9ph.qnssl.com/IMG_1433.jpg?imageView2/2/q/50&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>2014 年终总结</title>
-    <link href="https://lutaonan.com/blog/2014-summary/"/>
-    <updated>2014-12-31T00:00:00Z</updated>
-    <id>https://lutaonan.com/blog/2014-summary/</id>
-    <content type="html">&lt;p&gt;2014 年因为有高考所以比往年过得快了些，大学的一个学期转眼也过了。有时候甚至缓不过神来，甚至让我常常有种错觉，2014 它早就过了，但 2015 它迟迟未来。&lt;/p&gt;
-&lt;p&gt;今年的 1 月我还在为化学烦恼，今年的 12 月现在的我已经过上了那时梦寐以求的自由的生活。但是生活哪有什么所谓的自由，高考只不过给我开了一个闸，从一个小笼子，滚进了一个更大的笼子而已。而这个更大的笼子比以前按部就班的生活更让我感到害怕，就像《海上钢琴师》里 1900 放弃离开轮船后 对 Max 说的一样，让我害怕的不是我看到的东西，而是我所无法看到的东西，这里什么都有，可是唯独没有尽头。&lt;/p&gt;
-&lt;p&gt;还好上了大学以后，能遇到几个让我又有了寄托的朋友，我和他们一起做事，非常地快乐。&lt;/p&gt;
-&lt;p&gt;技术方面，哈哈，就不说了，我仍然迫切的希望能用技术给这个社会带来一点好的改变。&lt;/p&gt;
-&lt;p&gt;遗憾的事是好像很难再找到能聊聊天的朋友，而且好像变得不太爱说话了，所以有时候我还是挺怀念高一时候的我。最遗憾的事是 Google 还没有解封，当我以为『她』正在慢慢变好的时候，却再一次让我失望了。&lt;/p&gt;
-&lt;p&gt;新年愿望是，1，所有人都好 2，能继续写代码 3，生活的这片土地能再进步一些，我知道这的确需要一个过程，但我想自己，和我身边的人，还有未来的儿子和女儿，都能在这里活得快乐些。&lt;/p&gt;
-&lt;p&gt;最后附上 1900 对 Max 说的那段话，说的真好：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;恢复也非常简单：&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;All that city. You just couldn&#39;t see the end to it. The end? Please? You please just show me where it ends? It was all very fine on that gangway. And I was grand too, in my overcoat. I cut quite a figure. And I was getting off. Guaranteed. There was no problem. It wasn&#39;t what I saw that stopped me, Max. It was what I didn&#39;t see. You understand that? What I didn&#39;t see. In all that sprawling city there was everything except an end. There was no end. What I did not see was where the whole thing came to an end. The end of the world...&lt;/p&gt;
+&lt;p&gt;defaults delete com.apple.dock static-only; killall Dock&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;PS：使用这个方法的话，Dock 上的 Downloads 也会被隐藏掉。&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;4.-shift-%E5%88%87%E6%8D%A2%E8%BE%93%E5%85%A5%E6%B3%95&quot;&gt;4. shift 切换输入法&lt;/h3&gt;
+&lt;p&gt;先在系统设置/快捷键/输入法 里面设定一个“切换到下一个输入法”的快捷键（最好是比较冷门的组合，我选的是 command+shift+i）；&lt;/p&gt;
+&lt;p&gt;然后在 Better Touch Tool 的手势/键盘/按键顺序 中设置&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;按下 shift 等效于 command+shift+i&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;5.-mojave-%E7%9B%B8%E5%85%B3%E5%A4%84%E7%90%86&quot;&gt;5. Mojave 相关处理&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;字体处理：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Microsoft/vscode/issues/51132#issuecomment-424132330&quot;&gt;Font rendering seems strange in macOS Mojave · Issue #51132 · Microsoft/vscode&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.tekrevue.com/tip/only-dark-menu-bar-dock-mojave/&quot;&gt;黑白主题处理：How to Use Only a Dark Menu Bar and Dock in macOS Mojave - TekRevue&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;6.-%E5%8D%87%E7%BA%A7%E6%9B%B4%E6%96%B0-macos-mojave-10.14-%E5%90%8E%E7%B3%BB%E7%BB%9F%E5%8D%A1%E9%A1%BF%E4%BB%A5%E5%8F%8A%E9%83%A8%E5%88%86%E8%BD%AF%E4%BB%B6-(%E5%A6%82-vs-code)-%E5%AD%97%E4%BD%93%E5%8F%98%E8%99%9A%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95&quot;&gt;6. 升级更新 macOS Mojave 10.14 后系统卡顿以及部分软件 (如 VS Code) 字体变虚的解决方法&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;输入文字卡顿&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你的 Mac 已经更新至 macOS Mojave，在输入文字时经常卡顿，频繁出现小风车，那很有可能是搜狗输入法造成的，只需将它升级至最新的 4.8.0 版本，即可完美解决。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;字体发虚&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;升级 macOS Mojave 新系统后，苹果默认关闭了子像素抗锯齿，导致字体变细锯齿增多。
+解决字体渲染过细，打开终端，输入：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;重启应用比如 VS Code 后即可看到效果&lt;/p&gt;
 </content>
   </entry>
 </feed>
