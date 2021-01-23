@@ -12,12 +12,12 @@ module.exports = (eleventyConfig) => {
   ])
 
   eleventyConfig.addPlugin(pluginSEO, {
-    title: "Randy's Blog",
-    author: 'Randy Lu',
-    description: `Randy is blogging about life, tech and music.`,
-    twitter: 'randyloop',
-    url: 'https://lutaonan.com',
-    image: 'https://gbstatic.djyde.com/assets/Snapseed%204.jpg?x-oss-process=style/80'
+    title: "Elon's Blog",
+    author: 'Elon Woo',
+    description: `blogging about life, tech.`,
+    twitter: 'elonwoo',
+    url: 'https://elonwoo.com',
+    // image: 'https://gbstatic.djyde.com/assets/Snapseed%204.jpg?x-oss-process=style/80'
   });
 
 
