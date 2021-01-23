@@ -1,0 +1,77 @@
+---
+title: mac tips
+layout: blog.njk
+date: 2019-07-15
+tags: blog
+categories:
+  - mac
+---
+
+### 1. 更新命令
+
+> brew update && brew upgrade && brew cask upgrade && mas upgrade
+
+**察看本地快照**
+
+> sudo tmutil listlocalsnapshots /
+
+**删除本地快照**(最后加上你查出来的快照的时间戳)
+
+> tmutil deletelocalsnapshots 时间戳
+
+### 2. 其他快捷键
+
+让双手尽量多的键盘和快捷键，少使用鼠标和触摸板，可以大大提高效率。
+
+苹果官方文档。当你在写代码，怎么通过快捷键让光标转移到行首、行尾、向上翻页或者将光标移左移一个词？都在这篇文档里。
+
+[Mac keyboard shortcts](https://support.apple.com/kb/HT201236)
+
+苹果官方文档。回车触发蓝底按钮，空格触发蓝边按钮，都出自这里。
+
+[Mac keyboard shortcuts for accessibility features](https://support.apple.com/kb/HT204434)
+
+### 3. Remove all Dock icons[OCD]
+
+本条目对于强迫症适用。
+
+默认情况下 Dock 被一堆系统自带的应用占据着，而其中大部分我都很少使用，当我打开几个常用应用后，Dock 上会有很多图标，每个图标都会被挤得很小。所以我会把所有 Dock 上固定的图标都删掉，这样一来 Dock 上只有我打开的应用。`PS：Finder 图标是删不掉的。`
+
+除了一个一个删除图标，也可以通过这个命令来**隐藏所有的固定图标**：
+
+> defaults write com.apple.dock static-only -boolean true; killall Dock
+
+**恢复也非常简单：**
+> defaults delete com.apple.dock static-only; killall Dock
+
+`PS：使用这个方法的话，Dock 上的 Downloads 也会被隐藏掉。`
+
+### 4. shift 切换输入法
+
+先在系统设置/快捷键/输入法 里面设定一个“切换到下一个输入法”的快捷键（最好是比较冷门的组合，我选的是 command+shift+i）；
+
+然后在 Better Touch Tool 的手势/键盘/按键顺序 中设置
+> 按下 shift 等效于 command+shift+i
+
+
+### 5. Mojave 相关处理
+
+**字体处理：**
+
+[Font rendering seems strange in macOS Mojave · Issue #51132 · Microsoft/vscode](https://github.com/Microsoft/vscode/issues/51132#issuecomment-424132330)
+
+[黑白主题处理：How to Use Only a Dark Menu Bar and Dock in macOS Mojave - TekRevue](https://www.tekrevue.com/tip/only-dark-menu-bar-dock-mojave/)
+
+### 6. 升级更新 macOS Mojave 10.14 后系统卡顿以及部分软件 (如 VS Code) 字体变虚的解决方法
+
+**输入文字卡顿**
+
+如果你的 Mac 已经更新至 macOS Mojave，在输入文字时经常卡顿，频繁出现小风车，那很有可能是搜狗输入法造成的，只需将它升级至最新的 4.8.0 版本，即可完美解决。
+
+**字体发虚**
+
+升级 macOS Mojave 新系统后，苹果默认关闭了子像素抗锯齿，导致字体变细锯齿增多。
+解决字体渲染过细，打开终端，输入：
+> defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+
+重启应用比如 VS Code 后即可看到效果
