@@ -43,4 +43,5 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addPassthroughCopy("_redirects");
+  eleventyConfig.addPassthroughCopy("CNAME");
 }
