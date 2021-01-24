@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <title>
+        Tridactyl on Firefox - Elon's Blog</title>
+    
+
+    
+  <title>Tridactyl on Firefox - Elon&apos;s Blog</title>
+
+<meta name="description" content="blogging about life, tech.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Elon Woo">
+
+<link rel="canonical" href="https://elonwoo.com/blog/tridactyl -on-firefox/">
+
+<meta property="og:title" content="Tridactyl on Firefox - Elon&apos;s Blog">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://elonwoo.com/blog/tridactyl -on-firefox/">
+<meta property="og:description" content="blogging about life, tech.">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@elonwoo">
+<meta name="twitter:url" content="https://elonwoo.com/blog/tridactyl -on-firefox/">
+<meta name="twitter:title" content="Tridactyl on Firefox - Elon&apos;s Blog">
+<meta name="twitter:description" content="blogging about life, tech.">
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.21.0,npm/prismjs@1.21.0/components/prism-javascript.min.js,npm/prismjs@1.21.0/components/prism-typescript.min.js,npm/prismjs@1.21.0/components/prism-bash.min.js,npm/prismjs@1.21.0/components/prism-sql.min.js,npm/prismjs@1.21.0/components/prism-diff.min.js,npm/prismjs@1.21.0/components/prism-tsx.min.js,npm/prismjs@1.21.0/components/prism-jsx.min.js,npm/prismjs@1.21.0/components/prism-json.min.js"></script>
+
+  <link href="//cdn.jsdelivr.net/combine/npm/prismjs@1.21.0/themes/prism.min.css,npm/prismjs@1.21.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet">
+    <link href="/assets/index.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+  <div class="main-container mx-auto pt-12">
+    <div class="flex justify-between mb-4">
+  <div>
+    <h1 class="logo text-xl text-red-900">
+      <a href="/">Elon's Blog</a>
+    </h1>
+
+  </div>
+  <div class="flex self-center -mx-2 text-sm text-red-900 font-bold">
+    <a class="mx-2" href="/">文章</a>
+    
+
+  </div>
+</div>
+    <div class="mb-4 mt-12 font-sans">
+      <h2 class="text-4xl tracking-wide text-gray-900 font-bold">Tridactyl on Firefox</h2>
+      <h3 class="text-gray-500 text-xs font-light">2020-01-20</h3>
+    </div>
+    <div class="blog-post">
+      <p><img src="https://gt-toolbox.oss-cn-beijing.aliyuncs.com/uPic/j1kuJm.png" alt="Tridactyl-on-Firefox"></p>
+<pre><code class="language-text">
+&quot; For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+&quot; vim: set filetype=tridactyl
+&quot; Plug 'tridactyl/vim-tridactyl'
+
+
+&quot; ====================环境变量====================
+set yankto both
+set putfrom selection
+
+set allowautofocus false
+set viewsource default
+
+&quot; Sometimes the status bar in the bottom left corner overlaps the Tridactyl
+&quot; command line, so set an option to move the status bar to the right.
+guiset_quiet hoverlink right
+guiset_quiet tabs count
+
+&quot; 新标签页设置
+set newtab https://www.google.com/ncr
+
+&quot; 使用浏览器默认搜索
+unbind &lt;C-f&gt;
+
+&quot; 但也支持 Tridactyl 搜索
+bind / fillcmdline find
+bind ? fillcmdline find -?
+bind n findnext 1
+bind N findnext -1
+
+&quot; 平滑滚动
+set smoothscroll true
+
+&quot; hint按键
+set hintchars &quot;arstdhneiowfpluy&quot;
+
+
+&quot; ====================便捷书签====================
+quickmark v https://www.v2ex.com/
+
+
+
+&quot; ====================键盘映射====================
+bind q tabprev
+bind w tabnext
+bind Q tabmove -1
+bind W tabmove +1
+bind h back
+bind l forward
+bind j scrollline 50
+bind k scrollline -50
+
+bind c current_url open
+bind C current_url tabopen
+
+unbind --mode=normal m
+bind m pin
+
+&quot; make d take you to the tab you were just on (I find it much less confusing)
+bind d composite tab #; tabclose #
+bind D tabclose
+
+&quot; Handy multiwindow/multitasking binds
+bind gd tabdetach
+bind gD composite tabduplicate; tabdetach
+
+&quot; Make yy use canonical / short links on the 5 websites that support them
+unbind --mode=normal y
+bind yy clipboard yankcanon
+bind yt composite js document.title + '\n' + document.location.href | yank
+
+&quot; swap p and P
+bind p clipboard tabopen
+bind P clipboard open
+
+&quot; TODO reload config with :source?
+
+
+bind --mode=normal &lt;C-P&gt; winopen -private
+bind --mode=ex     &lt;C-a&gt; text.beginning_of_line
+bind --mode=insert &lt;C-a&gt; text.beginning_of_line
+bind --mode=input  &lt;C-a&gt; text.beginning_of_line
+bind --mode=ex     &lt;C-e&gt; text.end_of_line
+bind --mode=insert &lt;C-e&gt; text.end_of_line
+bind --mode=input  &lt;C-e&gt; text.end_of_line
+bind --mode=ex     &lt;C-f&gt; text.forward_word
+bind --mode=insert &lt;C-f&gt; text.forward_word
+bind --mode=input  &lt;C-f&gt; text.forward_word
+bind --mode=ex     &lt;C-k&gt; text.kill_line
+bind --mode=insert &lt;C-k&gt; text.kill_line
+bind --mode=input  &lt;C-k&gt; text.kill_line
+bind --mode=ex     &lt;C-u&gt; text.backward_kill_line
+bind --mode=insert &lt;C-u&gt; text.backward_kill_line
+bind --mode=input  &lt;C-u&gt; text.backward_kill_line
+bind --mode=ex     &lt;C-V&gt; composite getclip selection | text.insert_text
+bind --mode=insert &lt;C-V&gt; composite getclip selection | text.insert_text
+bind --mode=input  &lt;C-V&gt; composite getclip selection | text.insert_text
+bind --mode=ex     &lt;C-w&gt; text.backward_kill_word
+bind --mode=insert &lt;C-w&gt; text.backward_kill_word
+bind --mode=input  &lt;C-w&gt; text.backward_kill_word
+
+
+
+&quot; ====================搜索引擎====================
+&quot; ** Search Engines
+&quot; Disable all searchurls
+jsb Object.keys(tri.config.get(&quot;searchurls&quot;)).reduce((prev, u) =&gt; prev.catch(()=&gt;{}).then(_ =&gt; tri.excmds.setnull(&quot;searchurls.&quot; + u)), Promise.resolve())
+
+set searchengine g
+&quot; set searchurls.KEYWORD URL
+set searchurls.b https://www.baidu.com/s?ie=UTF-8&amp;wd=%s
+set searchurls.d https://www.douban.com/search?q=%s
+set searchurls.g https://www.google.com/search?q=%s
+set searchurls.gh https://github.com/search?utf8=%E2%9C%93&amp;q=%s&amp;ref=simplesearch
+set searchurls.mdn https://developer.mozilla.org/en-US/search?q=%s&amp;topic=api&amp;topic=js
+set searchurls.npm https://www.npmjs.com/search?q=%s
+set searchurls.pydoc https://docs.python.org/3/search.html?q=%s
+set searchurls.r https://old.reddit.com/r/%s
+set searchurls.rustdoc https://doc.rust-lang.org/std/index.html?search=%s
+set searchurls.y https://www.youtube.com/results?search_query=%s
+
+
+
+&quot; ====================脚本调用====================
+&quot; :js
+&quot; urlmodify
+alias tabsort jsb browser.tabs.query({}).then(tabs =&gt; tabs.sort((t1, t2) =&gt; t1.url.localeCompare(t2.url)).forEach((tab, index) =&gt; browser.tabs.move(tab.id, {index})))
+alias tabuniq jsb browser.tabs.query({}).then(tabs =&gt; browser.tabs.remove(tabs.filter((tab, index) =&gt; tabs.slice(index + 1).find(t =&gt; t.url == tab.url)).map(tab =&gt; tab.id)))
+bind --mode=normal ee composite get_current_url | exclaim /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+
+
+&quot; ====================例外设置====================
+autocmd DocStart mail.google.com mode ignore
+
+
+
+&quot; ====================其他设置====================
+&quot; Add helper commands that Mozillians think make Firefox irredeemably
+&quot; insecure. For details, read the comment at the top of this file.
+command fixamo_quiet jsb tri.excmds.setpref(&quot;privacy.resistFingerprinting.block_mozAddonManager&quot;, &quot;true&quot;).then(tri.excmds.setpref(&quot;extensions.webextensions.restrictedDomains&quot;, '&quot;&quot;'))
+command fixamo js tri.excmds.setpref(&quot;privacy.resistFingerprinting.block_mozAddonManager&quot;, &quot;true&quot;).then(tri.excmds.setpref(&quot;extensions.webextensions.restrictedDomains&quot;, '&quot;&quot;').then(tri.excmds.fillcmdline_tmp(3000, &quot;Permissions added to user.js. Please restart Firefox to make them take affect.&quot;)))
+
+&quot; Make Tridactyl work on more sites at the expense of some security. For
+&quot; details, read the comment at the top of this file.
+fixamo_quiet
+
+
+
+</code></pre>
+
+    </div>
+
+  </div>
+
+
+
+    
+  </body>
+
+</html>

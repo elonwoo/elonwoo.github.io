@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <title>
+        Pentadactyl on Pale Moon - Elon's Blog</title>
+    
+
+    
+  <title>Pentadactyl on Pale Moon - Elon&apos;s Blog</title>
+
+<meta name="description" content="blogging about life, tech.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Elon Woo">
+
+<link rel="canonical" href="https://elonwoo.com/blog/pentadactyl-on-palemoon/">
+
+<meta property="og:title" content="Pentadactyl on Pale Moon - Elon&apos;s Blog">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://elonwoo.com/blog/pentadactyl-on-palemoon/">
+<meta property="og:description" content="blogging about life, tech.">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@elonwoo">
+<meta name="twitter:url" content="https://elonwoo.com/blog/pentadactyl-on-palemoon/">
+<meta name="twitter:title" content="Pentadactyl on Pale Moon - Elon&apos;s Blog">
+<meta name="twitter:description" content="blogging about life, tech.">
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.21.0,npm/prismjs@1.21.0/components/prism-javascript.min.js,npm/prismjs@1.21.0/components/prism-typescript.min.js,npm/prismjs@1.21.0/components/prism-bash.min.js,npm/prismjs@1.21.0/components/prism-sql.min.js,npm/prismjs@1.21.0/components/prism-diff.min.js,npm/prismjs@1.21.0/components/prism-tsx.min.js,npm/prismjs@1.21.0/components/prism-jsx.min.js,npm/prismjs@1.21.0/components/prism-json.min.js"></script>
+
+  <link href="//cdn.jsdelivr.net/combine/npm/prismjs@1.21.0/themes/prism.min.css,npm/prismjs@1.21.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet">
+    <link href="/assets/index.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+  <div class="main-container mx-auto pt-12">
+    <div class="flex justify-between mb-4">
+  <div>
+    <h1 class="logo text-xl text-red-900">
+      <a href="/">Elon's Blog</a>
+    </h1>
+
+  </div>
+  <div class="flex self-center -mx-2 text-sm text-red-900 font-bold">
+    <a class="mx-2" href="/">文章</a>
+    
+
+  </div>
+</div>
+    <div class="mb-4 mt-12 font-sans">
+      <h2 class="text-4xl tracking-wide text-gray-900 font-bold">Pentadactyl on Pale Moon</h2>
+      <h3 class="text-gray-500 text-xs font-light">2020-01-19</h3>
+    </div>
+    <div class="blog-post">
+      <p><img src="https://gt-toolbox.oss-cn-beijing.aliyuncs.com/cnAYuE-HRASwW.png" alt="Pentadactyl-on-Palemoon"></p>
+<pre><code class="language-text">
+&quot;1.3.1
+
+loadplugins '\.(js|penta)$'
+group user
+set cdpath=''
+
+&quot; vim: set ft=pentadactyl:
+
+&quot;&quot; ==================环境变量设置========================
+
+set complete=search,location,file,bookmark,history,suggestion
+set defsearch=g
+set titlestring=firefox
+&quot;set newtab=all
+&quot;Show the destination of the link under the cursor in the status bar.
+set editor=&quot;/Applications/MacVim.app/Contents/MacOS/Vim -g -f&quot;
+set hintkeys=qwertasdfgzxcvb
+
+
+&quot;&quot; =====================键盘映射======================
+&quot; map x :set gui=none,tabs,bookmarks&lt;CR&gt;
+&quot; map c :set gui=none,tabs&lt;CR&gt;
+&quot; 
+&quot; map &lt;C-Up&gt; :set gui=all&lt;CR&gt;
+&quot; map &lt;C-Left&gt; :set gui=none&lt;CR&gt;
+&quot; map &lt;F3&gt; :set gui=none&lt;CR&gt;
+&quot; map &lt;C-Right&gt; :set gui=none,tabs&lt;CR&gt;
+&quot; map &lt;F4&gt; :set gui=none,tabs&lt;CR&gt;
+
+map -b q gT
+map -b w gt
+map -b Q :tabmove! -1&lt;CR&gt;
+map -b W :tabmove! +1&lt;CR&gt;
+map &lt; g0
+map -b &gt; g$
+map h :back&lt;CR&gt;
+map l :forward&lt;CR&gt;
+
+map -b j 8j
+map -b k 8k
+map -b J &lt;C-d&gt;
+map -b K &lt;C-u&gt;
+
+
+&quot; inoremap &lt;C-a&gt; &lt;Ins&gt;&lt;C-a&gt;&lt;Ins&gt;
+map -b gi gi&lt;C-e&gt;
+
+map U :u&lt;space&gt;
+map -b V :emenu&lt;space&gt;
+map -b pp P
+map S :stop&lt;CR&gt;
+
+map -b ,g :tabopen&lt;space&gt;g&lt;space&gt;
+map -b ,b :tabopen&lt;space&gt;b&lt;space&gt;
+map -b ,d :tabopen&lt;space&gt;d&lt;space&gt;
+map -b ,j :tabopen&lt;space&gt;j&lt;space&gt;
+map -b ,r :tabopen&lt;space&gt;r&lt;space&gt;
+map -b ,t :tabopen&lt;space&gt;t&lt;space&gt;
+map -b ,m :tabopen&lt;space&gt;gm&lt;space&gt;
+map -b ,y :tabopen&lt;space&gt;y&lt;space&gt;
+
+map ge &lt;C-6&gt;
+
+map &lt;C-t&gt; gH
+map gR :restart&lt;CR&gt;
+
+map -b Y :js dactyl.clipboardWrite(buffer.title + '\n' + buffer.URL)&lt;CR&gt;
+map -b eY :js dactyl.clipboardWrite('[' + buffer.title + '](' + buffer.URL + ')' )&lt;CR&gt;
+
+&quot;==================外部程序调用=======================
+map -b ee :js io.run(&quot;/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome&quot;, [buffer.URL])&lt;CR&gt;
+map -b eso :source ~/.pentadactylrc&lt;CR&gt;
+
+&quot;=====================qmark========================
+silent qmark v https://www.v2ex.com/
+
+</code></pre>
+
+    </div>
+
+  </div>
+
+
+
+    
+  </body>
+
+</html>

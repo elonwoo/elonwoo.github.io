@@ -241,6 +241,411 @@ GitHub blog项目-Settings-GitHub Pages-Source-Branch设置为gh-pages&lt;/p&gt;
   </entry>
   
   <entry>
+    <title>Tridactyl on Firefox</title>
+    <link href="https://lutaonan.com/blog/tridactyl%20-on-firefox/"/>
+    <updated>2020-01-20T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/tridactyl%20-on-firefox/</id>
+    <content type="html">&lt;p&gt;&lt;img src=&quot;https://gt-toolbox.oss-cn-beijing.aliyuncs.com/uPic/j1kuJm.png&quot; alt=&quot;Tridactyl-on-Firefox&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;
+&amp;quot; For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+&amp;quot; vim: set filetype=tridactyl
+&amp;quot; Plug &#39;tridactyl/vim-tridactyl&#39;
+
+
+&amp;quot; ====================环境变量====================
+set yankto both
+set putfrom selection
+
+set allowautofocus false
+set viewsource default
+
+&amp;quot; Sometimes the status bar in the bottom left corner overlaps the Tridactyl
+&amp;quot; command line, so set an option to move the status bar to the right.
+guiset_quiet hoverlink right
+guiset_quiet tabs count
+
+&amp;quot; 新标签页设置
+set newtab https://www.google.com/ncr
+
+&amp;quot; 使用浏览器默认搜索
+unbind &amp;lt;C-f&amp;gt;
+
+&amp;quot; 但也支持 Tridactyl 搜索
+bind / fillcmdline find
+bind ? fillcmdline find -?
+bind n findnext 1
+bind N findnext -1
+
+&amp;quot; 平滑滚动
+set smoothscroll true
+
+&amp;quot; hint按键
+set hintchars &amp;quot;arstdhneiowfpluy&amp;quot;
+
+
+&amp;quot; ====================便捷书签====================
+quickmark v https://www.v2ex.com/
+
+
+
+&amp;quot; ====================键盘映射====================
+bind q tabprev
+bind w tabnext
+bind Q tabmove -1
+bind W tabmove +1
+bind h back
+bind l forward
+bind j scrollline 50
+bind k scrollline -50
+
+bind c current_url open
+bind C current_url tabopen
+
+unbind --mode=normal m
+bind m pin
+
+&amp;quot; make d take you to the tab you were just on (I find it much less confusing)
+bind d composite tab #; tabclose #
+bind D tabclose
+
+&amp;quot; Handy multiwindow/multitasking binds
+bind gd tabdetach
+bind gD composite tabduplicate; tabdetach
+
+&amp;quot; Make yy use canonical / short links on the 5 websites that support them
+unbind --mode=normal y
+bind yy clipboard yankcanon
+bind yt composite js document.title + &#39;\n&#39; + document.location.href | yank
+
+&amp;quot; swap p and P
+bind p clipboard tabopen
+bind P clipboard open
+
+&amp;quot; TODO reload config with :source?
+
+
+bind --mode=normal &amp;lt;C-P&amp;gt; winopen -private
+bind --mode=ex     &amp;lt;C-a&amp;gt; text.beginning_of_line
+bind --mode=insert &amp;lt;C-a&amp;gt; text.beginning_of_line
+bind --mode=input  &amp;lt;C-a&amp;gt; text.beginning_of_line
+bind --mode=ex     &amp;lt;C-e&amp;gt; text.end_of_line
+bind --mode=insert &amp;lt;C-e&amp;gt; text.end_of_line
+bind --mode=input  &amp;lt;C-e&amp;gt; text.end_of_line
+bind --mode=ex     &amp;lt;C-f&amp;gt; text.forward_word
+bind --mode=insert &amp;lt;C-f&amp;gt; text.forward_word
+bind --mode=input  &amp;lt;C-f&amp;gt; text.forward_word
+bind --mode=ex     &amp;lt;C-k&amp;gt; text.kill_line
+bind --mode=insert &amp;lt;C-k&amp;gt; text.kill_line
+bind --mode=input  &amp;lt;C-k&amp;gt; text.kill_line
+bind --mode=ex     &amp;lt;C-u&amp;gt; text.backward_kill_line
+bind --mode=insert &amp;lt;C-u&amp;gt; text.backward_kill_line
+bind --mode=input  &amp;lt;C-u&amp;gt; text.backward_kill_line
+bind --mode=ex     &amp;lt;C-V&amp;gt; composite getclip selection | text.insert_text
+bind --mode=insert &amp;lt;C-V&amp;gt; composite getclip selection | text.insert_text
+bind --mode=input  &amp;lt;C-V&amp;gt; composite getclip selection | text.insert_text
+bind --mode=ex     &amp;lt;C-w&amp;gt; text.backward_kill_word
+bind --mode=insert &amp;lt;C-w&amp;gt; text.backward_kill_word
+bind --mode=input  &amp;lt;C-w&amp;gt; text.backward_kill_word
+
+
+
+&amp;quot; ====================搜索引擎====================
+&amp;quot; ** Search Engines
+&amp;quot; Disable all searchurls
+jsb Object.keys(tri.config.get(&amp;quot;searchurls&amp;quot;)).reduce((prev, u) =&amp;gt; prev.catch(()=&amp;gt;{}).then(_ =&amp;gt; tri.excmds.setnull(&amp;quot;searchurls.&amp;quot; + u)), Promise.resolve())
+
+set searchengine g
+&amp;quot; set searchurls.KEYWORD URL
+set searchurls.b https://www.baidu.com/s?ie=UTF-8&amp;amp;wd=%s
+set searchurls.d https://www.douban.com/search?q=%s
+set searchurls.g https://www.google.com/search?q=%s
+set searchurls.gh https://github.com/search?utf8=%E2%9C%93&amp;amp;q=%s&amp;amp;ref=simplesearch
+set searchurls.mdn https://developer.mozilla.org/en-US/search?q=%s&amp;amp;topic=api&amp;amp;topic=js
+set searchurls.npm https://www.npmjs.com/search?q=%s
+set searchurls.pydoc https://docs.python.org/3/search.html?q=%s
+set searchurls.r https://old.reddit.com/r/%s
+set searchurls.rustdoc https://doc.rust-lang.org/std/index.html?search=%s
+set searchurls.y https://www.youtube.com/results?search_query=%s
+
+
+
+&amp;quot; ====================脚本调用====================
+&amp;quot; :js
+&amp;quot; urlmodify
+alias tabsort jsb browser.tabs.query({}).then(tabs =&amp;gt; tabs.sort((t1, t2) =&amp;gt; t1.url.localeCompare(t2.url)).forEach((tab, index) =&amp;gt; browser.tabs.move(tab.id, {index})))
+alias tabuniq jsb browser.tabs.query({}).then(tabs =&amp;gt; browser.tabs.remove(tabs.filter((tab, index) =&amp;gt; tabs.slice(index + 1).find(t =&amp;gt; t.url == tab.url)).map(tab =&amp;gt; tab.id)))
+bind --mode=normal ee composite get_current_url | exclaim /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+
+
+&amp;quot; ====================例外设置====================
+autocmd DocStart mail.google.com mode ignore
+
+
+
+&amp;quot; ====================其他设置====================
+&amp;quot; Add helper commands that Mozillians think make Firefox irredeemably
+&amp;quot; insecure. For details, read the comment at the top of this file.
+command fixamo_quiet jsb tri.excmds.setpref(&amp;quot;privacy.resistFingerprinting.block_mozAddonManager&amp;quot;, &amp;quot;true&amp;quot;).then(tri.excmds.setpref(&amp;quot;extensions.webextensions.restrictedDomains&amp;quot;, &#39;&amp;quot;&amp;quot;&#39;))
+command fixamo js tri.excmds.setpref(&amp;quot;privacy.resistFingerprinting.block_mozAddonManager&amp;quot;, &amp;quot;true&amp;quot;).then(tri.excmds.setpref(&amp;quot;extensions.webextensions.restrictedDomains&amp;quot;, &#39;&amp;quot;&amp;quot;&#39;).then(tri.excmds.fillcmdline_tmp(3000, &amp;quot;Permissions added to user.js. Please restart Firefox to make them take affect.&amp;quot;)))
+
+&amp;quot; Make Tridactyl work on more sites at the expense of some security. For
+&amp;quot; details, read the comment at the top of this file.
+fixamo_quiet
+
+
+
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Pentadactyl on Pale Moon</title>
+    <link href="https://lutaonan.com/blog/pentadactyl-on-palemoon/"/>
+    <updated>2020-01-19T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/pentadactyl-on-palemoon/</id>
+    <content type="html">&lt;p&gt;&lt;img src=&quot;https://gt-toolbox.oss-cn-beijing.aliyuncs.com/cnAYuE-HRASwW.png&quot; alt=&quot;Pentadactyl-on-Palemoon&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;
+&amp;quot;1.3.1
+
+loadplugins &#39;\.(js|penta)$&#39;
+group user
+set cdpath=&#39;&#39;
+
+&amp;quot; vim: set ft=pentadactyl:
+
+&amp;quot;&amp;quot; ==================环境变量设置========================
+
+set complete=search,location,file,bookmark,history,suggestion
+set defsearch=g
+set titlestring=firefox
+&amp;quot;set newtab=all
+&amp;quot;Show the destination of the link under the cursor in the status bar.
+set editor=&amp;quot;/Applications/MacVim.app/Contents/MacOS/Vim -g -f&amp;quot;
+set hintkeys=qwertasdfgzxcvb
+
+
+&amp;quot;&amp;quot; =====================键盘映射======================
+&amp;quot; map x :set gui=none,tabs,bookmarks&amp;lt;CR&amp;gt;
+&amp;quot; map c :set gui=none,tabs&amp;lt;CR&amp;gt;
+&amp;quot; 
+&amp;quot; map &amp;lt;C-Up&amp;gt; :set gui=all&amp;lt;CR&amp;gt;
+&amp;quot; map &amp;lt;C-Left&amp;gt; :set gui=none&amp;lt;CR&amp;gt;
+&amp;quot; map &amp;lt;F3&amp;gt; :set gui=none&amp;lt;CR&amp;gt;
+&amp;quot; map &amp;lt;C-Right&amp;gt; :set gui=none,tabs&amp;lt;CR&amp;gt;
+&amp;quot; map &amp;lt;F4&amp;gt; :set gui=none,tabs&amp;lt;CR&amp;gt;
+
+map -b q gT
+map -b w gt
+map -b Q :tabmove! -1&amp;lt;CR&amp;gt;
+map -b W :tabmove! +1&amp;lt;CR&amp;gt;
+map &amp;lt; g0
+map -b &amp;gt; g$
+map h :back&amp;lt;CR&amp;gt;
+map l :forward&amp;lt;CR&amp;gt;
+
+map -b j 8j
+map -b k 8k
+map -b J &amp;lt;C-d&amp;gt;
+map -b K &amp;lt;C-u&amp;gt;
+
+
+&amp;quot; inoremap &amp;lt;C-a&amp;gt; &amp;lt;Ins&amp;gt;&amp;lt;C-a&amp;gt;&amp;lt;Ins&amp;gt;
+map -b gi gi&amp;lt;C-e&amp;gt;
+
+map U :u&amp;lt;space&amp;gt;
+map -b V :emenu&amp;lt;space&amp;gt;
+map -b pp P
+map S :stop&amp;lt;CR&amp;gt;
+
+map -b ,g :tabopen&amp;lt;space&amp;gt;g&amp;lt;space&amp;gt;
+map -b ,b :tabopen&amp;lt;space&amp;gt;b&amp;lt;space&amp;gt;
+map -b ,d :tabopen&amp;lt;space&amp;gt;d&amp;lt;space&amp;gt;
+map -b ,j :tabopen&amp;lt;space&amp;gt;j&amp;lt;space&amp;gt;
+map -b ,r :tabopen&amp;lt;space&amp;gt;r&amp;lt;space&amp;gt;
+map -b ,t :tabopen&amp;lt;space&amp;gt;t&amp;lt;space&amp;gt;
+map -b ,m :tabopen&amp;lt;space&amp;gt;gm&amp;lt;space&amp;gt;
+map -b ,y :tabopen&amp;lt;space&amp;gt;y&amp;lt;space&amp;gt;
+
+map ge &amp;lt;C-6&amp;gt;
+
+map &amp;lt;C-t&amp;gt; gH
+map gR :restart&amp;lt;CR&amp;gt;
+
+map -b Y :js dactyl.clipboardWrite(buffer.title + &#39;\n&#39; + buffer.URL)&amp;lt;CR&amp;gt;
+map -b eY :js dactyl.clipboardWrite(&#39;[&#39; + buffer.title + &#39;](&#39; + buffer.URL + &#39;)&#39; )&amp;lt;CR&amp;gt;
+
+&amp;quot;==================外部程序调用=======================
+map -b ee :js io.run(&amp;quot;/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome&amp;quot;, [buffer.URL])&amp;lt;CR&amp;gt;
+map -b eso :source ~/.pentadactylrc&amp;lt;CR&amp;gt;
+
+&amp;quot;=====================qmark========================
+silent qmark v https://www.v2ex.com/
+
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Vimperator on Firefox</title>
+    <link href="https://lutaonan.com/blog/vimperator-on-firefox/"/>
+    <updated>2020-01-18T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/vimperator-on-firefox/</id>
+    <content type="html">&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;
+loadplugins
+source! ~/.vimperatorrc.local
+
+&amp;quot;&amp;quot; ================colorscheme配色方案=====================
+colorscheme vimpwhite
+
+&amp;quot;&amp;quot; ==================环境变量设置========================
+
+&amp;quot;自动补全，s=搜索引擎和关键词，f＝本地文件，l＝书签和历史，b＝书签，h＝历史，S＝搜索引擎建议，t＝打开的标签
+set complete=slSt
+set defsearch=g
+set titlestring=firefox
+&amp;quot;set newtab=all
+&amp;quot;Show the destination of the link under the cursor in the status bar.
+set ssli=1
+set gui=nonavigation
+set gui=none
+set editor=&amp;quot;/Applications/MacVim.app/Contents/MacOS/Vim -g -f&amp;quot;
+
+map x :set gui=none,tabs,bookmarks&amp;lt;CR&amp;gt;
+map c :set gui=none,tabs&amp;lt;CR&amp;gt;
+
+map &amp;lt;C-Up&amp;gt; :set gui=all&amp;lt;CR&amp;gt;
+map &amp;lt;C-Left&amp;gt; :set gui=none&amp;lt;CR&amp;gt;
+map &amp;lt;F3&amp;gt; :set gui=none&amp;lt;CR&amp;gt;
+map &amp;lt;C-Right&amp;gt; :set gui=none,tabs&amp;lt;CR&amp;gt;
+map &amp;lt;F4&amp;gt; :set gui=none,tabs&amp;lt;CR&amp;gt;
+
+set scrollbars=false
+set hintchars=qwertasdfgzxcvb
+set hlsearch
+set focuscontent
+style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;} 
+
+com! -nargs=? -complete=search switchenginesearch exe &#39;o &amp;lt;args&amp;gt; &#39; + (buffer.lastInputField?buffer.lastInputField.value:&#39;&#39;)
+map s gi&amp;lt;ESC&amp;gt; :switchenginesearch&amp;lt;Space&amp;gt;
+
+
+&amp;quot;&amp;quot; =====================键盘映射======================
+noremap q gT
+noremap w gt
+noremap Q :tabmove! -1&amp;lt;CR&amp;gt;
+noremap W :tabmove! +1&amp;lt;CR&amp;gt;
+map &amp;lt; g0
+noremap &amp;gt; g$
+map h :back&amp;lt;CR&amp;gt;
+map l :forward&amp;lt;CR&amp;gt;
+
+noremap j 8j
+noremap k 8k
+noremap J &amp;lt;C-d&amp;gt;
+noremap K &amp;lt;C-u&amp;gt;
+
+
+&amp;quot; inoremap &amp;lt;C-a&amp;gt; &amp;lt;Ins&amp;gt;&amp;lt;C-a&amp;gt;&amp;lt;Ins&amp;gt;
+map &amp;lt;C-b&amp;gt; i&amp;lt;C-b&amp;gt;
+noremap gi gi&amp;lt;C-e&amp;gt;
+
+map U :u&amp;lt;space&amp;gt;
+noremap V :emenu&amp;lt;space&amp;gt;
+noremap pp P
+map S :stop&amp;lt;CR&amp;gt;
+
+noremap ,g :tabopen&amp;lt;space&amp;gt;g&amp;lt;space&amp;gt;
+noremap ,b :tabopen&amp;lt;space&amp;gt;b&amp;lt;space&amp;gt;
+noremap ,d :tabopen&amp;lt;space&amp;gt;d&amp;lt;space&amp;gt;
+noremap ,j :tabopen&amp;lt;space&amp;gt;j&amp;lt;space&amp;gt;
+noremap ,r :tabopen&amp;lt;space&amp;gt;r&amp;lt;space&amp;gt;
+noremap ,t :tabopen&amp;lt;space&amp;gt;t&amp;lt;space&amp;gt;
+noremap ,m :tabopen&amp;lt;space&amp;gt;gm&amp;lt;space&amp;gt;
+noremap ,y :tabopen&amp;lt;space&amp;gt;y&amp;lt;space&amp;gt;
+
+map ge &amp;lt;C-6&amp;gt;
+
+map &amp;lt;C-t&amp;gt; gH
+map gR :restart&amp;lt;CR&amp;gt;
+
+
+&amp;quot;=================about:config=======================
+&amp;quot; set!network.proxy.socks_remote_dns=true
+&amp;quot; set!mousewheel.withnokey.sysnumlines=false
+&amp;quot; set!mousewheel.withnokey.numlines=10
+&amp;quot; set!layout.spellcheckDefault=0
+&amp;quot; set!browser.download.manager.scanWhenDone=false
+&amp;quot; set!dom.max_script_run_time=20
+&amp;quot; set!security.dialog_enable_delay=0
+set!middlemouse.paste=true
+&amp;quot; set!browser.tabs.closeWindowWithLastTab=false
+set!clipboard.autocopy=true
+&amp;quot; set!browser.sessionstore.restore_pinned_tabs_on_demand=true
+&amp;quot; set!browser.tabs.insertRelatedAfterCurrent=true
+
+&amp;quot;===================Vimp插件========================
+let g:smooziee_scroll_amount=&amp;quot;400&amp;quot;
+let g:smooziee_scroll_interval=&amp;quot;10&amp;quot;
+
+map Y :copy titleAndURL&amp;lt;CR&amp;gt;
+map eY :copy markdownLink&amp;lt;CR&amp;gt;
+&amp;quot;==================外部程序调用=======================
+&amp;quot; command! ie js liberator.execute(&#39;!start iexplore &#39; + buffer.URL)
+map ee :js io.run(&amp;quot;/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome&amp;quot;, [buffer.URL])&amp;lt;CR&amp;gt;
+
+map eso :source ~/.vimperatorrc&amp;lt;CR&amp;gt;
+
+
+&amp;quot;=====================qmark========================
+silent qmark w http://www.163.com/
+
+
+&amp;quot;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝待查看=======================
+&amp;quot;Tree Style Tab 标签显示数字编号
+&amp;quot; set tabnumbers=true
+map &amp;lt;C-f&amp;gt;h/j/k/l :set!extensions.treestyletab.tabbar.position=left/bottom/top/right
+
+
+&amp;quot; &amp;quot;javascript to hide statusbar
+&amp;quot; noremap &amp;lt;silent&amp;gt; &amp;lt;F2&amp;gt; :js toggle_bottombar()&amp;lt;CR&amp;gt;
+&amp;quot; noremap : :js toggle_bottombar(&#39;on&#39;)&amp;lt;CR&amp;gt;:
+&amp;quot; noremap o :js toggle_bottombar(&#39;on&#39;)&amp;lt;CR&amp;gt;o
+&amp;quot; noremap O :js toggle_bottombar(&#39;on&#39;)&amp;lt;CR&amp;gt;O
+&amp;quot; noremap t :js toggle_bottombar(&#39;on&#39;)&amp;lt;CR&amp;gt;t
+&amp;quot; noremap T :js toggle_bottombar(&#39;on&#39;)&amp;lt;CR&amp;gt;t
+&amp;quot; noremap / :js toggle_bottombar(&#39;on&#39;)&amp;lt;CR&amp;gt;/
+&amp;quot; cnoremap &amp;lt;CR&amp;gt; &amp;lt;CR&amp;gt;:js toggle_bottombar(&#39;off&#39;)&amp;lt;CR&amp;gt;
+&amp;quot; cnoremap &amp;lt;Esc&amp;gt; &amp;lt;Esc&amp;gt;:js toggle_bottombar(&#39;off&#39;)&amp;lt;CR&amp;gt;
+&amp;quot; 
+&amp;quot; :js &amp;lt;&amp;lt; EOF
+&amp;quot; function toggle_bottombar(p) {
+&amp;quot;     var bb = document.getElementById(&#39;liberator-bottombar&#39;);
+&amp;quot;     if (!bb)
+&amp;quot;         return;
+&amp;quot;     if (p == &#39;on&#39;){
+&amp;quot;         bb.style.height = &#39;&#39;;
+&amp;quot;         bb.style.overflow = &#39;&#39;;
+&amp;quot;         return;
+&amp;quot;     }
+&amp;quot;     if (p == &#39;off&#39;){
+&amp;quot;         bb.style.height = &#39;0px&#39;;
+&amp;quot;         bb.style.overflow = &#39;hidden&#39;;
+&amp;quot;         return;
+&amp;quot;     }
+&amp;quot;     bb.style.height = (bb.style.height == &#39;&#39;) ? &#39;0px&#39; : &#39;&#39;;
+&amp;quot;     bb.style.overflow = (bb.style.height == &#39;&#39;) ? &#39;&#39; : &#39;hidden&#39;;
+&amp;quot; }
+&amp;quot; toggle_bottombar();
+&amp;quot; EOF
+&amp;quot; 
+&amp;quot; &amp;quot;keep the status line visible in full-screen
+&amp;quot; au Fullscreen .* :set guioptions+=s
+
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  
+  <entry>
     <title>解决MacOS休眠后Wifi卡死断网的方法</title>
     <link href="https://lutaonan.com/blog/mac-wifi-dropdown/"/>
     <updated>2019-07-24T00:00:00Z</updated>

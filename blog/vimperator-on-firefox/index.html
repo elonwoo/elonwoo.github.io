@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <title>
+        Vimperator on Firefox - Elon's Blog</title>
+    
+
+    
+  <title>Vimperator on Firefox - Elon&apos;s Blog</title>
+
+<meta name="description" content="blogging about life, tech.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Elon Woo">
+
+<link rel="canonical" href="https://elonwoo.com/blog/vimperator-on-firefox/">
+
+<meta property="og:title" content="Vimperator on Firefox - Elon&apos;s Blog">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://elonwoo.com/blog/vimperator-on-firefox/">
+<meta property="og:description" content="blogging about life, tech.">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@elonwoo">
+<meta name="twitter:url" content="https://elonwoo.com/blog/vimperator-on-firefox/">
+<meta name="twitter:title" content="Vimperator on Firefox - Elon&apos;s Blog">
+<meta name="twitter:description" content="blogging about life, tech.">
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.21.0,npm/prismjs@1.21.0/components/prism-javascript.min.js,npm/prismjs@1.21.0/components/prism-typescript.min.js,npm/prismjs@1.21.0/components/prism-bash.min.js,npm/prismjs@1.21.0/components/prism-sql.min.js,npm/prismjs@1.21.0/components/prism-diff.min.js,npm/prismjs@1.21.0/components/prism-tsx.min.js,npm/prismjs@1.21.0/components/prism-jsx.min.js,npm/prismjs@1.21.0/components/prism-json.min.js"></script>
+
+  <link href="//cdn.jsdelivr.net/combine/npm/prismjs@1.21.0/themes/prism.min.css,npm/prismjs@1.21.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet">
+    <link href="/assets/index.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+  <div class="main-container mx-auto pt-12">
+    <div class="flex justify-between mb-4">
+  <div>
+    <h1 class="logo text-xl text-red-900">
+      <a href="/">Elon's Blog</a>
+    </h1>
+
+  </div>
+  <div class="flex self-center -mx-2 text-sm text-red-900 font-bold">
+    <a class="mx-2" href="/">文章</a>
+    
+
+  </div>
+</div>
+    <div class="mb-4 mt-12 font-sans">
+      <h2 class="text-4xl tracking-wide text-gray-900 font-bold">Vimperator on Firefox</h2>
+      <h3 class="text-gray-500 text-xs font-light">2020-01-18</h3>
+    </div>
+    <div class="blog-post">
+      <pre><code class="language-text">
+loadplugins
+source! ~/.vimperatorrc.local
+
+&quot;&quot; ================colorscheme配色方案=====================
+colorscheme vimpwhite
+
+&quot;&quot; ==================环境变量设置========================
+
+&quot;自动补全，s=搜索引擎和关键词，f＝本地文件，l＝书签和历史，b＝书签，h＝历史，S＝搜索引擎建议，t＝打开的标签
+set complete=slSt
+set defsearch=g
+set titlestring=firefox
+&quot;set newtab=all
+&quot;Show the destination of the link under the cursor in the status bar.
+set ssli=1
+set gui=nonavigation
+set gui=none
+set editor=&quot;/Applications/MacVim.app/Contents/MacOS/Vim -g -f&quot;
+
+map x :set gui=none,tabs,bookmarks&lt;CR&gt;
+map c :set gui=none,tabs&lt;CR&gt;
+
+map &lt;C-Up&gt; :set gui=all&lt;CR&gt;
+map &lt;C-Left&gt; :set gui=none&lt;CR&gt;
+map &lt;F3&gt; :set gui=none&lt;CR&gt;
+map &lt;C-Right&gt; :set gui=none,tabs&lt;CR&gt;
+map &lt;F4&gt; :set gui=none,tabs&lt;CR&gt;
+
+set scrollbars=false
+set hintchars=qwertasdfgzxcvb
+set hlsearch
+set focuscontent
+style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;} 
+
+com! -nargs=? -complete=search switchenginesearch exe 'o &lt;args&gt; ' + (buffer.lastInputField?buffer.lastInputField.value:'')
+map s gi&lt;ESC&gt; :switchenginesearch&lt;Space&gt;
+
+
+&quot;&quot; =====================键盘映射======================
+noremap q gT
+noremap w gt
+noremap Q :tabmove! -1&lt;CR&gt;
+noremap W :tabmove! +1&lt;CR&gt;
+map &lt; g0
+noremap &gt; g$
+map h :back&lt;CR&gt;
+map l :forward&lt;CR&gt;
+
+noremap j 8j
+noremap k 8k
+noremap J &lt;C-d&gt;
+noremap K &lt;C-u&gt;
+
+
+&quot; inoremap &lt;C-a&gt; &lt;Ins&gt;&lt;C-a&gt;&lt;Ins&gt;
+map &lt;C-b&gt; i&lt;C-b&gt;
+noremap gi gi&lt;C-e&gt;
+
+map U :u&lt;space&gt;
+noremap V :emenu&lt;space&gt;
+noremap pp P
+map S :stop&lt;CR&gt;
+
+noremap ,g :tabopen&lt;space&gt;g&lt;space&gt;
+noremap ,b :tabopen&lt;space&gt;b&lt;space&gt;
+noremap ,d :tabopen&lt;space&gt;d&lt;space&gt;
+noremap ,j :tabopen&lt;space&gt;j&lt;space&gt;
+noremap ,r :tabopen&lt;space&gt;r&lt;space&gt;
+noremap ,t :tabopen&lt;space&gt;t&lt;space&gt;
+noremap ,m :tabopen&lt;space&gt;gm&lt;space&gt;
+noremap ,y :tabopen&lt;space&gt;y&lt;space&gt;
+
+map ge &lt;C-6&gt;
+
+map &lt;C-t&gt; gH
+map gR :restart&lt;CR&gt;
+
+
+&quot;=================about:config=======================
+&quot; set!network.proxy.socks_remote_dns=true
+&quot; set!mousewheel.withnokey.sysnumlines=false
+&quot; set!mousewheel.withnokey.numlines=10
+&quot; set!layout.spellcheckDefault=0
+&quot; set!browser.download.manager.scanWhenDone=false
+&quot; set!dom.max_script_run_time=20
+&quot; set!security.dialog_enable_delay=0
+set!middlemouse.paste=true
+&quot; set!browser.tabs.closeWindowWithLastTab=false
+set!clipboard.autocopy=true
+&quot; set!browser.sessionstore.restore_pinned_tabs_on_demand=true
+&quot; set!browser.tabs.insertRelatedAfterCurrent=true
+
+&quot;===================Vimp插件========================
+let g:smooziee_scroll_amount=&quot;400&quot;
+let g:smooziee_scroll_interval=&quot;10&quot;
+
+map Y :copy titleAndURL&lt;CR&gt;
+map eY :copy markdownLink&lt;CR&gt;
+&quot;==================外部程序调用=======================
+&quot; command! ie js liberator.execute('!start iexplore ' + buffer.URL)
+map ee :js io.run(&quot;/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome&quot;, [buffer.URL])&lt;CR&gt;
+
+map eso :source ~/.vimperatorrc&lt;CR&gt;
+
+
+&quot;=====================qmark========================
+silent qmark w http://www.163.com/
+
+
+&quot;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝待查看=======================
+&quot;Tree Style Tab 标签显示数字编号
+&quot; set tabnumbers=true
+map &lt;C-f&gt;h/j/k/l :set!extensions.treestyletab.tabbar.position=left/bottom/top/right
+
+
+&quot; &quot;javascript to hide statusbar
+&quot; noremap &lt;silent&gt; &lt;F2&gt; :js toggle_bottombar()&lt;CR&gt;
+&quot; noremap : :js toggle_bottombar('on')&lt;CR&gt;:
+&quot; noremap o :js toggle_bottombar('on')&lt;CR&gt;o
+&quot; noremap O :js toggle_bottombar('on')&lt;CR&gt;O
+&quot; noremap t :js toggle_bottombar('on')&lt;CR&gt;t
+&quot; noremap T :js toggle_bottombar('on')&lt;CR&gt;t
+&quot; noremap / :js toggle_bottombar('on')&lt;CR&gt;/
+&quot; cnoremap &lt;CR&gt; &lt;CR&gt;:js toggle_bottombar('off')&lt;CR&gt;
+&quot; cnoremap &lt;Esc&gt; &lt;Esc&gt;:js toggle_bottombar('off')&lt;CR&gt;
+&quot; 
+&quot; :js &lt;&lt; EOF
+&quot; function toggle_bottombar(p) {
+&quot;     var bb = document.getElementById('liberator-bottombar');
+&quot;     if (!bb)
+&quot;         return;
+&quot;     if (p == 'on'){
+&quot;         bb.style.height = '';
+&quot;         bb.style.overflow = '';
+&quot;         return;
+&quot;     }
+&quot;     if (p == 'off'){
+&quot;         bb.style.height = '0px';
+&quot;         bb.style.overflow = 'hidden';
+&quot;         return;
+&quot;     }
+&quot;     bb.style.height = (bb.style.height == '') ? '0px' : '';
+&quot;     bb.style.overflow = (bb.style.height == '') ? '' : 'hidden';
+&quot; }
+&quot; toggle_bottombar();
+&quot; EOF
+&quot; 
+&quot; &quot;keep the status line visible in full-screen
+&quot; au Fullscreen .* :set guioptions+=s
+
+</code></pre>
+
+    </div>
+
+  </div>
+
+
+
+    
+  </body>
+
+</html>
