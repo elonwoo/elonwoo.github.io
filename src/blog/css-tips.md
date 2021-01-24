@@ -1,5 +1,5 @@
 ---
-title: css tips
+title: CSS Tips
 layout: blog.njk
 tags: blog
 date: 2019-07-16

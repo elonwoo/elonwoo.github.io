@@ -1,5 +1,5 @@
 ---
-title: mac tips
+title: MacOS Tips
 layout: blog.njk
 date: 2019-07-15
 tags: blog

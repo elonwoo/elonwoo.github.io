@@ -1,5 +1,5 @@
 ---
-title: 极简blog主题
+title: Minimalist Theme for Blog
 layout: blog.njk
 date: 2020-01-22
 tags: blog

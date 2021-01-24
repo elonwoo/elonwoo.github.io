@@ -1,5 +1,5 @@
 ---
-title: 解决MacOS休眠后Wifi卡死断网的方法
+title: MacOS WiFi Dropping When Waking From Sleep
 layout: blog.njk
 date: 2019-07-24
 tags: blog
