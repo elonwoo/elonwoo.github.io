@@ -4,11 +4,27 @@
   <subtitle>Randy is blogging about life, tech and music.</subtitle>
   <link href="https://lutaonan.com/rss.xml" rel="self"/>
   <link href="https://lutaonan.com/"/>
-  <updated>2021-01-24T00:00:00Z</updated>
+  <updated>2021-01-25T00:00:00Z</updated>
   <id>https://lutaonan.com/</id>
   <author>
     <name>Randy</name>
   </author>
+  
+  <entry>
+    <title>Chrome DevTools Guide</title>
+    <link href="https://lutaonan.com/blog/20210125_chrome-devtools/"/>
+    <updated>2021-01-25T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/20210125_chrome-devtools/</id>
+    <content type="html">&lt;h2 id=&quot;snippets-on-chrome-devtools&quot;&gt;Snippets on Chrome DevTools&lt;/h2&gt;
+&lt;p&gt;经常使用的调试代码可以放到Chrome DevTools 的Snippets里，还可以通过&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cmd+o, !snippet_name 来直接运行&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/tools/chrome-devtools/javascript/snippets&quot;&gt;Run Snippets Of JavaScript On Any Page With Chrome DevTools&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E5%BB%B6%E4%BC%B8%E9%98%85%E8%AF%BB&quot;&gt;延伸阅读&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/tools/chrome-devtools&quot;&gt;Chrome DevTools  |  Google Developers&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>What Is A TTY On Linux</title>
