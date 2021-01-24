@@ -159,3 +159,38 @@ fixamo_quiet
 
 
 ```
+
+
+```css
+// userChrome.css
+/*
+ * Do not remove the @namespace line -- it's required for correct functioning
+ */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+/*
+ * Hide tab bar, navigation bar and scrollbars
+ * !important may be added to force override, but not necessary
+ * #content is not necessary to hide scroll bars
+ */
+#TabsToolbar {visibility: collapse;}
+#navigator-toolbox {visibility: collapse;}
+/*
+ * browser {margin-right: -14px; margin-bottom: -14px;}
+ */
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar .titlebar-spacer {
+        border-inline-end: none;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none;
+}
+
+```
