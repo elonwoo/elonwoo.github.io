@@ -1,7 +1,7 @@
 ---
 title: 罗翔教授语录
 layout: blog.njk
-date: 2020-01-24
+date: 2021-01-17
 tags: blog
 pin: true
 categories:

@@ -1,7 +1,7 @@
 ---
-title: Vimperator on Firefox
+title: Vimperator On Firefox
 layout: blog.njk
-date: 2020-01-18
+date: 2021-01-18
 tags: blog
 categories:
   - firefox

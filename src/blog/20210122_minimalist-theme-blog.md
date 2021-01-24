@@ -1,7 +1,7 @@
 ---
 title: Minimalist Theme for Blog
 layout: blog.njk
-date: 2020-01-22
+date: 2021-01-22
 tags: blog
 categories:
   - blog

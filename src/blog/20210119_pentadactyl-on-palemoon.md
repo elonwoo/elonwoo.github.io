@@ -1,7 +1,7 @@
 ---
-title: Pentadactyl on Pale Moon
+title: Pentadactyl On Pale Moon
 layout: blog.njk
-date: 2020-01-19
+date: 2021-01-19
 tags: blog
 categories:
   - firefox

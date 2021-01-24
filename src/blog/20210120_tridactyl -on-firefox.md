@@ -1,7 +1,7 @@
 ---
-title: Tridactyl on Firefox
+title: Tridactyl On Firefox
 layout: blog.njk
-date: 2020-01-20
+date: 2021-01-20
 tags: blog
 categories:
   - firefox
