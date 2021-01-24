@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <title>
+        What Is A TTY On Linux - Elon's Blog</title>
+    
+
+    
+  <title>What Is A TTY On Linux - Elon&apos;s Blog</title>
+
+<meta name="description" content="blogging about life, tech.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Elon Woo">
+
+<link rel="canonical" href="https://elonwoo.com/blog/20210124_What-is-a-TTY-on-Linux/">
+
+<meta property="og:title" content="What Is A TTY On Linux - Elon&apos;s Blog">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://elonwoo.com/blog/20210124_What-is-a-TTY-on-Linux/">
+<meta property="og:description" content="blogging about life, tech.">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@elonwoo">
+<meta name="twitter:url" content="https://elonwoo.com/blog/20210124_What-is-a-TTY-on-Linux/">
+<meta name="twitter:title" content="What Is A TTY On Linux - Elon&apos;s Blog">
+<meta name="twitter:description" content="blogging about life, tech.">
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.21.0,npm/prismjs@1.21.0/components/prism-javascript.min.js,npm/prismjs@1.21.0/components/prism-typescript.min.js,npm/prismjs@1.21.0/components/prism-bash.min.js,npm/prismjs@1.21.0/components/prism-sql.min.js,npm/prismjs@1.21.0/components/prism-diff.min.js,npm/prismjs@1.21.0/components/prism-tsx.min.js,npm/prismjs@1.21.0/components/prism-jsx.min.js,npm/prismjs@1.21.0/components/prism-json.min.js"></script>
+
+  <link href="//cdn.jsdelivr.net/combine/npm/prismjs@1.21.0/themes/prism.min.css,npm/prismjs@1.21.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet">
+    <link href="/assets/index.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+  <div class="main-container mx-auto pt-12">
+    <div class="flex justify-between mb-4">
+  <div>
+    <h1 class="logo text-xl text-red-900">
+      <a href="/">Elon's Blog</a>
+    </h1>
+
+  </div>
+  <div class="flex self-center -mx-2 text-sm text-red-900 font-bold">
+    <a class="mx-2" href="/">文章</a>
+    
+
+  </div>
+</div>
+    <div class="mb-4 mt-12 font-sans">
+      <h2 class="text-4xl tracking-wide text-gray-900 font-bold">What Is A TTY On Linux</h2>
+      <h3 class="text-gray-500 text-xs font-light">2021-01-24</h3>
+    </div>
+    <div class="blog-post">
+      <h2 id="%40zhujinliang">@zhujinliang</h2>
+<p>shell 指外壳程序，意思是与系统内核沟通的程序，对应的内核叫 kernel，就是 bash 、zsh 这样的程序</p>
+<p>逻辑上是我们通过输入输出设备连接到计算机硬件，通过 shell，调用 kernel 提供的接口，完成操作。</p>
+<p>tty 是电传打字机，早期计算机的输出设备，计算机通过串口线输出信号，电传打字机像人按动打字机似的，在纸上打出文字（据说 CR LF 也是电传打字机时代遗留下来的，CR 表示把打字头位置移到行首，LF 表示走一行纸）</p>
+<p>终端的概念，早期计算机体积大、造价高，所以一个机构或院校购买一台，然后通过终端设备（键盘、tty 、modem 等）接入，通过分时等形式供多人使用。各类操作系统就在这种操作逻辑上发展起来，以至于现在个人计算机仍保留这种原始的操作方式。现在已经没有了电传打字机之类的硬件设备，为了兼容，或者说情怀，于是在操作系统上虚拟了一个硬件。</p>
+<h2 id="%40billlee">@billlee</h2>
+<p>基本上就分为两类：shell 和 terminal</p>
+<p>terminal 负责底层的输入输出，例如：缓冲一行数据，直到 enter 按下的时候才把数据发送给前台进程、把 backspace, 方向键等转换成对应的转义序列，收到 ctrl+c 时给前台进程发送 SIGINT; 根据程序输出的转义序列给输出的文字设置颜色、粗体、闪烁、下划线等不同的格式。</p>
+<p>shell 负责解释用户输入的命令，根据输入的命令建立管道、fork, 调整 stdin/stdout/stderr 描述符，exec</p>
+<p>tty, pty, windows 超级终端都是各种不同的 terminal. bash, zsh, dash 等都是各种不同的 shell.</p>
+<p>至于 tty 是哪个进程负责的，如果这里的 tty 是指 linux 的虚拟 tty (ctrl + alt + F1-F6 调出来的那些) ，那只能说是内核本身负责的，不管对键盘输入的转义、还是对程序输出转义的解读，都是由内核内的虚拟 tty 驱动负责的。</p>
+<h2 id="%E5%BB%B6%E4%BC%B8%E9%98%85%E8%AF%BB">延伸阅读</h2>
+<ul>
+<li><a href="https://www.v2ex.com/t/747815#reply15">为什么终端有那么多的名称？ - V2EX</a></li>
+<li><a href="https://www.howtogeek.com/428174/what-is-a-tty-on-linux-and-how-to-use-the-tty-command/">What is a TTY on Linux? (and How to Use the tty Command)</a></li>
+</ul>
+
+    </div>
+
+  </div>
+
+
+
+    
+  </body>
+
+</html>

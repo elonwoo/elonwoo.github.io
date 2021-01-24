@@ -11,10 +11,34 @@
   </author>
   
   <entry>
-    <title>Registration Of A New Company 2021</title>
-    <link href="https://lutaonan.com/blog/20210124_registration-of-a-new-company/"/>
+    <title>What Is A TTY On Linux</title>
+    <link href="https://lutaonan.com/blog/20210124_What-is-a-TTY-on-Linux/"/>
     <updated>2021-01-24T00:00:00Z</updated>
-    <id>https://lutaonan.com/blog/20210124_registration-of-a-new-company/</id>
+    <id>https://lutaonan.com/blog/20210124_What-is-a-TTY-on-Linux/</id>
+    <content type="html">&lt;h2 id=&quot;%40zhujinliang&quot;&gt;@zhujinliang&lt;/h2&gt;
+&lt;p&gt;shell 指外壳程序，意思是与系统内核沟通的程序，对应的内核叫 kernel，就是 bash 、zsh 这样的程序&lt;/p&gt;
+&lt;p&gt;逻辑上是我们通过输入输出设备连接到计算机硬件，通过 shell，调用 kernel 提供的接口，完成操作。&lt;/p&gt;
+&lt;p&gt;tty 是电传打字机，早期计算机的输出设备，计算机通过串口线输出信号，电传打字机像人按动打字机似的，在纸上打出文字（据说 CR LF 也是电传打字机时代遗留下来的，CR 表示把打字头位置移到行首，LF 表示走一行纸）&lt;/p&gt;
+&lt;p&gt;终端的概念，早期计算机体积大、造价高，所以一个机构或院校购买一台，然后通过终端设备（键盘、tty 、modem 等）接入，通过分时等形式供多人使用。各类操作系统就在这种操作逻辑上发展起来，以至于现在个人计算机仍保留这种原始的操作方式。现在已经没有了电传打字机之类的硬件设备，为了兼容，或者说情怀，于是在操作系统上虚拟了一个硬件。&lt;/p&gt;
+&lt;h2 id=&quot;%40billlee&quot;&gt;@billlee&lt;/h2&gt;
+&lt;p&gt;基本上就分为两类：shell 和 terminal&lt;/p&gt;
+&lt;p&gt;terminal 负责底层的输入输出，例如：缓冲一行数据，直到 enter 按下的时候才把数据发送给前台进程、把 backspace, 方向键等转换成对应的转义序列，收到 ctrl+c 时给前台进程发送 SIGINT; 根据程序输出的转义序列给输出的文字设置颜色、粗体、闪烁、下划线等不同的格式。&lt;/p&gt;
+&lt;p&gt;shell 负责解释用户输入的命令，根据输入的命令建立管道、fork, 调整 stdin/stdout/stderr 描述符，exec&lt;/p&gt;
+&lt;p&gt;tty, pty, windows 超级终端都是各种不同的 terminal. bash, zsh, dash 等都是各种不同的 shell.&lt;/p&gt;
+&lt;p&gt;至于 tty 是哪个进程负责的，如果这里的 tty 是指 linux 的虚拟 tty (ctrl + alt + F1-F6 调出来的那些) ，那只能说是内核本身负责的，不管对键盘输入的转义、还是对程序输出转义的解读，都是由内核内的虚拟 tty 驱动负责的。&lt;/p&gt;
+&lt;h2 id=&quot;%E5%BB%B6%E4%BC%B8%E9%98%85%E8%AF%BB&quot;&gt;延伸阅读&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.v2ex.com/t/747815#reply15&quot;&gt;为什么终端有那么多的名称？ - V2EX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.howtogeek.com/428174/what-is-a-tty-on-linux-and-how-to-use-the-tty-command/&quot;&gt;What is a TTY on Linux? (and How to Use the tty Command)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Registration Of A New Company 2021</title>
+    <link href="https://lutaonan.com/blog/20210123_registration-of-a-new-company/"/>
+    <updated>2021-01-23T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/20210123_registration-of-a-new-company/</id>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.v2ex.com/t/747843#reply34&quot;&gt;公司注册下来了，分享一下费用、流程以及遇到的坑 - V2EX&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -23,10 +47,10 @@
   
   <entry>
     <title>Eleventy Blog On GitHub Page</title>
-    <link href="https://lutaonan.com/blog/20210123_blog-on-github-page/"/>
-    <updated>2021-01-23T00:00:00Z</updated>
-    <id>https://lutaonan.com/blog/20210123_blog-on-github-page/</id>
-    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;table-of-contents&quot;&gt;&lt;div class=&quot;toc-container-header&quot;&gt;索引&lt;/div&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/20210123_blog-on-github-page/#%E4%B8%BB%E9%A2%98%E5%8F%82%E8%80%83&quot;&gt;主题参考&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/20210123_blog-on-github-page/#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&quot;&gt;注意事项&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/20210123_blog-on-github-page/#%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D&quot;&gt;添加自定义域名&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/20210123_blog-on-github-page/#%E6%B7%BB%E5%8A%A0github-action&quot;&gt;添加Github Action&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/20210123_blog-on-github-page/#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5&quot;&gt;参考链接&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;
+    <link href="https://lutaonan.com/blog/20210122_blog-on-github-page/"/>
+    <updated>2021-01-22T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/20210122_blog-on-github-page/</id>
+    <content type="html">&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;table-of-contents&quot;&gt;&lt;div class=&quot;toc-container-header&quot;&gt;索引&lt;/div&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/20210122_blog-on-github-page/#%E4%B8%BB%E9%A2%98%E5%8F%82%E8%80%83&quot;&gt;主题参考&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/20210122_blog-on-github-page/#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&quot;&gt;注意事项&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/20210122_blog-on-github-page/#%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D&quot;&gt;添加自定义域名&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/20210122_blog-on-github-page/#%E6%B7%BB%E5%8A%A0github-action&quot;&gt;添加Github Action&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://lutaonan.com/blog/20210122_blog-on-github-page/#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5&quot;&gt;参考链接&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;
 &lt;h2 id=&quot;%E4%B8%BB%E9%A2%98%E5%8F%82%E8%80%83&quot;&gt;主题参考&lt;/h2&gt;
 &lt;p&gt;参照 Randy&#39;s blog 的主题&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://lutaonan.com/&quot;&gt;Randy&#39;s Blog&lt;/a&gt;&lt;/p&gt;
@@ -119,9 +143,9 @@ GitHub blog项目-Settings-GitHub Pages-Source-Branch设置为gh-pages&lt;/p&gt;
   
   <entry>
     <title>Minimalist Theme for Blog</title>
-    <link href="https://lutaonan.com/blog/20210122_minimalist-theme-blog/"/>
-    <updated>2021-01-22T00:00:00Z</updated>
-    <id>https://lutaonan.com/blog/20210122_minimalist-theme-blog/</id>
+    <link href="https://lutaonan.com/blog/20210121_minimalist-theme-blog/"/>
+    <updated>2021-01-21T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/20210121_minimalist-theme-blog/</id>
     <content type="html">&lt;p&gt;以下收集了一些个人比较喜欢的 &lt;strong&gt;极简blog主题&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://lutaonan.com/&quot;&gt;Randy&#39;s Blog&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/djyde/blog-2020&quot;&gt;djyde/blog-2020&lt;/a&gt;&lt;/p&gt;
