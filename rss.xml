@@ -223,7 +223,7 @@ GitHub blog项目-Settings-GitHub Pages-Source-Branch设置为gh-pages&lt;/p&gt;
   </entry>
   
   <entry>
-    <title>极简blog主题</title>
+    <title>Minimalist Theme for Blog</title>
     <link href="https://lutaonan.com/blog/minimalist-theme-blog/"/>
     <updated>2020-01-22T00:00:00Z</updated>
     <id>https://lutaonan.com/blog/minimalist-theme-blog/</id>
@@ -646,7 +646,7 @@ map &amp;lt;C-f&amp;gt;h/j/k/l :set!extensions.treestyletab.tabbar.position=left
   </entry>
   
   <entry>
-    <title>解决MacOS休眠后Wifi卡死断网的方法</title>
+    <title>MacOS WiFi Dropping When Waking From Sleep</title>
     <link href="https://lutaonan.com/blog/mac-wifi-dropdown/"/>
     <updated>2019-07-24T00:00:00Z</updated>
     <id>https://lutaonan.com/blog/mac-wifi-dropdown/</id>
@@ -666,7 +666,7 @@ map &amp;lt;C-f&amp;gt;h/j/k/l :set!extensions.treestyletab.tabbar.position=left
   </entry>
   
   <entry>
-    <title>css tips</title>
+    <title>CSS Tips</title>
     <link href="https://lutaonan.com/blog/css-tips/"/>
     <updated>2019-07-16T00:00:00Z</updated>
     <id>https://lutaonan.com/blog/css-tips/</id>
@@ -687,7 +687,7 @@ overflow: hidden;
   </entry>
   
   <entry>
-    <title>mac tips</title>
+    <title>MacOS Tips</title>
     <link href="https://lutaonan.com/blog/mac-tips/"/>
     <updated>2019-07-15T00:00:00Z</updated>
     <id>https://lutaonan.com/blog/mac-tips/</id>
