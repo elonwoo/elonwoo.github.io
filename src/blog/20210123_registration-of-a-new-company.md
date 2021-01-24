@@ -1,7 +1,7 @@
 ---
 title:  Registration Of A New Company 2021
 layout: blog.njk
-date: 2021-01-24
+date: 2021-01-23
 tags: blog
 categories:
   - skill
