@@ -4,11 +4,22 @@
   <subtitle>Randy is blogging about life, tech and music.</subtitle>
   <link href="https://lutaonan.com/rss.xml" rel="self"/>
   <link href="https://lutaonan.com/"/>
-  <updated>2021-01-25T00:00:00Z</updated>
+  <updated>2021-01-28T00:00:00Z</updated>
   <id>https://lutaonan.com/</id>
   <author>
     <name>Randy</name>
   </author>
+  
+  <entry>
+    <title>How To Download All Blocks In Ant Design Pro V5</title>
+    <link href="https://lutaonan.com/blog/20210128_how_to_download_all_blocks_in_antd_pro_v5/"/>
+    <updated>2021-01-28T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/20210128_how_to_download_all_blocks_in_antd_pro_v5/</id>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;yarn run pro fetch-blocks --branch=v5&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Chrome DevTools Guide</title>
