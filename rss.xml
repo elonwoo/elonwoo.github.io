@@ -11,10 +11,10 @@
   </author>
   
   <entry>
-    <title>How To Download All Blocks In Ant Design Pro V5</title>
-    <link href="https://lutaonan.com/blog/20210128_how_to_download_all_blocks_in_antd_pro_v5/"/>
+    <title>Ant Design Pro V5 Reference</title>
+    <link href="https://lutaonan.com/blog/20210128_ant_design_pro_v5_reference/"/>
     <updated>2021-01-28T00:00:00Z</updated>
-    <id>https://lutaonan.com/blog/20210128_how_to_download_all_blocks_in_antd_pro_v5/</id>
+    <id>https://lutaonan.com/blog/20210128_ant_design_pro_v5_reference/</id>
     <content type="html">&lt;h2 id=&quot;%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81&quot;&gt;执行代码&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;yarn run pro fetch-blocks --branch=v5&lt;/p&gt;
@@ -27,6 +27,7 @@
 &lt;li&gt;&lt;a href=&quot;https://github.com/brlala/antd_v5&quot;&gt;brlala/antd_v5&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/xieyx/admin_cooker&quot;&gt;xieyx/admin_cooker: antd pro v5+umi@3+sula动态配置&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/wangJacker/antdesign-pro-v5&quot;&gt;wangJacker/antdesign-pro-v5: ant design pro v5模板 不含多标签&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/147822314&quot;&gt;使用ant design开发完整的后台系统 - 知乎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
