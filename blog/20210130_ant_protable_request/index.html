@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <title>
+        Tow Request Methods Of Antd ProTable - Elon's Blog</title>
+    
+
+    
+  <title>Tow Request Methods Of Antd ProTable - Elon&apos;s Blog</title>
+
+<meta name="description" content="blogging about life, tech.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Elon Woo">
+
+<link rel="canonical" href="https://elonwoo.com/blog/20210130_ant_protable_request/">
+
+<meta property="og:title" content="Tow Request Methods Of Antd ProTable - Elon&apos;s Blog">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://elonwoo.com/blog/20210130_ant_protable_request/">
+<meta property="og:description" content="blogging about life, tech.">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@elonwoo">
+<meta name="twitter:url" content="https://elonwoo.com/blog/20210130_ant_protable_request/">
+<meta name="twitter:title" content="Tow Request Methods Of Antd ProTable - Elon&apos;s Blog">
+<meta name="twitter:description" content="blogging about life, tech.">
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.21.0,npm/prismjs@1.21.0/components/prism-javascript.min.js,npm/prismjs@1.21.0/components/prism-typescript.min.js,npm/prismjs@1.21.0/components/prism-bash.min.js,npm/prismjs@1.21.0/components/prism-sql.min.js,npm/prismjs@1.21.0/components/prism-diff.min.js,npm/prismjs@1.21.0/components/prism-tsx.min.js,npm/prismjs@1.21.0/components/prism-jsx.min.js,npm/prismjs@1.21.0/components/prism-json.min.js"></script>
+
+  <link href="//cdn.jsdelivr.net/combine/npm/prismjs@1.21.0/themes/prism.min.css,npm/prismjs@1.21.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet">
+    <link href="/assets/index.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+  <div class="main-container mx-auto pt-12">
+    <div class="flex justify-between mb-4">
+  <div>
+    <h1 class="logo text-xl text-red-900">
+      <a href="/">Elon's Blog</a>
+    </h1>
+
+  </div>
+  <div class="flex self-center -mx-2 text-sm text-red-900 font-bold">
+    <a class="mx-2" href="/">文章</a>
+    
+
+  </div>
+</div>
+    <div class="mb-4 mt-12 font-sans">
+      <h2 class="text-4xl tracking-wide text-gray-900 font-bold">Tow Request Methods Of Antd ProTable</h2>
+      <h3 class="text-gray-500 text-xs font-light">2021-01-30</h3>
+    </div>
+    <div class="blog-post">
+      <h2 id="%E6%96%B9%E6%B3%95%E4%B8%80">方法一</h2>
+<pre><code class="language-javascript">request={async (
+        // 第一个参数 params 查询表单和 params 参数的结合
+        // 第一个参数中一定会有 pageSize 和  current ，这两个参数是 antd 的规范
+        params: T &amp; {
+          pageSize: number;
+          current: number;
+        },
+        sort,
+        filter,
+      ) =&gt; {
+        // 这里需要返回一个 Promise,在返回之前你可以进行数据转化
+        // 如果需要转化参数可以在这里进行修改
+        const msg = await queryRule({
+          currentPage: params.current,
+          numPerPage: params.pageSize,
+        });
+        return {
+          data: msg.data.recordList,
+          // success 请返回 true，
+          // 不然 table 会停止解析数据，即使有数据
+          success: msg.errorCode === 0,
+          // 不传会使用 data 的长度，如果是分页一定要传
+          // total: msg.data.pagination.totalCount,
+        };
+      }}
+</code></pre>
+<h2 id="%E6%96%B9%E6%B3%95%E4%BA%8C">方法二</h2>
+<pre><code class="language-javascript">request={async (params, sorter, filter) =&gt; {
+  const msg = await queryRule({ ...params, sorter, filter });
+  return {
+    data: msg.data.recordList,
+    success: msg.errorCode === 0,
+  };
+}}
+</code></pre>
+<h2 id="%E6%96%B9%E6%B3%95%E4%B8%89">方法三</h2>
+<pre><code class="language-javascript">request={(params) =&gt;
+  queryRule(params).then((res) =&gt; {
+    const result = {
+      data: res.data.recordList,
+      total: res.data.totalCount,
+      success: res.errorCode === 0,
+      pageSize: 10,
+      current: res.data.currentPage,
+    };
+    return result;
+  })
+}
+</code></pre>
+
+    </div>
+
+  </div>
+
+
+
+    
+  </body>
+
+</html>
