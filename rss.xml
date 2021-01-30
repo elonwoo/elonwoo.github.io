@@ -4,11 +4,28 @@
   <subtitle>Randy is blogging about life, tech and music.</subtitle>
   <link href="https://lutaonan.com/rss.xml" rel="self"/>
   <link href="https://lutaonan.com/"/>
-  <updated>2021-01-30T00:00:00Z</updated>
+  <updated>2021-01-31T00:00:00Z</updated>
   <id>https://lutaonan.com/</id>
   <author>
     <name>Randy</name>
   </author>
+  
+  <entry>
+    <title>Vivaldi - Best Browser in 2021</title>
+    <link href="https://lutaonan.com/blog/20210131_vivaldi_best_browser_in_2021/"/>
+    <updated>2021-01-31T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/20210131_vivaldi_best_browser_in_2021/</id>
+    <content type="html">&lt;p&gt;&lt;img src=&quot;https://gt-toolbox.oss-cn-beijing.aliyuncs.com/q8ruTn.png&quot; alt=&quot;Vivaldi&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;经过各种尝试，我宣布Vivaldi是2021年最好用的浏览器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;100%替代 Google Chrome&lt;/li&gt;
+&lt;li&gt;垂直标签管理比 Microsoft Edge Browser 更完美&lt;/li&gt;
+&lt;li&gt;实现 Vimperator / Pentadactyl / Tridactyl 的最简界面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;%E5%BB%B6%E4%BC%B8%E9%98%85%E8%AF%BB&quot;&gt;延伸阅读&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/92618817&quot;&gt;为什么 Vivaldi 是最好用的桌面浏览器 - 知乎&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Request Methods Of Antd ProTable</title>
