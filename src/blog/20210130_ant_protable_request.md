@@ -1,5 +1,5 @@
 ---
-title: Tow Request Methods Of Antd ProTable
+title: Request Methods Of Antd ProTable
 layout: blog.njk
 date: 2021-01-30
 tags: blog
