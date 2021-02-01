@@ -18,3 +18,4 @@ categories:
 * [xieyx/admin\_cooker: antd pro v5\+umi@3\+sula动态配置](https://github.com/xieyx/admin_cooker)
 * [wangJacker/antdesign\-pro\-v5: ant design pro v5模板 不含多标签](https://github.com/wangJacker/antdesign-pro-v5)
 * [使用ant design开发完整的后台系统 - 知乎](https://zhuanlan.zhihu.com/p/147822314)
+* [怎么配置测试环境,生产环境? · Issue \#1636 · ant\-design/ant\-design\-pro](https://github.com/ant-design/ant-design-pro/issues/1636)
