@@ -4,11 +4,35 @@
   <subtitle>Randy is blogging about life, tech and music.</subtitle>
   <link href="https://lutaonan.com/rss.xml" rel="self"/>
   <link href="https://lutaonan.com/"/>
-  <updated>2021-02-02T00:00:00Z</updated>
+  <updated>2021-02-06T00:00:00Z</updated>
   <id>https://lutaonan.com/</id>
   <author>
     <name>Randy</name>
   </author>
+  
+  <entry>
+    <title>Open anything in VS Code using a MacOS quick action</title>
+    <link href="https://lutaonan.com/blog/20210206_Open_in_VS_Code/"/>
+    <updated>2021-02-06T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/20210206_Open_in_VS_Code/</id>
+    <content type="html">&lt;h2 id=&quot;launch-automator&quot;&gt;Launch Automator&lt;/h2&gt;
+&lt;p&gt;Create a new Quick Action&lt;/p&gt;
+&lt;h2 id=&quot;configure-the-workflow%3A&quot;&gt;Configure the workflow:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Set it to receive current &amp;quot;files and folders&amp;quot; from Finder.&lt;/li&gt;
+&lt;li&gt;Set and image if you want one - I used the icons from this GitHub repo.&lt;/li&gt;
+&lt;li&gt;Add a new Run Shell Script action to the workflow.&lt;/li&gt;
+&lt;li&gt;Set the Pass Input to be &amp;quot;as arguments&amp;quot;&lt;/li&gt;
+&lt;li&gt;Set the shell script to be:
+&lt;blockquote&gt;
+&lt;p&gt;open -n -b &amp;quot;com.microsoft.VSCode&amp;quot; --args &amp;quot;$*&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;save-the-action-using-a-name-like-open-in-vs-code.&quot;&gt;Save the action using a name like Open In VS Code.&lt;/h2&gt;
+&lt;p&gt;This will register the quick action with Finder, and you will now be able to right-click on a file or folder in Finder and select Quick Actions-&amp;gt;Open In VS Code&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Ten Years Of Memories</title>
