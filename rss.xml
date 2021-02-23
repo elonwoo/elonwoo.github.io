@@ -4,7 +4,7 @@
   <subtitle>Randy is blogging about life, tech and music.</subtitle>
   <link href="https://lutaonan.com/rss.xml" rel="self"/>
   <link href="https://lutaonan.com/"/>
-  <updated>2021-02-21T00:00:00Z</updated>
+  <updated>2021-02-23T00:00:00Z</updated>
   <id>https://lutaonan.com/</id>
   <author>
     <name>Randy</name>
@@ -13,7 +13,7 @@
   <entry>
     <title>Vivium Theme</title>
     <link href="https://lutaonan.com/blog/20210223_vivium_theme/"/>
-    <updated>2021-02-21T00:00:00Z</updated>
+    <updated>2021-02-23T00:00:00Z</updated>
     <id>https://lutaonan.com/blog/20210223_vivium_theme/</id>
     <content type="html">&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;.vimiumReset,
 div.vimiumReset,
