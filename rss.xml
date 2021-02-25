@@ -4,11 +4,28 @@
   <subtitle>Randy is blogging about life, tech and music.</subtitle>
   <link href="https://lutaonan.com/rss.xml" rel="self"/>
   <link href="https://lutaonan.com/"/>
-  <updated>2021-02-23T00:00:00Z</updated>
+  <updated>2021-02-26T00:00:00Z</updated>
   <id>https://lutaonan.com/</id>
   <author>
     <name>Randy</name>
   </author>
+  
+  <entry>
+    <title>Open Umi With A Specific Browser</title>
+    <link href="https://lutaonan.com/blog/20210226_open_umi_with_chrome/"/>
+    <updated>2021-02-26T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/20210226_open_umi_with_chrome/</id>
+    <content type="html">&lt;p&gt;推荐一个 Github 项目「Finicky」，可以通过设置关键词让特定浏览器打开特定网页，完美解决我想要用 Firefox 打开 RoamResearch  但默认是 Chrome 的问题
+&lt;a href=&quot;https://github.com/johnste/finicky&quot;&gt;johnste/finicky: A macOS app for customizing which browser to start&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;但我的需求较为简单，平常已经全面使用Vivaldi Browser，用umijs做开发时，用Chrome打开调试&lt;/p&gt;
+&lt;p&gt;编辑 &lt;code&gt;package.json&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&amp;quot;start&amp;quot;: &amp;quot;cross-env ESLINT=none DEBUG_MODE=true PORT=8005 umi dev&amp;quot;,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改为&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&amp;quot;start&amp;quot;: &amp;quot;cross-env ESLINT=none DEBUG_MODE=true BROWSER=&#39;google chrome&#39; PORT=8005 umi dev&amp;quot;,
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Vivium Theme</title>

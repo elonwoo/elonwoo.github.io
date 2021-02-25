@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <title>
+        Open Umi With A Specific Browser - Elon's Blog</title>
+    
+
+    
+  <title>Open Umi With A Specific Browser - Elon&apos;s Blog</title>
+
+<meta name="description" content="blogging about life, tech.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Elon Woo">
+
+<link rel="canonical" href="https://elonwoo.com/blog/20210226_open_umi_with_chrome/">
+
+<meta property="og:title" content="Open Umi With A Specific Browser - Elon&apos;s Blog">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://elonwoo.com/blog/20210226_open_umi_with_chrome/">
+<meta property="og:description" content="blogging about life, tech.">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@elonwoo">
+<meta name="twitter:url" content="https://elonwoo.com/blog/20210226_open_umi_with_chrome/">
+<meta name="twitter:title" content="Open Umi With A Specific Browser - Elon&apos;s Blog">
+<meta name="twitter:description" content="blogging about life, tech.">
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.21.0,npm/prismjs@1.21.0/components/prism-javascript.min.js,npm/prismjs@1.21.0/components/prism-typescript.min.js,npm/prismjs@1.21.0/components/prism-bash.min.js,npm/prismjs@1.21.0/components/prism-sql.min.js,npm/prismjs@1.21.0/components/prism-diff.min.js,npm/prismjs@1.21.0/components/prism-tsx.min.js,npm/prismjs@1.21.0/components/prism-jsx.min.js,npm/prismjs@1.21.0/components/prism-json.min.js"></script>
+
+  <link href="//cdn.jsdelivr.net/combine/npm/prismjs@1.21.0/themes/prism.min.css,npm/prismjs@1.21.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet">
+    <link href="/assets/index.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+  <div class="main-container mx-auto pt-12">
+    <div class="flex justify-between mb-4">
+  <div>
+    <h1 class="logo text-xl text-red-900">
+      <a href="/">Elon's Blog</a>
+    </h1>
+
+  </div>
+  <div class="flex self-center -mx-2 text-sm text-red-900 font-bold">
+    <a class="mx-2" href="/">文章</a>
+    
+
+  </div>
+</div>
+    <div class="mb-4 mt-12 font-sans">
+      <h2 class="text-4xl tracking-wide text-gray-900 font-bold">Open Umi With A Specific Browser</h2>
+      <h3 class="text-gray-500 text-xs font-light">2021-02-26</h3>
+    </div>
+    <div class="blog-post">
+      <p>推荐一个 Github 项目「Finicky」，可以通过设置关键词让特定浏览器打开特定网页，完美解决我想要用 Firefox 打开 RoamResearch  但默认是 Chrome 的问题
+<a href="https://github.com/johnste/finicky">johnste/finicky: A macOS app for customizing which browser to start</a></p>
+<p>但我的需求较为简单，平常已经全面使用Vivaldi Browser，用umijs做开发时，用Chrome打开调试</p>
+<p>编辑 <code>package.json</code></p>
+<pre><code class="language-javascript">&quot;start&quot;: &quot;cross-env ESLINT=none DEBUG_MODE=true PORT=8005 umi dev&quot;,
+</code></pre>
+<p>修改为</p>
+<pre><code class="language-javascript">&quot;start&quot;: &quot;cross-env ESLINT=none DEBUG_MODE=true BROWSER='google chrome' PORT=8005 umi dev&quot;,
+</code></pre>
+
+    </div>
+
+  </div>
+
+
+
+    
+  </body>
+
+</html>
