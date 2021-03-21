@@ -4,11 +4,57 @@
   <subtitle>Randy is blogging about life, tech and music.</subtitle>
   <link href="https://lutaonan.com/rss.xml" rel="self"/>
   <link href="https://lutaonan.com/"/>
-  <updated>2021-02-26T00:00:00Z</updated>
+  <updated>2021-03-22T00:00:00Z</updated>
   <id>https://lutaonan.com/</id>
   <author>
     <name>Randy</name>
   </author>
+  
+  <entry>
+    <title>MongoDB Skills</title>
+    <link href="https://lutaonan.com/blog/20210322_mongodb/"/>
+    <updated>2021-03-22T00:00:00Z</updated>
+    <id>https://lutaonan.com/blog/20210322_mongodb/</id>
+    <content type="html">&lt;h4 id=&quot;python-%E6%8E%A5%E5%85%A5-mongodb&quot;&gt;Python 接入 MongoDB&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;import pymongo
+client = pymongo.MongoClient(host=&#39;127.0.0.1&#39;)
+db = client.guba
+collection = db.table
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;%E5%8E%BB%E9%87%8D&quot;&gt;去重&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;collection.distinct(&amp;quot;name&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;获取最后一条数据&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;collection.find({}, {&#39;_id&#39;: 0, &#39;reply_user&#39;: 1, &#39;reply_publish_time&#39;: 1}).sort([(&#39;_id&#39;, 1)]).limit(1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;%E8%8E%B7%E5%8F%96%E4%B8%8E%E6%8C%87%E5%AE%9Ajson%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9%E7%9A%84%E6%95%B0%E6%8D%AE&quot;&gt;获取与指定Json对象内容的数据&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;collection.find({&amp;quot;student.name&amp;quot;: &#39;小李&#39;}, {&#39;_id&#39;: 0, &#39;reply_publish_time&#39;: 1, &#39;reply_text&#39;: 1}).limit(50).sort([(&#39;_id&#39;, 1)])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E6%97%B6%E5%8E%BB%E9%87%8D&quot;&gt;插入数据时去重&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;collections.update({&#39;_id&#39;:post[&#39;post_id&#39;]},{&#39;$set&#39;:post},upsert=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gt-toolbox.oss-cn-beijing.aliyuncs.com/VjmmCU-MeyxOy.jpg&quot; alt=&quot;mongodb插入数据时去重&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;python-%E4%B8%AD%E7%9A%84-mongodb-%E7%9A%84-sort-%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8&quot;&gt;Python 中的 MongoDB 的 sort 函数使用&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# 在mongodb中我们的对sort的写法是  
+db.xxx.find().sort({&#39;date&#39;:1})
+# 在pycharm中这样写会报错：
+# TypeError: if no direction is specified, key_or_list must be an instance of list
+# 正确的脚本是:
+db.xxx.find().sort([(&#39;date&#39;,1)])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;python3-pymongo-%E4%BD%BF%E7%94%A8-count-%E6%8A%A5%E8%AD%A6%E5%91%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95&quot;&gt;Python3 pymongo 使用 count 报警告解决办法&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;db_count = cursor.estimated_document_count()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果是带条件的查询统计就需要使用 count_documents&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;db_count = cursor.count_documents({&#39;dt&#39;: handle_date})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;ref&quot;&gt;Ref&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://johng.cn/mongodb-command/&quot;&gt;MongoDB基本命令 – 碎言碎语&lt;/a&gt;
+&lt;a href=&quot;https://juejin.cn/post/6844903597465927694&quot;&gt;Python操作MongoDB看这一篇就够了&lt;/a&gt;
+&lt;a href=&quot;https://www.jianshu.com/p/0a52c672ae78&quot;&gt;“MongoDB基本命令用” - 简书&lt;/a&gt;
+&lt;a href=&quot;http://www.picdata.cn/picdata/ci_b.php&quot;&gt;图悦-热词分析工具|词云图制作软件|热词词频分析&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Open Umi With A Specific Browser</title>

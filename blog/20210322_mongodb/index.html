@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <title>
+        MongoDB Skills - Elon's Blog</title>
+    
+
+    
+  <title>MongoDB Skills - Elon&apos;s Blog</title>
+
+<meta name="description" content="blogging about life, tech.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Elon Woo">
+
+<link rel="canonical" href="https://elonwoo.com/blog/20210322_mongodb/">
+
+<meta property="og:title" content="MongoDB Skills - Elon&apos;s Blog">
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://elonwoo.com/blog/20210322_mongodb/">
+<meta property="og:description" content="blogging about life, tech.">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@elonwoo">
+<meta name="twitter:url" content="https://elonwoo.com/blog/20210322_mongodb/">
+<meta name="twitter:title" content="MongoDB Skills - Elon&apos;s Blog">
+<meta name="twitter:description" content="blogging about life, tech.">
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.21.0,npm/prismjs@1.21.0/components/prism-javascript.min.js,npm/prismjs@1.21.0/components/prism-typescript.min.js,npm/prismjs@1.21.0/components/prism-bash.min.js,npm/prismjs@1.21.0/components/prism-sql.min.js,npm/prismjs@1.21.0/components/prism-diff.min.js,npm/prismjs@1.21.0/components/prism-tsx.min.js,npm/prismjs@1.21.0/components/prism-jsx.min.js,npm/prismjs@1.21.0/components/prism-json.min.js"></script>
+
+  <link href="//cdn.jsdelivr.net/combine/npm/prismjs@1.21.0/themes/prism.min.css,npm/prismjs@1.21.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet">
+    <link href="/assets/index.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+  <div class="main-container mx-auto pt-12">
+    <div class="flex justify-between mb-4">
+  <div>
+    <h1 class="logo text-xl text-red-900">
+      <a href="/">Elon's Blog</a>
+    </h1>
+
+  </div>
+  <div class="flex self-center -mx-2 text-sm text-red-900 font-bold">
+    <a class="mx-2" href="/">文章</a>
+    
+
+  </div>
+</div>
+    <div class="mb-4 mt-12 font-sans">
+      <h2 class="text-4xl tracking-wide text-gray-900 font-bold">MongoDB Skills</h2>
+      <h3 class="text-gray-500 text-xs font-light">2021-03-22</h3>
+    </div>
+    <div class="blog-post">
+      <h4 id="python-%E6%8E%A5%E5%85%A5-mongodb">Python 接入 MongoDB</h4>
+<pre><code class="language-python">import pymongo
+client = pymongo.MongoClient(host='127.0.0.1')
+db = client.guba
+collection = db.table
+</code></pre>
+<h4 id="%E5%8E%BB%E9%87%8D">去重</h4>
+<pre><code class="language-python">collection.distinct(&quot;name&quot;)
+</code></pre>
+<p>获取最后一条数据</p>
+<pre><code class="language-python">collection.find({}, {'_id': 0, 'reply_user': 1, 'reply_publish_time': 1}).sort([('_id', 1)]).limit(1)
+</code></pre>
+<h4 id="%E8%8E%B7%E5%8F%96%E4%B8%8E%E6%8C%87%E5%AE%9Ajson%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9%E7%9A%84%E6%95%B0%E6%8D%AE">获取与指定Json对象内容的数据</h4>
+<pre><code class="language-python">collection.find({&quot;student.name&quot;: '小李'}, {'_id': 0, 'reply_publish_time': 1, 'reply_text': 1}).limit(50).sort([('_id', 1)])
+</code></pre>
+<h4 id="%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E6%97%B6%E5%8E%BB%E9%87%8D">插入数据时去重</h4>
+<pre><code class="language-python">collections.update({'_id':post['post_id']},{'$set':post},upsert=True)
+</code></pre>
+<p><img src="https://gt-toolbox.oss-cn-beijing.aliyuncs.com/VjmmCU-MeyxOy.jpg" alt="mongodb插入数据时去重"></p>
+<h4 id="python-%E4%B8%AD%E7%9A%84-mongodb-%E7%9A%84-sort-%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8">Python 中的 MongoDB 的 sort 函数使用</h4>
+<pre><code class="language-python"># 在mongodb中我们的对sort的写法是  
+db.xxx.find().sort({'date':1})
+# 在pycharm中这样写会报错：
+# TypeError: if no direction is specified, key_or_list must be an instance of list
+# 正确的脚本是:
+db.xxx.find().sort([('date',1)])
+</code></pre>
+<h4 id="python3-pymongo-%E4%BD%BF%E7%94%A8-count-%E6%8A%A5%E8%AD%A6%E5%91%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">Python3 pymongo 使用 count 报警告解决办法</h4>
+<pre><code class="language-python">db_count = cursor.estimated_document_count()
+</code></pre>
+<p>如果是带条件的查询统计就需要使用 count_documents</p>
+<pre><code class="language-python">db_count = cursor.count_documents({'dt': handle_date})
+</code></pre>
+<h4 id="ref">Ref</h4>
+<p><a href="https://johng.cn/mongodb-command/">MongoDB基本命令 – 碎言碎语</a>
+<a href="https://juejin.cn/post/6844903597465927694">Python操作MongoDB看这一篇就够了</a>
+<a href="https://www.jianshu.com/p/0a52c672ae78">“MongoDB基本命令用” - 简书</a>
+<a href="http://www.picdata.cn/picdata/ci_b.php">图悦-热词分析工具|词云图制作软件|热词词频分析</a></p>
+
+    </div>
+
+  </div>
+
+
+
+    
+  </body>
+
+</html>
